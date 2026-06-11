@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form Elements Showcase</title>
+</head>
+
+<body>
+
+    <h1>Complete HTML Form Example</h1>
+
+    <form action="/submit" method="post" enctype="multipart/form-data" autocomplete="on" novalidate>
+
+        <!-- Text Input -->
+        <fieldset>
+            <legend>Basic Inputs</legend>
+
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" value="" minlength="3"
+                maxlength="50" required autofocus>
+            <br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@email.com" required>
+            <br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" minlength="8" required>
+            <br><br>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+251912345678">
+            <br><br>
+
+            <label for="website">Website:</label>
+            <input type="url" id="website" name="website" placeholder="https://example.com">
+            <br><br>
+
+            <label for="search">Search:</label>
+            <input type="search" id="search" name="search" placeholder="Search...">
+            <br><br>
+        </fieldset>
+
+        <!-- Numeric Inputs -->
+        <fieldset>
+            <legend>Numeric Inputs</legend>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="1" max="120" step="1">
+            <br><br>
+
+            <label for="rating">Rating:</label>
+            <input type="range" id="rating" name="rating" min="0" max="100" step="10">
+            <br><br>
+        </fieldset>
+
+        <!-- Date & Time Inputs -->
+        <fieldset>
+            <legend>Date and Time</legend>
+
+            <label>Date:</label>
+            <input type="date" name="date">
+            <br><br>
+
+            <label>Time:</label>
+            <input type="time" name="time">
+            <br><br>
+
+            <label>DateTime Local:</label>
+            <input type="datetime-local" name="datetime">
+            <br><br>
+
+            <label>Month:</label>
+            <input type="month" name="month">
+            <br><br>
+
+            <label>Week:</label>
+            <input type="week" name="week">
+            <br><br>
+        </fieldset>
+
+        <!-- Color -->
+        <fieldset>
+            <legend>Color Picker</legend>
+
+            <label>Favorite Color:</label>
+            <input type="color" name="color">
+            <br><br>
+        </fieldset>
+
+        <!-- File Upload -->
+        <fieldset>
+            <legend>File Upload</legend>
+
+            <label>Upload File:</label>
+            <input type="file" name="file" accept=".jpg,.png,.pdf" multiple>
+            <br><br>
+        </fieldset>
+
+        <!-- Radio Buttons -->
+        <fieldset>
+            <legend>Radio Buttons</legend>
+
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+        </fieldset>
+
+        <br>
+
+        <!-- Checkboxes -->
+        <fieldset>
+            <legend>Checkboxes</legend>
+
+            <input type="checkbox" id="html" name="skills" value="HTML">
+            <label for="html">HTML</label>
+
+            <input type="checkbox" id="css" name="skills" value="CSS">
+            <label for="css">CSS</label>
+
+            <input type="checkbox" id="js" name="skills" value="JavaScript">
+            <label for="js">JavaScript</label>
+        </fieldset>
+
+        <br>
+
+        <!-- Select -->
+        <fieldset>
+            <legend>Select Dropdown</legend>
+
+            <label for="country">Country:</label>
+
+            <select id="country" name="country">
+                <option value="">Choose Country</option>
+                <option value="ethiopia">Ethiopia</option>
+                <option value="kenya">Kenya</option>
+                <option value="uganda">Uganda</option>
+            </select>
+        </fieldset>
+
+        <br>
+
+        <!-- Multiple Select -->
+        <fieldset>
+            <legend>Multiple Select</legend>
+
+            <select name="languages" multiple size="4">
+                <option>English</option>
+                <option>Amharic</option>
+                <option>French</option>
+                <option>Arabic</option>
+            </select>
+        </fieldset>
+
+        <br>
+
+        <!-- Textarea -->
+        <fieldset>
+            <legend>Textarea</legend>
+
+            <textarea name="message" rows="6" cols="40" placeholder="Write your message..."></textarea>
+        </fieldset>
+
+        <br>
+
+        <!-- Datalist -->
+        <fieldset>
+            <legend>Datalist</legend>
+
+            <input list="browsers" name="browser">
+
+            <datalist id="browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Edge">
+            </datalist>
+        </fieldset>
+
+        <br>
+
+        <!-- Hidden Input -->
+        <input type="hidden" name="user_id" value="12345">
+
+        <!-- Readonly -->
+        <label>Readonly:</label>
+        <input type="text" value="Cannot Edit" readonly>
+        <br><br>
+
+        <!-- Disabled -->
+        <label>Disabled:</label>
+        <input type="text" value="Disabled Field" disabled>
+        <br><br>
+
+        <!-- Buttons -->
+        <fieldset>
+            <legend>Buttons</legend>
+
+            <input type="submit" value="Submit">
+
+            <input type="reset" value="Reset">
+
+            <input type="button" value="Normal Button">
+
+            <button type="submit">Submit Button</button>
+
+            <button type="reset">Reset Button</button>
+        </fieldset>
+
+    </form>
+
+</body>
+
+</html>
