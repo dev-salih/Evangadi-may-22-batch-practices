@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Common HTML Tags</title>
 
@@ -23,14 +24,24 @@
         <div>
             <h2 id="someID">Here is one section</h2>
             <p class="someParagraph">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quisquam itaque quos vitae eveniet mollitia, nisi deserunt illo sequi dicta ducimus facilis, sit saepe quidem beatae quaerat eligendi? Cum, impedit.
-                Asperiores corrupti culpa quidem veniam suscipit, animi labore expedita voluptatibus fuga reiciendis veritatis sapiente iusto eaque iste repudiandae nihil tenetur! Eum aut nisi, doloremque atque vero distinctio excepturi asperiores iste?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quisquam itaque quos vitae eveniet
+                mollitia, nisi deserunt illo sequi dicta ducimus facilis, sit saepe quidem beatae quaerat eligendi? Cum,
+                impedit.
+                Asperiores corrupti culpa quidem veniam suscipit, animi labore expedita voluptatibus fuga reiciendis
+                veritatis sapiente iusto eaque iste repudiandae nihil tenetur! Eum aut nisi, doloremque atque vero
+                distinctio excepturi asperiores iste?
             </p>
 
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus eos, eligendi perspiciatis iste doloribus ut nemo debitis molestias? Doloremque, ipsa. Autem exercitationem, molestias aliquid earum in dolor sequi porro sint!
-                Harum maxime praesentium tempora quidem doloremque sunt. Ipsum expedita molestias beatae fuga quaerat? Unde cupiditate modi fugit repellendus qui. Reprehenderit alias, molestias unde nulla quibusdam saepe consectetur laboriosam debitis possimus.
-                Aut maxime dolor fuga voluptates ipsum nam numquam unde provident totam impedit excepturi distinctio odit exercitationem dolorum accusamus neque fugiat tempore, asperiores sapiente nostrum architecto laboriosam. Quia consectetur repudiandae laudantium!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus eos, eligendi perspiciatis iste
+                doloribus ut nemo debitis molestias? Doloremque, ipsa. Autem exercitationem, molestias aliquid earum in
+                dolor sequi porro sint!
+                Harum maxime praesentium tempora quidem doloremque sunt. Ipsum expedita molestias beatae fuga quaerat?
+                Unde cupiditate modi fugit repellendus qui. Reprehenderit alias, molestias unde nulla quibusdam saepe
+                consectetur laboriosam debitis possimus.
+                Aut maxime dolor fuga voluptates ipsum nam numquam unde provident totam impedit excepturi distinctio
+                odit exercitationem dolorum accusamus neque fugiat tempore, asperiores sapiente nostrum architecto
+                laboriosam. Quia consectetur repudiandae laudantium!
             </p>
         </div>
     </section>
@@ -48,13 +59,90 @@
             <h2>Sample form</h2>
 
             <form action="#">
-                <label for="fname">First name:</label><br/>
-                <input type="text" id="fname" name="fname" value="" /><br/>
-                <label for="lname">Last name</label><br />
-                
+                <label for="fname">First name:</label><br />
+                <input type="text" id="fname" name="fname" value="" /><br />
+                <label for="lname">Last name:</label><br />
+                <input type="text" id="lname" name="lname" value="" /><br />
+                <label for="message">Last name:</label><br />
+                <textarea rows="4" cols="50"></textarea><br /><br />
+                <input type="submit" value="Submit" />
+
+                <select name="department" id="">
+                    <option value="">select department</option>
+                    <option value="">computer science</option>
+                    <option value="">IT</option>
+                    <option value="">software engineering</option>
+                </select>
+
             </form>
         </div>
     </section>
 
+    <hr />
+
+    <section>
+        <div>
+            <h2>Formating tags</h2>
+            <p>
+                2<sup>nd</sup> <br />
+                H<sub>2</sub>O <br />
+                <em>Emphesized</em> <br />
+                <strong>Strong. Mostly the same as bold</strong> <br />
+                <small> Smaller text </small>
+            </p>
+            <p><b>Here is a bold text</b> followed by some regular size text.</p>
+            <center>We can use the center tag to center elements</center>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <h2>Media tags</h2>
+
+            <h3>Image</h3>
+            <img src="../Resources/CommonHtmlTags/images/dog.jpg" alt="Dog" />
+
+            <h3>Image using the figure tag</h3>
+            <figure>
+                <img src="../Resources/CommonHtmlTags/images/dog.jpg" alt="Dog" />
+                <figcaption>Cute dog</figcaption>
+            </figure>
+
+            <p><b>Here is a bold text</b> followed by some regular size text.</p>
+            <center>We can use the center tag to center elements</center>
+
+            <h3>Video</h3>
+            <p>
+                Note: The video is included inside the images folder. Not a good
+                practice. But it is ok for now.
+            </p>
+            <video width="320" height="240" controls>
+                <source src="../Resources/CommonHtmlTags/images/howToCreateAFolder.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+
+            <h3>Embed youTube video</h3>
+            <p>
+                You can copy the embed code for youTube videos directly from youTube.
+                If you don't know how to do that, please raise the question during
+                group sessions.
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/PNj9POMbwd8?si=5HFHnJmMzWYcViwc"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <h2>Footer links</h2>
+        <ul>
+            <li>
+                <a href="https://www.evangadi.com/" target="_blank">Evangadi</a>
+            </li>
+        </ul>
+    </footer>
+
 </body>
+
 </html>
