@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Playground</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1 id="main-title">CSS Selectors Playground</h1>
+
+    <h2>Grouping Selector Example</h2>
+    <h3>Grouping Selector Example</h3>
+
+    <div class="demo-box">
+        <p class="highlight">Class Selector (.highlight)</p>
+    </div>
+
+    <div class="article demo-box">
+        <p>Descendant Selector (.article p)</p>
+    </div>
+
+    <div class="parent demo-box">
+        <p>Direct Child Selector (> )</p>
+        <div>
+            <p>Not Direct Child</p>
+        </div>
+    </div>
+
+    <div class="demo-box">
+        <h3 class="adjacent-title">Adjacent Sibling</h3>
+        <p>Selected by +</p>
+        <p>Not selected</p>
+    </div>
+
+    <div class="demo-box">
+        <h3 class="general-title">General Sibling</h3>
+        <p>Selected</p>
+        <p>Selected</p>
+    </div>
+
+    <div class="demo-box">
+        <a href="https://google.com">HTTPS Link</a><br>
+        <a href="manual.pdf">PDF Link</a>
+    </div>
+
+    <div class="demo-box">
+        <input type="email" placeholder="Email field">
+    </div>
+
+    <div class="demo-box">
+        <button class="btn-primary">Contains Selector</button>
+    </div>
+
+    <div class="demo-box active">
+        Word Match Selector (.active)
+    </div>
+
+    <p lang="en-US">Language Selector</p>
+
+    <div class="demo-box hover-box">
+        Hover Over Me
+    </div>
+
+    <div class="demo-box">
+        <input class="focus-input" placeholder="Focus me">
+    </div>
+
+    <div class="demo-box">
+        <input type="checkbox" class="check">
+    </div>
+
+    <div class="demo-box">
+        <input class="required-field" required placeholder="Required">
+    </div>
+
+    <div class="demo-box">
+        <input class="optional-field" placeholder="Optional">
+    </div>
+
+    <div class="demo-box">
+        <input class="valid-field" type="email" value="test@gmail.com">
+    </div>
+
+    <div class="demo-box">
+        <input class="invalid-field" type="email" value="wrong-email">
+    </div>
+
+    <ul class="list">
+        <li>First Child</li>
+        <li>Middle Child</li>
+        <li>Last Child</li>
+    </ul>
+
+    <div class="only demo-box">
+        <p>Only Child</p>
+    </div>
+
+    <ul class="nth">
+        <li>One</li>
+        <li>nth-child(2)</li>
+        <li>Three</li>
+    </ul>
+
+    <div class="nth-type demo-box">
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+    </div>
+
+    <div class="empty-box"></div>
+
+    <p>Not Special</p>
+    <p class="special">Special</p>
+
+    <p class="root-demo">Uses :root variable</p>
+
+    <a href="#target-demo">Click Target Demo</a>
+
+    <div id="target-demo" class="demo-box">
+        :target Example
+    </div>
+
+    <h4>:is() Example</h4>
+    <h5>:is() Example</h5>
+    <h6>:is() Example</h6>
+
+    <section class="demo-box">
+        :where() Example
+    </section>
+
+    <div class="card demo-box">
+        <img src="https://via.placeholder.com/100" alt="">
+        Card using :has(img)
+    </div>
+
+    <p class="before-demo">Before Element</p>
+
+    <p class="after-demo">After Element</p>
+
+    <p class="first-letter-demo">
+        First letter becomes larger.
+    </p>
+
+    <p class="first-line-demo">
+        This paragraph contains enough text to demonstrate
+        the first-line pseudo element. Resize your browser
+        window to see the effect more clearly.
+    </p>
+
+    <input class="placeholder-demo" placeholder="Placeholder Demo">
+
+    <ul class="marker-demo">
+        <li>Marker One</li>
+        <li>Marker Two</li>
+    </ul>
+
+    <input type="file">
+
+</body>
+
+</html>

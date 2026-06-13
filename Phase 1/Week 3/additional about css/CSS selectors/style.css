@@ -1,0 +1,205 @@
+/* UNIVERSAL */
+* {
+  font-family: Arial, sans-serif;
+}
+
+/* ELEMENT */
+h1 {
+  color: darkblue;
+}
+
+/* CLASS */
+.highlight {
+  background: yellow;
+}
+
+/* ID */
+#main-title {
+  border-bottom: 3px solid red;
+}
+
+/* GROUPING */
+h2,
+h3 {
+  color: green;
+}
+
+/* DESCENDANT */
+.article p {
+  color: blue;
+}
+
+/* CHILD */
+.parent > p {
+  background: lightgreen;
+}
+
+/* ADJACENT SIBLING */
+.adjacent-title + p {
+  border: 2px solid red;
+}
+
+/* GENERAL SIBLING */
+.general-title ~ p {
+  background: pink;
+}
+
+/* ATTRIBUTE EXISTS */
+[href] {
+  text-decoration: none;
+}
+
+/* ATTRIBUTE EXACT */
+input[type="email"] {
+  background: lightyellow;
+}
+
+/* STARTS WITH */
+a[href^="https"] {
+  color: green;
+}
+
+/* ENDS WITH */
+a[href$=".pdf"] {
+  color: red;
+}
+
+/* CONTAINS */
+[class*="btn"] {
+  border: 2px solid black;
+}
+
+/* WORD MATCH */
+[class~="active"] {
+  color: red;
+}
+
+/* HYPHEN PREFIX */
+[lang|="en"] {
+  border-left: 5px solid blue;
+}
+
+/* PSEUDO CLASSES */
+
+.hover-box:hover {
+  background: orange;
+}
+
+.focus-input:focus {
+  outline: 4px solid blue;
+}
+
+.check:checked {
+  width: 25px;
+  height: 25px;
+}
+
+.required-field:required {
+  border: 3px solid red;
+}
+
+.optional-field:optional {
+  border: 3px solid gray;
+}
+
+.valid-field:valid {
+  background: lightgreen;
+}
+
+.invalid-field:invalid {
+  background: pink;
+}
+
+.list li:first-child {
+  color: red;
+}
+
+.list li:last-child {
+  color: blue;
+}
+
+.only p:only-child {
+  background: gold;
+}
+
+.nth li:nth-child(2) {
+  background: lightblue;
+}
+
+.nth-type p:nth-of-type(2) {
+  background: violet;
+}
+
+.empty-box:empty {
+  width: 100px;
+  height: 40px;
+  border: 3px solid red;
+}
+
+p:not(.special) {
+  opacity: 0.5;
+}
+
+:root {
+  --main-color: purple;
+}
+
+.root-demo {
+  color: var(--main-color);
+}
+
+#target-demo:target {
+  background: yellow;
+}
+
+:is(h4, h5, h6) {
+  color: brown;
+}
+
+:where(section) {
+  padding: 5px;
+}
+
+.card:has(img) {
+  border: 5px solid green;
+}
+
+/* PSEUDO ELEMENTS */
+
+.before-demo::before {
+  content: "⭐ ";
+}
+
+.after-demo::after {
+  content: " ✓";
+}
+
+.first-letter-demo::first-letter {
+  font-size: 40px;
+}
+
+.first-line-demo::first-line {
+  color: red;
+}
+
+::selection {
+  background: yellow;
+}
+
+.placeholder-demo::placeholder {
+  color: red;
+}
+
+.marker-demo li::marker {
+  color: blue;
+}
+
+input[type="file"]::file-selector-button {
+  background: lightgreen;
+}
+
+.demo-box {
+  margin: 15px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
