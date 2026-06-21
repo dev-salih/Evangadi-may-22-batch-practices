@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+body {
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Header style */
+.header-wrapper {
+  background-color: black;
+  color: #fff; /*what is its significance?*/
+  font-weight: 200;
+  font-size: 0.75em;
+
+  /* display: flex;
+    justify-content: center; */
+}
+
+.header-wrapper ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.internal-wrapper {
+  width: 980px;
+  margin: 0 auto;
+  padding: 0 10px; /*is this important?*/
+}
+
+.header-wrapper a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header-wrapper .internal-wrapper ul li {
+  display: inline-block; /* its significance?*/
+  padding: 14px 0 8px;
+  /* height: 25px;  */
+  /*why the height does not work?*/
+  opacity: 0.8;
+}
+.header-wrapper ul li:hover {
+  /*why it does not work by removing the ul?*/
+  opacity: 1;
+}
+
+/* .logo-link, .search-link, .cart-link {
+	width: 18px;	
+	display: block; /*its significance?*
+} */
+.header-wrapper img {
+  width: 18px;
+}
+
+.header-wrapper ul li.logo-link {
+  /*why it is must to add ul? why the li is close to logo-link?*/
+  padding: 12px 0 10px;
+}
+.header-wrapper ul li.search-link {
+  padding: 14px 0 8px;
+}
+.header-wrapper ul li.cart-link {
+  padding: 12px 0 10px;
+}
