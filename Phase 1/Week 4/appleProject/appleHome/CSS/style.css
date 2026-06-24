@@ -42,7 +42,7 @@ body {
 .header-wrapper .internal-wrapper ul li {
   display: inline-block; /* its significance?*/
   padding: 14px 0 8px;
-  /* height: 25px;  */
+  /* height: 25px; */
   /*why the height does not work?*/
   opacity: 0.8;
 }
@@ -176,4 +176,43 @@ body {
 .footer-country-name {
   display: inline-block;
   vertical-align: top;
+}
+
+.main-highlight-wrapper {
+  background-color: #fafafa;
+  text-align: center;
+  padding: 25px 0;
+}
+.main-highlight-wrapper ul {
+  list-style: none;
+}
+.model {
+  font-size: 0.85em;
+}
+.product-title {
+  font-weight: 700;
+  font-size: 56px;
+}
+.brief-description {
+  font-size: 2em;
+}
+.links-wrapper {
+  padding: 15px 0;
+}
+.links-wrapper ul li {
+  display: inline-block;
+  padding-right: 20px;
+}
+.links-wrapper ul li a {
+  color: #06c;
+  text-decoration: none;
+}
+.links-wrapper ul li a:hover {
+  color: #000;
+}
+.links-wrapper ul li a:after {
+  font-family: "FontAwesome";
+  content: "\f105";
+  font-weight: 900;
+  padding-left: 10px;
 }
