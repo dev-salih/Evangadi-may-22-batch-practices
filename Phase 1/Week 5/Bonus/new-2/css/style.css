@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  padding: 30px 10px;
+  background: #fff;
+}
+
+.container {
+  width: 100%;
+  max-width: 700px;
+}
+
+/* Navigation */
+
+.navbar {
+  background: #ff8522;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #000;
+  border: 5px solid #18a8e4;
+  text-align: center;
+  padding: 8px;
+  background: #ff8522;
+  font-weight: bold;
+}
+
+/* Title */
+
+.title-box {
+  width: 80%;
+  margin: 20px auto;
+  border: 5px solid #f7b7d0;
+  text-align: center;
+  padding: 10px;
+  font-size: 22px;
+}
+
+/* Main */
+
+.content {
+  background: #ffc41d;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Left */
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.green {
+  background: #b6f400;
+  border: 6px solid white;
+  height: 220px;
+}
+
+/* Right */
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.top-box {
+  border: 6px solid #d0d0d0;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.big {
+  width: 140px;
+  height: 220px;
+}
+
+.bottom-box {
+  display: flex;
+  gap: 10px;
+  border: 6px solid #d0d0d0;
+  background: white;
+  padding: 10px;
+}
+
+.gray {
+  flex: 1;
+  height: 180px;
+  background: #cfcfcf;
+}
+
+/* Footer */
+
+footer {
+  margin-top: 20px;
+  background: #9fd4e5;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  gap: 20px;
+}
+
+.contact,
+.address {
+  border: 5px solid red;
+  padding: 10px;
+  background: #9fd4e5;
+}
+
+/* Desktop */
+
+@media (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navbar a {
+    width: 110px;
+  }
+
+  .content {
+    flex-direction: row;
+  }
+
+  .left,
+  .right {
+    flex: 1;
+  }
+
+  .green {
+    height: 280px;
+  }
+}
