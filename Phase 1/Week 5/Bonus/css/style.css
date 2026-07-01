@@ -2,100 +2,198 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
+
 /* body {
-  width: 960px;
-  padding: 0 10%;
+  max-width:1000px;
+  margin:auto;
+  padding:20px;
 } */
-main {
-  padding: 0 4px;
-  border: 2px solid #000;
-}
-/* Header style */
-.header-links-wrapper ul {
-  background-color: #ed1c24;
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  padding: 10px 10px 20px;
-  margin-bottom: 20px;
-  border: 4px solid #000;
-}
-.header-links-wrapper ul li {
-  /* padding: 10px  20px; */
-  border: 3px solid #000;
-  padding: 5px 30px;
+
+/* --MOBILE FIRST-- */
+.outer-container {
+  border: 4px solid black;
+  padding: 0 5px;
 }
 
-.header-links-wrapper ul li a {
+header {
+  background: #ed1c24; /*is there any d/ce b/n BG & BGC? */
+  border: 3px solid black;
+  padding: 20px 20px 40px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between; /*d/ce b/n space-around & space-between? */
+}
+
+nav a {
   text-decoration: none;
+  color: black;
+  border: 3px solid black;
+  padding: 10px 30px;
 }
-.how {
+nav a:first-child {
+  /*how do i change H into h?*/
+}
+
+.bigScreen-only {
   display: none;
 }
 
-/* section 1 */
-.section-1 {
-  display: none;
+.container {
+  padding: 20px 0;
 }
 
-/* section 2 rightSide */
-.right-upper {
-  background-color: #b5e61d;
-  width: 250px;
-  height: 150px;
-  border: 4px solid #000;
-}
-.right-lower {
-  background-color: #b5e61d;
-  width: 250px;
-  height: 150px;
-  border: 4px solid #000;
-}
-.rightSide-wrapper {
+.green-section {
   display: flex;
-  justify-content: space-between;
-  background-color: #ffc90e;
+  gap: 10px;
+  background: #ffc91f;
   padding: 10px;
-  border: 4px solid #000;
+  margin-bottom: 20px;
+  border: 3px solid black;
 }
-/* section 2 leftSide */
-.leftSide-wrapper {
-  border: 4px solid #000;
-  width: 300px;
-  margin: 20px 0px;
+
+.green {
+  flex: 1;
+  background: #b8f400;
+  height: 200px;
+  border: 3px solid black;
+}
+
+.gray-top {
+  border: 3px solid black;
+  max-width: 300px;
+  margin: auto;
+  height: 280px;
   padding: 20px;
   display: flex;
 }
-.left-upper {
-  width: 250px;
-  height: 250px;
-  background-color: #c3c3c3;
-  border: 4px solid #000;
-}
-/* .left-lower {
-  width: 250px;
-  height: 150px;
-  background-color: #c3c3c3;
-  border: 4px solid #000;
-} */
 
-/* footer */
-footer{
-  background-color: #99D9EA;
-  border: 4px solid #000;
+.large-gray {
+  flex: 1;
+  border: 3px solid black;
 }
-.address{
-  display: none;
+
+.gray {
+  background: #cfcfcf;
 }
-.contact-no{
-  padding: 10px 50px;
+
+footer {
+  background: #99d9ea;
+  border: 3px solid black;
+  padding: 15px 50px;
 }
-p{
-  display: inline-block;
-  vertical-align: top;
+.contact {
+  display: flex;
 }
-.contact-no ul{
-  display: inline-block;
+.contact ul li {
   list-style: none;
+}
+
+/* --FOR BIG SCREEN -- */
+
+@media (min-width: 768px) {
+  header {
+    background: #ff7f27;
+    border: none;
+  }
+  .outer-container {
+    border: none;
+  }
+  .bigScreen-only {
+    display: block;
+  }
+
+  nav a {
+    border: 6px solid #00a2e8;
+  }
+
+  .heading-text {
+    width: 400px;
+    margin: 10px auto;
+    text-align: center;
+    border: 5px solid #ffb0ca;
+    padding: 10px; /*increasing padding for the sides(R&L) does not affect*/
+  }
+
+  .container {
+    background-color: #ffc90e;
+    border: 10px solid #ffc90e;
+    margin: 10px 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+  }
+
+  .container > section {
+    flex: 1;
+  }
+
+  .green-section {
+    border: 4px solid #b5e61d;
+    background-color: #fff;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 0px;
+  }
+  .green {
+    border: none;
+  }
+
+  .gray-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .gray-top {
+    flex: 1;
+    max-width: none;
+    background-color: #fff;
+  }
+
+  .gray-bottom {
+    flex: 1;
+    background-color: #fff;
+  }
+
+  .gray-top {
+    border: 4px solid #c3c3c3;
+    width: 100%;
+  }
+
+  .large-gray {
+    height: 200px;
+    margin: 5px 80px;
+    border: 0;
+  }
+
+  .gray-bottom {
+    display: flex;
+    gap: 10px;
+    border: 4px solid #bbb;
+    padding: 10px;
+  }
+
+  .gray-bottom .gray {
+    flex: 1;
+    width: 50px;
+    height: 200px;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    text-align: left;
+    padding: 20px;
+  }
+
+  .contact,
+  .address {
+    border: 4px solid #ed1c24;
+    padding: 10px;
+  }
 }
