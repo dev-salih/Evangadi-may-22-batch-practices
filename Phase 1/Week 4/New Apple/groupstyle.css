@@ -1,0 +1,79 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+body {
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+.sixth-highlight-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.sixth-highlight-wrapper .left-side-wrapper {
+  background-image: url(./Apple_Group/images/home/promo_iphone_tradein.jpg);
+  margin: 1% 0%;
+}
+
+.sixth-highlight-wrapper .right-side-wrapper {
+  background-image: url(./Apple_Group/images/home/promo_apple_card.jpg);
+  margin: 1% 0%;
+}
+.left-side-wrapper,
+.right-side-wrapper {
+  height: 580px;
+  width: 49.5%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding-bottom: 48px;
+  padding-top: 44px;
+}
+.right-side-wrapper .logo-wrapper img {
+  max-width: 120px;
+}
+/* ---------------------- */
+.sixth-highlight-wrapper .left-side-wrapper .description-wraper {
+  max-width: 240px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 1.1904761905;
+  font-weight: 400;
+  letter-spacing: 0.011em;
+}
+
+.sixth-highlight-wrapper .right-side-wrapper .description-wraper {
+  max-width: 260px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 1.2105263158;
+  font-weight: 400;
+  letter-spacing: 0.012em;
+}
+/* ---------------------- */
+.button-wrapper {
+  margin-top: 15px;
+}
+.button-wrapper button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+.estimate,
+.learn-more {
+  background-color: #0071e3;
+  color: #fff;
+}
+.apply-now {
+  border: 1px solid #0071e3 !important;
+  color: #0071e3;
+}

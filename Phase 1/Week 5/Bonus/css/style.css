@@ -36,6 +36,7 @@ nav a {
 }
 nav a:first-child {
   /*how do i change H into h?*/
+  text-transform: capitalize;
 }
 
 .bigScreen-only {

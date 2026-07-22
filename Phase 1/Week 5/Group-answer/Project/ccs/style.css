@@ -1,0 +1,83 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  /* height: auto; */
+}
+
+.bg-colore {
+  background-color: #195774;
+  font-size: 40px;
+  text-align: center;
+  padding: 20px 0;
+}
+.all-puppy {
+  padding: 30px 0;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.missing-puppy {
+  display: none;
+}
+
+.puppy-1,
+.puppy-3 {
+  margin-bottom: 50px;
+}
+.more-puppies {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+/* start media queries for larg screen */
+
+@media (min-width: 768px) {
+  .all-puppy {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    margin: 0 auto;
+  }
+
+  .missing-puppy {
+    display: flex;
+  }
+  .puppy-1,
+  .puppy-2,
+  .missing-puppy {
+    width: 32%;
+    /* height: 226px; */
+  }
+
+  .puppy-1,
+  .puppy-2 {
+    margin-bottom: 0;
+  }
+
+  .missing-puppy {
+    /* display: flex;
+    justify-content: space-between; */
+    align-items: center;
+    text-align: center;
+    background-color: #ee4d65;
+    font-size: 6vw;
+  }
+
+  .puppy-3,
+  .puppy-4 {
+    width: 47%;
+  }
+ /* .more-puppies p:hover {
+    border: 2px solid green;
+    color: goldenrod;
+    border: 50px 15px;
+    width: 200px;
+  } */
+}
+ 
+

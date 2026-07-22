@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 img {
   max-width: 100%;
@@ -42,7 +42,7 @@ body {
 .header-wrapper .internal-wrapper ul li {
   display: inline-block; /* its significance?*/
   padding: 14px 0 8px;
-  /* height: 25px; */
+  height: 25px;
   /*why the height does not work?*/
   opacity: 0.8;
 }
