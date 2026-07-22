@@ -32,19 +32,21 @@ console.log(
     !("2" == "two" || 1 == "1"),
 );
 
-// ======Question 2) MCQ =========
+// =========================================
+//Question 2) MCQ
+// =========================================
 
 // 1. Which expression returns true?
-// A/ 
-    console.log('1' === 1);
-// B/   
-    console.log(1 == 1); 
-// C/   
-    console.log(1 === 1); 
+// A/
+console.log("1" === 1);
+// B/
+console.log(1 == 1);
+// C/
+console.log(1 === 1);
 // D/  B and C from above----------(CORRECT)
 
 // 2. What is the value of x in this statement?
-let x = (1 == true);
+let x = 1 == true;
 console.log(x);
 // A/ 1
 // B/ true-------------(CORRECT)
@@ -53,7 +55,7 @@ console.log(x);
 
 // 3. What is the value of y from the following statements?
 let a = 10;
-let y = (a > 5) && (a < 15);
+let y = a > 5 && a < 15;
 console.log(y);
 // A/ 10
 // B/ 5
@@ -80,7 +82,7 @@ console.log(d);
 
 // 6. What is the value of f in the following statements?
 let e = 1;
-let f = (e !== 2);
+let f = e !== 2;
 console.log(f);
 // A/ 1
 // B/ 2
@@ -88,10 +90,43 @@ console.log(f);
 // D/ true------------(CORRECT)
 
 // 7. What is the output of (+”2”+2)?
-console.log(+"2"+2); //----------(4)
+console.log(+"2" + 2); //----------(4)
 
 // 8. What is the output of (7 % 3)?
 console.log(7 % 3); //--------(1)
 
 // 9. What is the output of (2+true)?
 console.log(2 + true);
+
+// ======================
+// Question 3:
+// ======================
+
+// ●Write a simple script that adds 1 and 2 and displays the result on the console
+// ●Use variables a, b & c
+// ●Use "let" to declare the variables
+// ●Use the formula c = a + b
+// ●Display the value of c on console
+
+let g = 1;
+let h = 2;
+let i = g + h;
+console.log(i);
+
+//======================================
+// Question 4:
+//=======================================
+
+// ●Create a variable to hold your first name
+// ●Create another variable to hold your last name
+// ●Create a third variable to hold your full name
+// ●Assign the value of your first name and last name to the first two variable
+// ●Use "+" to concatenate your first name and last name to assign the result to your last name's
+// variable
+// ●Don't forget to include space between your first and last name
+// ●Display the value of your full name on the console
+
+let firstName = "Salih";
+let lastName = "Muhammed";
+let fullName = firstName + " " + lastName;
+console.log(fullName);
