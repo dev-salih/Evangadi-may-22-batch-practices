@@ -129,4 +129,4 @@ console.log(i);
 let firstName = "Salih";
 let lastName = "Muhammed";
 let fullName = firstName + " " + lastName;
-console.log(fullName);
+console.log(`my name is ${fullName}`);
