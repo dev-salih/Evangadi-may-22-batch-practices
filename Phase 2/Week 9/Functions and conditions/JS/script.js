@@ -169,19 +169,19 @@ increment(5);
 // console.log(result);
 
 // =====================================================
-console.log("\n ======Question 8=======" ) 
+console.log("\n ======Question 8=======");
 // =====================================================
 // ● Write a function that takes the base and height of a triangle and returns its area.
 // ○ https://edabit.com/challenge/3CaszbdZYGN4otQD8
 
 // step 1; understand
-        // -base & height are given values and want to declare a function which calculates the area of a triangle
+// -base & height are given values and want to declare a function which calculates the area of a triangle
 
 // step 2; write on paper
-        // ex.. if base= 4, height = 6
-        //     area = 4*6/2 =12
+// ex.. if base= 4, height = 6
+//     area = 4*6/2 =12
 // step 3; craft a general step/formula
-        // areaTri = base * height / 2;
+// areaTri = base * height / 2;
 // step 4; pseudocode writing
 
 // -define a function which takes the base and height of a triangle as a parameter
@@ -216,36 +216,36 @@ console.log("\n ======Question 9=======");
 // ○ https://edabit.com/challenge/8Qg78sf5SNDEANKti
 
 // step 1; understand
-          // - 3 animals with specific number of legs for each is given. 
-          // - i want to calculate the total number of legs of the 3 animals with given quantity of the animals .
+// - 3 animals with specific number of legs for each is given.
+// - i want to calculate the total number of legs of the 3 animals with given quantity of the animals .
 // step 2; solve it on paper
-          // - ex if we have 3 chicken, 2 cow, and 8 pigs 
-          //         total number of legs = 3*2 + 2*4 + 8*4 = 6 + 8 + 32 = 46;
+// - ex if we have 3 chicken, 2 cow, and 8 pigs
+//         total number of legs = 3*2 + 2*4 + 8*4 = 6 + 8 + 32 = 46;
 // step 3; craft a general step/formula
-          // totalLegs = 2*chickens + 4*cows + 4*pigs;
+// totalLegs = 2*chickens + 4*cows + 4*pigs;
 // step 4; pseudocode writing
-          // -write a function which takes 3 numbers values as a parameter
-          // -check the arguments are numbers and positive integers(>=0)
-          // -validate is the given values are able to be converted to number
-          // -declare var for each animals
-          // -declare a var "result" which calculates the total legs
-          // -return the result
+// -write a function which takes 3 numbers values as a parameter
+// -check the arguments are numbers and positive integers(>=0)
+// -validate is the given values are able to be converted to number
+// -declare var for each animals
+// -declare a var "result" which calculates the total legs
+// -return the result
 
 // step 5; pseudocode to JS translation
 
-function animalLegs(chicken, cow, pig){
+function animalLegs(chicken, cow, pig) {
   if (isNaN(chicken)) {
     return "please enter quantity of CHICKENS in a positive numerical value!!";
   } else if (isNaN(cow)) {
     return "please enter quantity of COWS in a positive numerical value!!";
   } else if (isNaN(pig)) {
-    return  "please enter quantity of PIGS in a positive numerical value!!";
+    return "please enter quantity of PIGS in a positive numerical value!!";
   } else if (isNaN(chicken) && isNaN(cow) && isNaN(pig)) {
-    return  "please enter quantity of chickens, cows & pigs in a positive numerical value!!";
+    return "please enter quantity of chickens, cows & pigs in a positive numerical value!!";
   }
 
-  if (chicken < 0 || cow < 0 || pig < 0 ) {
-    return  "Quantity of animals cannot be negative; please enter a positive numerical value!!"
+  if (chicken < 0 || cow < 0 || pig < 0) {
+    return "Quantity of animals cannot be negative; please enter a positive numerical value!!";
   }
 
   let totalChickenLegs = chicken * 2;
@@ -269,12 +269,11 @@ function animalLegs(chicken, cow, pig){
 
 console.log(total);
 
-// NOTE 
-      // 1) NO need of converting string of numbers in to Number value b/c it was only need in addition(which    can also utilized for concatenation) but in multiplication there is no concatenation!!
+// NOTE
+// 1) NO need of converting string of numbers in to Number value b/c it was only need in addition(which    can also utilized for concatenation) but in multiplication there is no concatenation!!
+
 // Question;
-      // 1) why the above last test is not working as i expect?????????????????????????????????
-
-
+// 1) why the above last test is not working as i expect?????????????????????????????????
 
 // =============================================================
 console.log("\n ======Question 10=======");
@@ -306,27 +305,6 @@ console.log("\n ======Question 14=======");
 // ○ “Grade A” when score is between 90 and 100 (both 90 and 100 included)
 // ○ “Grade B” when score is between 80 and 89 (both 80 and 89 included)
 // ○ “Grade C” for any score below 79
-
-// Question 7
-// function number(num){
-//    return ++num         // or u can use  return num + 1;
-// }
-// console.log(number(9));
-
-// Question 8
-// function triAngle(base, height){
-//   return base * height/2
-// }
-// console.log(triAngle(4, 6));
-// console.log(triAngle(4, "6"));
-
-// Question 9
-// function totalAnimalLegs(chickens, cows, pigs){
-//   return chickens*2 + cows*4 + pigs*4
-// }
-// console.log(totalAnimalLegs(abebe, 3, 5));
-// console.log(totalAnimalLegs(1, 2, 3));
-// console.log(totalAnimalLegs(5, 2, 8));
 
 // Question 10
 // function arryNumber(ab){
