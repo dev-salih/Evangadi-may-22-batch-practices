@@ -47,14 +47,6 @@ mySecond(c);
 // Question 4
 // ● Write a function named myFourth that takes an array as a parameter and prints only the first
 // value of the array on the console.
-
-function myFourth([a, b]) {
-  console.log(a);
-}
-myFourth([5, 3]);
-
-// OR
-
 function theFourth(arr) {
   console.log(arr[0]);
 }
