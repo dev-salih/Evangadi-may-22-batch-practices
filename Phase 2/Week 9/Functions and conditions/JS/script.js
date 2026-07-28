@@ -47,6 +47,7 @@ mySecond(c);
 // Question 4
 // ● Write a function named myFourth that takes an array as a parameter and prints only the first
 // value of the array on the console.
+
 function theFourth(arr) {
   console.log(arr[0]);
 }
@@ -59,13 +60,6 @@ theFourth([1, 2, 3, 4, 5]);
 function myFifth(arr) {
   let sum = arr[0] + arr[1];
   console.log(sum);
-}
-myFifth([65, 3]);
-
-// OR
-
-function myFifth([a, b]) {
-  console.log(a + b);
 }
 myFifth([65, 3]);
 
