@@ -30,18 +30,19 @@ mySecond("salih");
 // ● Define a function called myThird that takes a parameter and prints the parameter on the
 // console. But, it uses mySecond function to print the parameter on the console
 
-function myThird(b) {
-  return b;
+function myThird(d) {
+  mySecond(d);
 }
-var c = myThird("mohammed");
-mySecond(c);
+myThird("Abebe");
+
 
 // OR
 
-function theThird(d) {
-  mySecond(d);
+function theThird(b) {
+  return b;
 }
-theThird("Abebe");
+var c = theThird("mohammed");
+mySecond(c);
 
 // Question 4
 // ● Write a function named myFourth that takes an array as a parameter and prints only the first
