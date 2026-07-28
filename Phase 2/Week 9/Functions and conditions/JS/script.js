@@ -107,7 +107,10 @@ myFifth([65, 3]);
 // -print the result on console
 
 // step 5; pseudocode to JS translation
-function converter(min) {
+function converter(minute) {
+  let min = Number(minute);
+  // let min = parseInt(minute);
+  // let min = parseFloat(minute);
   if (isNaN(min)) {
     console.log("please enter a number !!");
   } else if (min < 0) {
@@ -117,11 +120,12 @@ function converter(min) {
     console.log(result);
   }
 }
-converter(-9);
+converter(2.2);
 
 // step 6; Test
   // it is working right 
-  //  Question; what if we enter a decimal number???????????
+  //  Question 1; what if we enter a decimal number????????????????????????
+  //  Question 2; how do we change string to number?????????????????????????
 
 
 // =================================================
@@ -130,6 +134,25 @@ converter(-9);
 // ● Create a function that takes a number as a parameter, increments the number by +1 and
 // returns the result.
 // ○ https://edabit.com/challenge/NAQhEoxbofPidLxm9
+
+// step 1; understand
+  
+// step 2; write on paper
+
+// step 3; craft a general step/formula
+
+// step 4; pseudocode writing
+// -define a function which takes a number as a parameter
+// -check the argument is a number
+// -declare a var "result" which multiply minute by 60;
+// -print the result on console
+
+// step 5; pseudocode to JS translation
+function name(params) {
+  
+}
+
+// step 6; Test
 
 
 
@@ -172,3 +195,90 @@ converter(-9);
 // ○ “Grade A” when score is between 90 and 100 (both 90 and 100 included)
 // ○ “Grade B” when score is between 80 and 89 (both 80 and 89 included)
 // ○ “Grade C” for any score below 79
+
+
+
+
+
+
+
+// Question 7
+// function number(num){
+//    return ++num         // or u can use  return num + 1;
+// }
+// console.log(number(9));
+
+
+// Question 8
+// function triAngle(base, height){
+//   return base * height/2
+// } 
+// console.log(triAngle(4, 6));
+// console.log(triAngle(4, "6"));
+
+// Question 9
+// function totalAnimalLegs(chickens, cows, pigs){
+//   return chickens*2 + cows*4 + pigs*4
+// }
+// console.log(totalAnimalLegs(abebe, 3, 5));
+// console.log(totalAnimalLegs(1, 2, 3));
+// console.log(totalAnimalLegs(5, 2, 8));
+
+
+// Question 10
+// function arryNumber(ab){
+//   return ab[0]*3
+// }
+// let sum = arryNumber([10, 7]);
+// console.log(sum);
+
+// Question 11
+// function checkEquality(num1, num2){
+//   return num1 === num2;    // or u can use by using if //if (num1 === num2) {
+// }                                 //          return true;
+// console.log(checkEquality(3,3));    //        } else {
+// console.log(checkEquality (3,"3"));   //     return false; }
+
+// Question 12
+// function divisible (integer){
+//   return integer%100===0      // or u can use if else
+// }
+// console.log(divisible (100));
+// console.log(divisible (450));
+
+
+// ?Question 13
+// function evenOrOdd(a){
+//   if (typeof a !== "number") {
+//     return "Invalid input";
+//   }
+//   if (a%2 ===0){    
+//     return "even"            //return a%2 ===0? "even" : "odd"
+//   } else {
+//     return "odd"
+//   }
+//   }
+//? or
+// function evenOrOdd(a) {
+//   if (typeof a !== "number" || Number.isNaN(a)) {
+//     return "Invalid input";
+//   }
+
+//   return a % 2 === 0 ? "even" : "odd";
+// }
+// console.log(evenOrOdd(10));
+// console.log(evenOrOdd(15));
+// console.log(evenOrOdd("salih"));
+// console.log(evenOrOdd("Helo"));
+
+
+// Question 14
+// function getGrade(score) {
+  //   if (score > 100 || score < 0) {
+    //     return "Invalid score";
+    //   } else if (score >= 90 && score <= 100) {
+      //     return "Grade A";
+      //   } else if (score >= 80 && score <= 89) {
+//     return "Grade B";
+//   } else {
+//     return "Grade C";
