@@ -35,7 +35,6 @@ function myThird(d) {
 }
 myThird("Abebe");
 
-
 // OR
 
 function theThird(b) {
@@ -73,7 +72,6 @@ myFifth([65, 3]);
 // step 5; pseudocode to JS translation
 // step 6; Test
 
-
 // =============================================
 // Question 6
 // ===============
@@ -110,10 +108,9 @@ function converter(minute) {
 converter(2.2);
 
 // step 6; Test
-  // it is working right 
-  //  Question 1; what if we enter a decimal number????????????????????????
-  //  Question 2; how do we change string to number?????????????????????????
-
+// it is working right
+//  Question 1; what if we enter a decimal number????????????????????????
+//  Question 2; how do we change string to number?????????????????????????
 
 // =================================================
 // Question 7
@@ -123,7 +120,7 @@ converter(2.2);
 // ○ https://edabit.com/challenge/NAQhEoxbofPidLxm9
 
 // step 1; understand
-  
+
 // step 2; write on paper
 
 // step 3; craft a general step/formula
@@ -135,13 +132,9 @@ converter(2.2);
 // -print the result on console
 
 // step 5; pseudocode to JS translation
-function name(params) {
-  
-}
+function name(params) {}
 
 // step 6; Test
-
-
 
 // Question 8
 // ● Write a function that takes the base and height of a triangle and returns its area.
@@ -183,23 +176,16 @@ function name(params) {
 // ○ “Grade B” when score is between 80 and 89 (both 80 and 89 included)
 // ○ “Grade C” for any score below 79
 
-
-
-
-
-
-
 // Question 7
 // function number(num){
 //    return ++num         // or u can use  return num + 1;
 // }
 // console.log(number(9));
 
-
 // Question 8
 // function triAngle(base, height){
 //   return base * height/2
-// } 
+// }
 // console.log(triAngle(4, 6));
 // console.log(triAngle(4, "6"));
 
@@ -210,7 +196,6 @@ function name(params) {
 // console.log(totalAnimalLegs(abebe, 3, 5));
 // console.log(totalAnimalLegs(1, 2, 3));
 // console.log(totalAnimalLegs(5, 2, 8));
-
 
 // Question 10
 // function arryNumber(ab){
@@ -233,13 +218,12 @@ function name(params) {
 // console.log(divisible (100));
 // console.log(divisible (450));
 
-
 // ?Question 13
 // function evenOrOdd(a){
 //   if (typeof a !== "number") {
 //     return "Invalid input";
 //   }
-//   if (a%2 ===0){    
+//   if (a%2 ===0){
 //     return "even"            //return a%2 ===0? "even" : "odd"
 //   } else {
 //     return "odd"
@@ -258,14 +242,13 @@ function name(params) {
 // console.log(evenOrOdd("salih"));
 // console.log(evenOrOdd("Helo"));
 
-
 // Question 14
 // function getGrade(score) {
-  //   if (score > 100 || score < 0) {
-    //     return "Invalid score";
-    //   } else if (score >= 90 && score <= 100) {
-      //     return "Grade A";
-      //   } else if (score >= 80 && score <= 89) {
+//   if (score > 100 || score < 0) {
+//     return "Invalid score";
+//   } else if (score >= 90 && score <= 100) {
+//     return "Grade A";
+//   } else if (score >= 80 && score <= 89) {
 //     return "Grade B";
 //   } else {
 //     return "Grade C";
