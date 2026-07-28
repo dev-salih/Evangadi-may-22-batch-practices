@@ -175,7 +175,7 @@ console.log("\n ======Question 8=======" )
 // ○ https://edabit.com/challenge/3CaszbdZYGN4otQD8
 
 // step 1; understand
-        // -base & height are given values and want to declare a function which calculates the are of the triangle
+        // -base & height are given values and want to declare a function which calculates the area of a triangle
 
 // step 2; write on paper
         // ex.. if base= 4, height = 6
@@ -214,6 +214,25 @@ console.log("\n ======Question 9=======");
 // farmer breeds three species (chickens = 2 legs, cows =, 4 legs, pigs = 4 legs). Remember: the
 // farmer wants to know the total number of legs and not the total number of animals.
 // ○ https://edabit.com/challenge/8Qg78sf5SNDEANKti
+
+// step 1; understand
+          - 3 animals with specific number of legs for each is given. 
+          - i want to calculate the total number of legs of the 3 animals with given quantity of the animals .
+// step 2; solve it on paper
+          - ex if we have 3 chicken, 2 cow, and 8 pigs 
+                  total number of legs = 3*2 + 2*4 + 8*4 = 6 + 8 + 32 = 46;
+// step 3; craft a general step/formula
+          totalLegs = 2*chickens + 4*cows + 4*pigs;
+// step 4; pseudocode writing
+          -write a function which takes 3 numbers values as a parameter
+          -check the arguments are numbers and positive integers(>=0)
+          -validate is the given values are able to be coverted to number
+          -declare var for each animals
+          -declare a var "result" which calculates the total legs
+          -return the result
+// step 5; pseudocode to JS translation
+
+// step 6; Test
 
 
 // =============================================================
