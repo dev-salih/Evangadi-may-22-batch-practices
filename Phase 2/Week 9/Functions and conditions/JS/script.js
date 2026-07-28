@@ -216,23 +216,64 @@ console.log("\n ======Question 9=======");
 // ○ https://edabit.com/challenge/8Qg78sf5SNDEANKti
 
 // step 1; understand
-          - 3 animals with specific number of legs for each is given. 
-          - i want to calculate the total number of legs of the 3 animals with given quantity of the animals .
+          // - 3 animals with specific number of legs for each is given. 
+          // - i want to calculate the total number of legs of the 3 animals with given quantity of the animals .
 // step 2; solve it on paper
-          - ex if we have 3 chicken, 2 cow, and 8 pigs 
-                  total number of legs = 3*2 + 2*4 + 8*4 = 6 + 8 + 32 = 46;
+          // - ex if we have 3 chicken, 2 cow, and 8 pigs 
+          //         total number of legs = 3*2 + 2*4 + 8*4 = 6 + 8 + 32 = 46;
 // step 3; craft a general step/formula
-          totalLegs = 2*chickens + 4*cows + 4*pigs;
+          // totalLegs = 2*chickens + 4*cows + 4*pigs;
 // step 4; pseudocode writing
-          -write a function which takes 3 numbers values as a parameter
-          -check the arguments are numbers and positive integers(>=0)
-          -validate is the given values are able to be coverted to number
-          -declare var for each animals
-          -declare a var "result" which calculates the total legs
-          -return the result
+          // -write a function which takes 3 numbers values as a parameter
+          // -check the arguments are numbers and positive integers(>=0)
+          // -validate is the given values are able to be converted to number
+          // -declare var for each animals
+          // -declare a var "result" which calculates the total legs
+          // -return the result
+
 // step 5; pseudocode to JS translation
 
+function animalLegs(chicken, cow, pig){
+  if (isNaN(chicken)) {
+    return "please enter quantity of CHICKENS in a positive numerical value!!";
+  } else if (isNaN(cow)) {
+    return "please enter quantity of COWS in a positive numerical value!!";
+  } else if (isNaN(pig)) {
+    return  "please enter quantity of PIGS in a positive numerical value!!";
+  } else if (isNaN(chicken) && isNaN(cow) && isNaN(pig)) {
+    return  "please enter quantity of chickens, cows & pigs in a positive numerical value!!";
+  }
+
+  if (chicken < 0 || cow < 0 || pig < 0 ) {
+    return  "Quantity of animals cannot be negative; please enter a positive numerical value!!"
+  }
+
+  let totalChickenLegs = chicken * 2;
+  let totalCowLegs = cow * 4;
+  let totalPigLegs = pig * 4;
+  let totalAnimalLegs = totalChickenLegs + totalCowLegs + totalPigLegs;
+
+  return totalAnimalLegs;
+}
+
 // step 6; Test
+// let total = animalLegs(3,2,8); //46
+// let total = animalLegs(-3,2,8); //Quantity of animals cannot be negative; please enter a positive numerical value!!
+// let total = animalLegs(3,-2,8); //Quantity of animals cannot be negative; please enter a positive numerical value!!
+// let total = animalLegs(3,2,-8); //Quantity of animals cannot be negative; please enter a positive numerical value!!
+// let total = animalLegs("3","2",8); //Quantity of animals cannot be negative; please enter a positive numerical value!!
+// let total = animalLegs("hen",2,8); //Quantity of animals cannot be negative; please enter a positive numerical value!!
+// let total = animalLegs(3,"ox",8); //Quantity of animals cannot be negative; please enter a positive numerical value!!
+// let total = animalLegs(3,2,"goat"); //Quantity of animals cannot be negative; please enter a positive numerical value!!
+// let total = animalLegs("hen","ox","goat"); //Quantity of animals cannot be negative; please enter a positive numerical value!!
+
+console.log(total);
+
+// NOTE 
+      // 1) NO need of converting string of numbers in to Number value b/c it was only need in addition(which    can also utilized for concatenation) but in multiplication there is no concatenation!!
+// Question;
+      // 1) why the above last test is not working as i expect?????????????????????????????????
+
 
 
 // =============================================================
