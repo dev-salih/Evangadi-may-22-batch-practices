@@ -193,7 +193,18 @@ console.log("\n ======Question 8=======" )
 // -return its result
 
 // step 5; pseudocode to JS translation
+function areaTri(base, height) {
+  if (isNaN(base) || isNaN(height)) {
+    console.log("please enter a number value!!");
+  } else {
+    let area = (base * height) / 2;
+    return area;
+  }
+}
 
+// step 6; Test
+let triArea = areaTri(3, 20);
+console.log(triArea);
 
 // ======================================================
 console.log("\n ======Question 9=======");
