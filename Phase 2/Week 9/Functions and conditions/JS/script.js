@@ -6,7 +6,7 @@
 
 // Questions on functions
 
-// Question 1
+console.log("\n ======Question 1=======");
 // ● Define a simple function named myFirst that prints the word "Hello" on the console
 // ○ First define the function
 // ○ Then call the function
@@ -16,7 +16,7 @@ function myFirst() {
 }
 myFirst();
 
-// Question 2
+console.log("\n ======Question 2=======");
 // ● Define a function called mySecond that takes a parameter and prints the parameter on
 // console
 // ○ Feel free to give any value as a parameter in your function
@@ -26,7 +26,7 @@ function mySecond(a) {
 }
 mySecond("salih");
 
-// Question 3
+console.log("\n ======Question 3=======");
 // ● Define a function called myThird that takes a parameter and prints the parameter on the
 // console. But, it uses mySecond function to print the parameter on the console
 
@@ -43,7 +43,7 @@ function theThird(b) {
 var c = theThird("mohammed");
 mySecond(c);
 
-// Question 4
+console.log("\n ======Question 4=======");
 // ● Write a function named myFourth that takes an array as a parameter and prints only the first
 // value of the array on the console.
 
@@ -52,7 +52,7 @@ function theFourth(arr) {
 }
 theFourth([1, 2, 3, 4, 5]);
 
-// Question 5
+console.log("\n ======Question 5=======");
 // ● Write a function named myFifth that takes an array with two numbers in it as a parameter and
 // prints the sum of the two numbers on console
 
@@ -73,19 +73,26 @@ myFifth([65, 3]);
 // step 6; Test
 
 // =============================================
-// Question 6
+console.log("\n ======Question 6=======");
 // ===============
 // ● Write a function that takes an integer minutes and converts it to seconds.
 // ○ https://edabit.com/challenge/8q54MKnRrm89pSLmW
 
 // step 1; understand
+
 // 1 minute = 60 second, so i have to multiply the minute by 60 to convert it to seconds;
+
 // step 2; write on paper
+
 // 4 * 60 = 240;
 // 3 * 60 = 180;
+
 // step 3; craft a general step/formula
+
 // second = minute * 60;
+
 // step 4; pseudocode writing
+
 // -define a function which takes an argument(minute)
 // -check the argument is a number and positive integer
 // -declare a var "result" which multiply minute by 60;
@@ -113,7 +120,7 @@ converter(2.2);
 //  Question 2; how do we change string to number?????????????????????????
 
 // =================================================
-// Question 7
+console.log("\n ======Question 7=======");
 // ========================================
 // ● Create a function that takes a number as a parameter, increments the number by +1 and
 // returns the result.
@@ -126,28 +133,81 @@ converter(2.2);
 // step 3; craft a general step/formula
 
 // step 4; pseudocode writing
+
 // -define a function which takes a number as a parameter
+
 // -check the argument is a number
-// -declare a var "result" which multiply minute by 60;
+
+// -declare a var which increments by +1;
+
 // -print the result on console
 
 // step 5; pseudocode to JS translation
-function name(params) {}
+function increment(num) {
+  if (isNaN(num)) {
+    console.log("please enter a number value!!");
+  } else {
+    let number = num + 1;
+    console.log(number);
+  }
+}
 
 // step 6; Test
 
-// Question 8
+increment(5);
+
+// OR
+
+// function increment(num) {
+//   if (isNaN(num)) {
+//     console.log("please enter a number value!!");
+//   } else {
+//     return ++num;
+//   }
+// }
+// let result = increment(7);
+// console.log(result);
+
+// =====================================================
+console.log("\n ======Question 8=======" ) 
+// =====================================================
 // ● Write a function that takes the base and height of a triangle and returns its area.
 // ○ https://edabit.com/challenge/3CaszbdZYGN4otQD8
 
-// Question 9
+// step 1; understand
+        // -base & height are given values and want to declare a function which calculates the are of the triangle
+
+// step 2; write on paper
+        // ex.. if base= 4, height = 6
+        //     area = 4*6/2 =12
+// step 3; craft a general step/formula
+        // areaTri = base * height / 2;
+// step 4; pseudocode writing
+
+// -define a function which takes the base and height of a triangle as a parameter
+
+// -check the argument is a number
+
+// -declare a var = area which which calculates the area of the triangle;
+
+// -return its result
+
+// step 5; pseudocode to JS translation
+
+
+// ======================================================
+console.log("\n ======Question 9=======");
+// ======================================================
 // ● Create a function that returns the total number of legs of all the animals. In this challenge, a
 // farmer is asking you to tell him how many legs can be counted among all his animals. The
 // farmer breeds three species (chickens = 2 legs, cows =, 4 legs, pigs = 4 legs). Remember: the
 // farmer wants to know the total number of legs and not the total number of animals.
 // ○ https://edabit.com/challenge/8Qg78sf5SNDEANKti
 
-// Question 10 (not from edabit.com)
+
+// =============================================================
+console.log("\n ======Question 10=======");
+// =============================================================
 // ● Create a function that takes an array containing only TWO numbers as a parameter and returns
 // a value that is 3 times the first element of the array.
 
@@ -155,21 +215,21 @@ function name(params) {}
 // Questions on Conditional statements and - practice exercise
 // =====================================================================
 
-// Question 11
+console.log("\n ======Question 11=======");
 // ● Create a function that returns true when num1 is equal to num2; otherwise return false.
 // ○ https://edabit.com/challenge/QSnaSH5S3oxZkwcNc
 
-// Question 12
+console.log("\n ======Question 12=======");
 // ● Create a function that takes an integer and returns true if it's divisible by 100, otherwise
 // return false.
 // ○ https://edabit.com/challenge/qMr6wYGr6NaXAPQGF
 
-// Question 13
+console.log("\n ======Question 13=======");
 // ● Create a function that takes a number as an argument and returns "even" for even numbers
 // and "odd" for odd numbers.
 // ○ https://edabit.com/challenge/kuzB5CMXiKDEYKXAP
 
-// Question 14
+console.log("\n ======Question 14=======");
 // ● Create a function that returns
 // ○ “Invalid score” if score is above 100 or score is a negative number
 // ○ “Grade A” when score is between 90 and 100 (both 90 and 100 included)
