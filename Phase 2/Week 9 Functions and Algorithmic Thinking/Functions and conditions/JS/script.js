@@ -264,7 +264,7 @@ function animalLegs(chicken, cow, pig) {
 // let total = animalLegs("3","2",8); //Quantity of animals cannot be negative; please enter a positive numerical value!!
 // let total = animalLegs("hen",2,8); //Quantity of animals cannot be negative; please enter a positive numerical value!!
 // let total = animalLegs(3,"ox",8); //Quantity of animals cannot be negative; please enter a positive numerical value!!
-let total = animalLegs(3,2,"goat"); //Quantity of animals cannot be negative; please enter a positive numerical value!!
+let total = animalLegs(3, 2, "goat"); //Quantity of animals cannot be negative; please enter a positive numerical value!!
 // let total = animalLegs("hen","ox","goat"); //Quantity of animals cannot be negative; please enter a positive numerical value!!
 
 console.log(total);
@@ -285,7 +285,7 @@ function arrayCalc(arr) {
   let e = 3 * arr[0];
   return e;
 }
-let array = arrayCalc([7,5]);
+let array = arrayCalc([7, 5]);
 console.log(array);
 
 // ================================================================
@@ -303,8 +303,7 @@ function equivalence(num1, num2) {
     console.log("False");
   }
 }
-equivalence(4,4);
-
+equivalence(4, 4);
 
 console.log("\n ======Question 12=======");
 // ● Create a function that takes an integer and returns true if it's divisible by 100, otherwise
@@ -320,8 +319,6 @@ function isDivisibleBy100(int) {
 }
 let divisionBy100 = isDivisibleBy100(240);
 console.log(divisionBy100);
-
-
 
 console.log("\n ======Question 13=======");
 // ● Create a function that takes a number as an argument and returns "even" for even numbers
@@ -347,9 +344,7 @@ let evenOdd = checkEvenOdd(7);
 console.log(evenOdd);
 
 // QUESTION;
-  // 1) WHY the last input executed as "please enter integer value!!"?  
-
-
+// 1) WHY the last input executed as "please enter integer value!!"?
 
 console.log("\n ======Question 14=======");
 // ● Create a function that returns
@@ -361,8 +356,8 @@ console.log("\n ======Question 14=======");
 // function scoreGrade(score) {
 //   if (score > 100 || score < 0) {
 //     return "Invalid score";
-//   } else if (90 <= score <= 100) {        
-    // return "Grade A";   
+//   } else if (90 <= score <= 100) {
+//     return "Grade A";
 //   } else if (80 <= score <= 89) {
 //     return "Grade B";
 //   } else if (score <= 79) {
@@ -370,7 +365,6 @@ console.log("\n ======Question 14=======");
 //   }
 // }
 // NOTE; THE above expression(lower num <= score <= higher num) should not be used in JS, b/c it may give us false positive
-
 
 function scoreGrade(score) {
   if (score > 100 || score < 0) {
