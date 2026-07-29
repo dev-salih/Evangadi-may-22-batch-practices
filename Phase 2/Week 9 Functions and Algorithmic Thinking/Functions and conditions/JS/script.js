@@ -264,7 +264,7 @@ function animalLegs(chicken, cow, pig) {
 // let total = animalLegs("3","2",8); //Quantity of animals cannot be negative; please enter a positive numerical value!!
 // let total = animalLegs("hen",2,8); //Quantity of animals cannot be negative; please enter a positive numerical value!!
 // let total = animalLegs(3,"ox",8); //Quantity of animals cannot be negative; please enter a positive numerical value!!
-// let total = animalLegs(3,2,"goat"); //Quantity of animals cannot be negative; please enter a positive numerical value!!
+let total = animalLegs(3,2,"goat"); //Quantity of animals cannot be negative; please enter a positive numerical value!!
 // let total = animalLegs("hen","ox","goat"); //Quantity of animals cannot be negative; please enter a positive numerical value!!
 
 console.log(total);
@@ -281,6 +281,13 @@ console.log("\n ======Question 10=======");
 // ● Create a function that takes an array containing only TWO numbers as a parameter and returns
 // a value that is 3 times the first element of the array.
 
+function arrayCalc(arr) {
+  let e = 3 * arr[0];
+  return e;
+}
+let array = arrayCalc([7,5]);
+console.log(array);
+
 // ================================================================
 // Questions on Conditional statements and - practice exercise
 // =====================================================================
@@ -288,6 +295,8 @@ console.log("\n ======Question 10=======");
 console.log("\n ======Question 11=======");
 // ● Create a function that returns true when num1 is equal to num2; otherwise return false.
 // ○ https://edabit.com/challenge/QSnaSH5S3oxZkwcNc
+
+
 
 console.log("\n ======Question 12=======");
 // ● Create a function that takes an integer and returns true if it's divisible by 100, otherwise
