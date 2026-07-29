@@ -296,6 +296,14 @@ console.log("\n ======Question 11=======");
 // ● Create a function that returns true when num1 is equal to num2; otherwise return false.
 // ○ https://edabit.com/challenge/QSnaSH5S3oxZkwcNc
 
+function equivalence(num1, num2) {
+  if (num1 == num2) {
+    console.log("True");
+  } else {
+    console.log("False");
+  }
+}
+equivalence(4,4);
 
 
 console.log("\n ======Question 12=======");
