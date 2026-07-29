@@ -329,18 +329,26 @@ console.log("\n ======Question 13=======");
 // ○ https://edabit.com/challenge/kuzB5CMXiKDEYKXAP
 
 function checkEvenOdd(num) {
-  if (!Number.isInteger(num)) {
-    return "please enter integer value!!"
+  if (isNaN(num)) {
+    return "Invalid input! please enter numerical value!!";
+  } else if (!Number.isInteger(num)) {
+    return "please enter integer value!!";
   } else if (num % 2 === 0) {
     return "even";
-  } else if(Math.abs(num % 2) == 1) {
+  } else if (Math.abs(num % 2) == 1) {
     return "odd";
   }
 }
-// let evenOdd = checkEvenOdd(7);
+let evenOdd = checkEvenOdd(7);
 // let evenOdd = checkEvenOdd(34);
-let evenOdd = checkEvenOdd(7.6);
+// let evenOdd = checkEvenOdd(7.6);
+// let evenOdd = checkEvenOdd("Hi");
+// let evenOdd = checkEvenOdd("3"); // why ?????????????????
 console.log(evenOdd);
+
+// QUESTION;
+  // 1) WHY the last input executed as "please enter integer value!!"?  
+
 
 
 console.log("\n ======Question 14=======");
@@ -350,26 +358,35 @@ console.log("\n ======Question 14=======");
 // ○ “Grade B” when score is between 80 and 89 (both 80 and 89 included)
 // ○ “Grade C” for any score below 79
 
-
-// function evenOrOdd(a) {
-//   if (typeof a !== "number" || Number.isNaN(a)) {
-//     return "Invalid input";
-//   }
-
-//   return a % 2 === 0 ? "even" : "odd";
-// }
-// console.log(evenOrOdd(10));
-// console.log(evenOrOdd(15));
-// console.log(evenOrOdd("salih"));
-// console.log(evenOrOdd("Helo"));
-
-// Question 14
-// function getGrade(score) {
+// function scoreGrade(score) {
 //   if (score > 100 || score < 0) {
 //     return "Invalid score";
-//   } else if (score >= 90 && score <= 100) {
-//     return "Grade A";
-//   } else if (score >= 80 && score <= 89) {
+//   } else if (90 <= score <= 100) {        
+    // return "Grade A";   
+//   } else if (80 <= score <= 89) {
 //     return "Grade B";
-//   } else {
+//   } else if (score <= 79) {
 //     return "Grade C";
+//   }
+// }
+// NOTE; THE above expression(lower num <= score <= higher num) should not be used in JS, b/c it may give us false positive
+
+
+function scoreGrade(score) {
+  if (score > 100 || score < 0) {
+    return "Invalid score";
+  } else if (score >= 90 && score <= 100) {
+    return "Grade A";
+  } else if (score >= 80 && score <= 89) {
+    return "Grade B";
+  } else {
+    return "Grade C";
+  }
+}
+
+// let grading = scoreGrade(110);
+// let grading = scoreGrade(-12);
+// let grading = scoreGrade(97);
+// let grading = scoreGrade(84);
+let grading = scoreGrade(30);
+console.log(grading);
