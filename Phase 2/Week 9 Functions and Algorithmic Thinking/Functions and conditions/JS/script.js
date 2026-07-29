@@ -311,6 +311,18 @@ console.log("\n ======Question 12=======");
 // return false.
 // ○ https://edabit.com/challenge/qMr6wYGr6NaXAPQGF
 
+function isDivisibleBy100(int) {
+  if (int % 100 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+let divisionBy100 = isDivisibleBy100(240);
+console.log(divisionBy100);
+
+
+
 console.log("\n ======Question 13=======");
 // ● Create a function that takes a number as an argument and returns "even" for even numbers
 // and "odd" for odd numbers.
