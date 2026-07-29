@@ -329,13 +329,17 @@ console.log("\n ======Question 13=======");
 // ○ https://edabit.com/challenge/kuzB5CMXiKDEYKXAP
 
 function checkEvenOdd(num) {
-  if (num % 2 === 0) {
+  if (!Number.isInteger(num)) {
+    return "please enter integer value!!"
+  } else if (num % 2 === 0) {
     return "even";
   } else if(Math.abs(num % 2) == 1) {
     return "odd";
   }
 }
-let evenOdd = checkEvenOdd(7);
+// let evenOdd = checkEvenOdd(7);
+// let evenOdd = checkEvenOdd(34);
+let evenOdd = checkEvenOdd(7.6);
 console.log(evenOdd);
 
 
@@ -346,39 +350,7 @@ console.log("\n ======Question 14=======");
 // ○ “Grade B” when score is between 80 and 89 (both 80 and 89 included)
 // ○ “Grade C” for any score below 79
 
-// Question 10
-// function arryNumber(ab){
-//   return ab[0]*3
-// }
-// let sum = arryNumber([10, 7]);
-// console.log(sum);
 
-// Question 11
-// function checkEquality(num1, num2){
-//   return num1 === num2;    // or u can use by using if //if (num1 === num2) {
-// }                                 //          return true;
-// console.log(checkEquality(3,3));    //        } else {
-// console.log(checkEquality (3,"3"));   //     return false; }
-
-// Question 12
-// function divisible (integer){
-//   return integer%100===0      // or u can use if else
-// }
-// console.log(divisible (100));
-// console.log(divisible (450));
-
-// ?Question 13
-// function evenOrOdd(a){
-//   if (typeof a !== "number") {
-//     return "Invalid input";
-//   }
-//   if (a%2 ===0){
-//     return "even"            //return a%2 ===0? "even" : "odd"
-//   } else {
-//     return "odd"
-//   }
-//   }
-//? or
 // function evenOrOdd(a) {
 //   if (typeof a !== "number" || Number.isNaN(a)) {
 //     return "Invalid input";
