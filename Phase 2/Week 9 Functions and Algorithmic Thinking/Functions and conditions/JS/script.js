@@ -328,6 +328,17 @@ console.log("\n ======Question 13=======");
 // and "odd" for odd numbers.
 // ○ https://edabit.com/challenge/kuzB5CMXiKDEYKXAP
 
+function checkEvenOdd(num) {
+  if (num % 2 === 0) {
+    return "even";
+  } else if(Math.abs(num % 2) == 1) {
+    return "odd";
+  }
+}
+let evenOdd = checkEvenOdd(7);
+console.log(evenOdd);
+
+
 console.log("\n ======Question 14=======");
 // ● Create a function that returns
 // ○ “Invalid score” if score is above 100 or score is a negative number
