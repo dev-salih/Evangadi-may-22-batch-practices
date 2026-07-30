@@ -341,15 +341,15 @@ console.log("\n ======Question 13=======");
 // ○ https://edabit.com/challenge/kuzB5CMXiKDEYKXAP
 
 function checkEvenOdd(num) {
-//   if (typeof num !=='number') {
-//     return "Invalid input! please enter numerical value!!";
-//   } else if (!Number.isInteger(num)) {
-//     return "please enter integer value!!";
-//   } else if (num % 2 === 0) {
-//     return "even";
-//   } 
-//     return "odd";
-// }
+  if (typeof num !=='number') {
+    return "Invalid input! please enter numerical value!!";
+  } else if (!Number.isInteger(num)) {
+    return "please enter integer value!!";
+  } else if (num % 2 === 0) {
+    return "even";
+  } 
+    return "odd";
+}
 // let evenOdd = checkEvenOdd(7);
 // let evenOdd = checkEvenOdd(34);
 // let evenOdd = checkEvenOdd(-7);
