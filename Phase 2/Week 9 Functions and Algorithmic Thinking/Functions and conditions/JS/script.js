@@ -310,13 +310,15 @@ console.log("\n ======Question 11=======");
 // ○ https://edabit.com/challenge/QSnaSH5S3oxZkwcNc
 
 function equivalence(num1, num2) {
-  if (num1 == num2) {
-    console.log("True");
-  } else {
-    console.log("False");
+  if (typeof num1 !=='number' || typeof num2 !=='number') {
+    return "invalid number";
   }
+  return num1 == num2;
 }
-equivalence(4, 4);
+// let equiv = equivalence("4", "4");
+// let equiv = equivalence(4, 4);
+let equiv = equivalence(5, 6);
+console.log(equiv);
 
 console.log("\n ======Question 12=======");
 // ● Create a function that takes an integer and returns true if it's divisible by 100, otherwise
@@ -339,25 +341,25 @@ console.log("\n ======Question 13=======");
 // ○ https://edabit.com/challenge/kuzB5CMXiKDEYKXAP
 
 function checkEvenOdd(num) {
-  if (isNaN(num)) {
-    return "Invalid input! please enter numerical value!!";
-  } else if (!Number.isInteger(num)) {
-    return "please enter integer value!!";
-  } else if (num % 2 === 0) {
-    return "even";
-  } else if (Math.abs(num % 2) == 1) {
-    return "odd";
-  }
-}
-let evenOdd = checkEvenOdd(7);
+//   if (typeof num !=='number') {
+//     return "Invalid input! please enter numerical value!!";
+//   } else if (!Number.isInteger(num)) {
+//     return "please enter integer value!!";
+//   } else if (num % 2 === 0) {
+//     return "even";
+//   } 
+//     return "odd";
+// }
+// let evenOdd = checkEvenOdd(7);
 // let evenOdd = checkEvenOdd(34);
-// let evenOdd = checkEvenOdd(7.6);
+// let evenOdd = checkEvenOdd(-7);
+// let evenOdd = checkEvenOdd(7.8);
 // let evenOdd = checkEvenOdd("Hi");
-// let evenOdd = checkEvenOdd("3"); // why ?????????????????
+let evenOdd = checkEvenOdd("3");
 console.log(evenOdd);
 
 // QUESTION;
-// 1) WHY the last input executed as "please enter integer value!!"?
+// 1) WHY the last input executed as "please enter integer value!!"?      now it is corrected by using "typeof" keyword
 
 console.log("\n ======Question 14=======");
 // ● Create a function that returns
@@ -402,4 +404,4 @@ function scoreGrade(score) {
 let grading = scoreGrade("hello");
 console.log(grading);
 
-// QUESTION; WHY line 392 is still working as number???????????????????????/
+// QUESTION; WHY line 392 is still working as number???????????????????????
