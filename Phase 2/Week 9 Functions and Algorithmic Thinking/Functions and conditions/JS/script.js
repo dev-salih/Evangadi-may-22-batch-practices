@@ -162,11 +162,15 @@ increment(5);
 //   if (isNaN(num)) {
 //     console.log("please enter a number value!!");
 //   } else {
-//     return ++num;
+//     // return ++num;
+//     console.log(++num);
+    
 //   }
 // }
 // let result = increment(7);
-// console.log(result);
+// console.log(result); // terminate
+
+//gec -> run - > memory phase, code execution phase, fn(), result = fn(7), num = undefine, num = 7 , 8-> return
 
 // =====================================================
 console.log("\n ======Question 8=======");
@@ -234,14 +238,15 @@ console.log("\n ======Question 9=======");
 // step 5; pseudocode to JS translation
 
 function animalLegs(chicken, cow, pig) {
+  if (isNaN(chicken) && isNaN(cow) && isNaN(pig)) {
+    return "Quantity of animals cannot be negative; please enter a positive numerical value!!";
+  }
   if (isNaN(chicken)) {
     return "please enter quantity of CHICKENS in a positive numerical value!!";
   } else if (isNaN(cow)) {
     return "please enter quantity of COWS in a positive numerical value!!";
   } else if (isNaN(pig)) {
     return "please enter quantity of PIGS in a positive numerical value!!";
-  } else if (isNaN(chicken) && isNaN(cow) && isNaN(pig)) {
-    return "please enter quantity of chickens, cows & pigs in a positive numerical value!!";
   }
 
   if (chicken < 0 || cow < 0 || pig < 0) {
@@ -264,8 +269,8 @@ function animalLegs(chicken, cow, pig) {
 // let total = animalLegs("3","2",8); //Quantity of animals cannot be negative; please enter a positive numerical value!!
 // let total = animalLegs("hen",2,8); //Quantity of animals cannot be negative; please enter a positive numerical value!!
 // let total = animalLegs(3,"ox",8); //Quantity of animals cannot be negative; please enter a positive numerical value!!
-let total = animalLegs(3, 2, "goat"); //Quantity of animals cannot be negative; please enter a positive numerical value!!
-// let total = animalLegs("hen","ox","goat"); //Quantity of animals cannot be negative; please enter a positive numerical value!!
+// let total = animalLegs(3, 2, "goat"); //Quantity of animals cannot be negative; please enter a positive numerical value!!
+let total = animalLegs("hen","ox","goat"); //Quantity of animals cannot be negative; please enter a positive numerical value!!
 
 console.log(total);
 
@@ -282,10 +287,18 @@ console.log("\n ======Question 10=======");
 // a value that is 3 times the first element of the array.
 
 function arrayCalc(arr) {
+  if (!Array.isArray(arr)) {
+    return "please enter array value!!";
+  }
+  if (arr.length !== 2) {
+    return "check the array contains two values";
+  }
   let e = 3 * arr[0];
   return e;
 }
 let array = arrayCalc([7, 5]);
+// let array = arrayCalc(7,5);
+// let array = arrayCalc([7, 5, 4]);
 console.log(array);
 
 // ================================================================
