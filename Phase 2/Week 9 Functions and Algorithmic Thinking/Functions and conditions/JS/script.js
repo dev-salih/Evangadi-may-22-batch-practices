@@ -384,7 +384,7 @@ console.log("\n ======Question 14=======");
 function scoreGrade(score) {
   if (score > 100 || score < 0) {
     return "Invalid input!";
-  } else if (isNaN(score)) {
+  } else if (typeof score !== "number") {
     return "እባክዎ ቁጥር ያስገቡ።";
   } else if (score >= 90 && score <= 100) {
     return "Grade A";
@@ -400,8 +400,8 @@ function scoreGrade(score) {
 // let grading = scoreGrade(97);
 // let grading = scoreGrade(84);
 // let grading = scoreGrade(30);
-// let grading = scoreGrade("88");
-let grading = scoreGrade("hello");
+let grading = scoreGrade("88");
+// let grading = scoreGrade("hello");
 console.log(grading);
 
-// QUESTION; WHY line 392 is still working as number???????????????????????
+// QUESTION; WHY line 392 is still working as number?????   the problem was.. isNaN converts by default the "88" in to 88 first the if statement becomes false, so !executed. but corrected by using typeof.
