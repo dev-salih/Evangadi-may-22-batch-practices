@@ -1,7 +1,11 @@
 // Decision loop and  object oriented programming:
 // practice exercises
+
+
 // Questions on decision loops
 // ************************
+
+
 console.log("\n =============Question 1==========="); 
 // ● Write a function that prints the first 10 integers on the console starting from the number 1 using
 // the JavaScript for loop.
@@ -14,7 +18,9 @@ function questionOne() {
 
 questionOne();
 
-// Question 2
+
+
+console.log("\n =============Question 2==========="); 
 // ● Write a function that takes a single number as an argument and prints the next 5 numbers in the
 // console. Note: each output should be displayed on a new line.
 // ○ Test case: If you give 7 to the function, output should look like this:
@@ -24,7 +30,17 @@ questionOne();
 // 11
 // 12
 
-// Question 3
+function questionTwo(num) {
+  for (let i = 1; i <= 5; i++) {
+    console.log(num + i);
+  }
+}
+
+questionTwo(7);
+
+
+
+console.log("\n =============Question 3==========="); 
 // ● Write a function that takes a single number and prints the sum of the next 10 numbers after the
 // given number.
 // ○ Testcase: If you give 7 to the function,out put should be:125-because(8+9+10+
