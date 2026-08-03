@@ -1,0 +1,144 @@
+// Decision loop and  object oriented programming:
+// practice exercises
+// Questions on decision loops
+// ************************
+// Question 1
+// ● Write a function that prints the first 10 integers on the console starting from the number 1 using
+// the JavaScript for loop.
+
+
+// Question 2
+// ● Writeafunctionthat takesasinglenumberasanargumentandprintsthenext5numbersinthe
+// console. Note: each output should be displayed on a new line.
+// ○ Test case: If you give 7 to the function, output should look like this:
+// 8
+// 9
+// 10
+// 11
+// 12
+// Question 3
+// ● Writeafunctionthat takesasinglenumberandprintsthesumof thenext10numbersafterthe
+// given number.
+// ○ Testcase: Ifyougive7tothefunction,outputshouldbe:125-because(8+9+10+
+// 11+  12+  13+  14+  15+  16+  17 = 125)
+// Question 4
+// ● Writeafunctionthat takesanarrayasanargumentandprintseveryelementofthearrayonthe
+// console.
+// ○ Test case: given the array a = [1, "Hello", 8, 44],  output should look like this:
+// 1
+// Hello
+// 8
+// 44
+// Question 5
+// ● Write a function that takes anarrayasanargument andprints the totalnumberofelements
+// found in the array.Hint: use a property of the Arrayobject to solve this question.
+// ○ Test case 1: Given the array a = [1, "Hello", 8, 44], output should be: 4
+// ○ Test case 2: Given the array a = ["world", 13], output should be: 2
+// Question 6
+// ● Writeafunctionthattakesanarrayofnumbersasaparameterandlogsintheconsolethesumof
+// all the numbers in the array.
+// ○ Test case1: Ifyougive thisarray, [5, 6, 99, 8, 76, 4, 68, 44], tothefunction,output
+// should be: 310 because 5 + 6 + 99 + 8 + 76 + 4 + 68 + 44
+// ○ Testcase2:Ifyougivethisarray,[3,0],tothefunction,outputshouldbe: 3 because
+// 3 + 0
+// Question 7
+// ● Writeafunctionthat takesanarrayofallnumbersasaparameter,subtractsthetotalsumofall
+// oddnumbers of the array fromthe total sumofall evennumbersandlogs theresult inthe
+// console.
+// ○ Test case: Ifyougivethese array, [5,6,99,8,76,4,68,44], tothefunction, output
+// should be:   102
+// ■ Sum of odd numbers: 5 + 99 =  104
+// ■ Sum of even numbers: 6 + 8 + 76 + 4 + 68 + 44 =  206
+// ■ Difference between total even and total odd numbers: 206 - 104 = 102
+// Question  8
+// ● Writeafunctionthattakesanarrayasaparameterandlogsintheconsoletheelementsthathave
+// evenindexesonly.Notice: thisquestionisnotaskingyoutologelementswithevenvalue,but
+// elements that are located on even indexes)
+// ○ Test case1: Ifyougive thisarraytothefunction[5, 6, 99, 8,76,4,68,44], toutput
+// should be:
+// 5
+// 99
+// 76
+// 68
+// ○ Testcase2: Ifyougivethisarraytothefunction[11,“Sam”,3,7,“car”], outputshould
+// be:
+// 11
+// 3
+// car
+// Questions on built in JavaScript methods
+// ***********************************
+// Questions 9 and 10 are dependent on the sampleArray provided below:
+// let sampleArray = [5, 6, 99, 8, 76, 4, 68, 44];
+// Question 9
+// Writeafunctionthat takes thesampleArrayasaparameter, removes the lastelement fromthearray,
+// adds a new value of "32" to the array and prints the new array on the console.Hint: use an array method
+// Question 10
+// ● Write a function that takes the sampleArray as an argument, sorts the array in ascending order
+// and prints the sorted array on the console
+// // Use the sort method. Make sure you understand just using the sort() method alphabetically.
+// You should use this sorting syntax -  sort(function(a, b){return a-b});
+// Questions on JavaScript objects
+// ****************************
+// The questions below ( questions 11 to 14) are based on the "evangadiClass" object provided below.
+// let evangadiClass = {
+// lengthOfCourse: "1 Month",
+// website: "https://www.evangadi.com/",
+// isChallenging: false,
+// topicsCovered: ["HTML", "CSS", "Media Query", "JavaScript"],
+// students: [
+// {
+// },
+// {
+// },
+// {
+// },
+// {
+// },
+// {
+// }
+// ]
+// name: "Abebe",
+// age: 34,
+// sex: "M"
+// name: "Kebede",
+// age: 44,
+// sex: "M"
+// name: "Almaz",
+// age: 27,
+// sex: "F"
+// name: "Challa",
+// age: 22,
+// sex: "M"
+// name: "Chaltu",
+// age: 19,
+// sex: "F"
+// }
+// Question 11
+// ● Change the lengthOfCourse property of the object to "5 Month" and print the new object on the
+// console
+// ○ // Use the dot notation "." to call the property you want to change
+// Question 12
+// ● Add "Bootstrap" at the end of the topicsCovered property and print the new object on the
+// console
+// ○ // Use an array method
+// Question 13
+// ● Write a function that takes the "evangadiClass" object as an argument and calculates the average
+// age of the class. Print the result on the console
+// Question 14
+// ● Write a function that takes the "evangadiClass" object as an argument and calculates the
+// percentage of male students in the class. Print the result on the console
+// Puzzles
+// *******
+// Question 15: Test the divisors of three
+// ● Write a function that takes 2 parameters: a low and high number. Your goal is to print all
+// numbers (on the console) between low and high, and for each of these numbers print
+// whether or not the number is divisible by 3. If the number is divisible by 3, print the word
+// "div3" directly after the number.
+// Question 16: The famous coding interview question (FizzBuzz)
+// ● Write a function that prints in the console the numbers from 1 to 100. But for multiples of
+// three print “Fizz” instead of the number and for the multiples of five print “Buzz” and for
+// numbers which are multiples of both three and five print "FizzBuzz".
+// Question 19: Evens number
+// ● An Evens number is an integer whose digits are all even. For example 2426 is an Evens
+// number but 3224 is not. Write a function named isEvens that prints on the console 1 if its
+// integer argument is an Evens number. The function prints 0 otherwise.
