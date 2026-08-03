@@ -2,13 +2,20 @@
 // practice exercises
 // Questions on decision loops
 // ************************
-// Question 1
+console.log("\n =============Question 1==========="); 
 // ● Write a function that prints the first 10 integers on the console starting from the number 1 using
 // the JavaScript for loop.
 
+function questionOne() {
+  for (let i = 1; i <= 10; i++) {
+    console.log(i);
+  }
+}
+
+questionOne();
 
 // Question 2
-// ● Writeafunctionthat takesasinglenumberasanargumentandprintsthenext5numbersinthe
+// ● Write a function that takes a single number as an argument and prints the next 5 numbers in the
 // console. Note: each output should be displayed on a new line.
 // ○ Test case: If you give 7 to the function, output should look like this:
 // 8
@@ -16,10 +23,11 @@
 // 10
 // 11
 // 12
+
 // Question 3
-// ● Writeafunctionthat takesasinglenumberandprintsthesumof thenext10numbersafterthe
+// ● Write a function that takes a single number and prints the sum of the next 10 numbers after the
 // given number.
-// ○ Testcase: Ifyougive7tothefunction,outputshouldbe:125-because(8+9+10+
+// ○ Testcase: If you give 7 to the function,out put should be:125-because(8+9+10+
 // 11+  12+  13+  14+  15+  16+  17 = 125)
 // Question 4
 // ● Writeafunctionthat takesanarrayasanargumentandprintseveryelementofthearrayonthe
