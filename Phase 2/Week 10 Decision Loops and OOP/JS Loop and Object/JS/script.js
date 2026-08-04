@@ -1,12 +1,10 @@
 // Decision loop and  object oriented programming:
 // practice exercises
 
-
 // Questions on decision loops
 // ************************
 
-
-console.log("\n =============Question 1==========="); 
+console.log("\n =============Question 1===========");
 // ● Write a function that prints the first 10 integers on the console starting from the number 1 using
 // the JavaScript for loop.
 
@@ -18,9 +16,7 @@ function questionOne() {
 
 questionOne();
 
-
-
-console.log("\n =============Question 2==========="); 
+console.log("\n =============Question 2===========");
 // ● Write a function that takes a single number as an argument and prints the next 5 numbers in the
 // console. Note: each output should be displayed on a new line.
 // ○ Test case: If you give 7 to the function, output should look like this:
@@ -38,9 +34,7 @@ function questionTwo(num) {
 
 questionTwo(7);
 
-
-
-console.log("\n =============Question 3==========="); 
+console.log("\n =============Question 3===========");
 // ● Write a function that takes a single number and prints the sum of the next 10 numbers after the
 // given number.
 // ○ Testcase: If you give 7 to the function,out put should be:125-because(8+9+10+
@@ -68,9 +62,9 @@ console.log("\n =============Question 4===========");
 // 44
 
 function questionFour(arr) {
-    for (let i = 0; i < arr.length; i++) {
-        console.log(arr[i]);
-    }
+  for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+  }
 }
 
 questionFour([1, "Hello", 8, 44]);
@@ -110,14 +104,32 @@ questionSix([5, 6, 99, 8, 76, 4, 68, 44]);
 questionSix([3, 0]);
 
 console.log("\n =============Question 7===========");
-// ● Writeafunctionthat takesanarrayofallnumbersasaparameter,subtractsthetotalsumofall
-// oddnumbers of the array fromthe total sumofall evennumbersandlogs theresult inthe
+// ● Write a function that takes an array of all numbers as a parameter,subtracts the total sum of all
+// odd numbers of the array from the total sum of all even numbers and logs the result in the
 // console.
-// ○ Test case: Ifyougivethese array, [5,6,99,8,76,4,68,44], tothefunction, output
+// ○ Test case: If you give these array, [5,6,99,8,76,4,68,44], to the function, output
 // should be:   102
 // ■ Sum of odd numbers: 5 + 99 =  104
 // ■ Sum of even numbers: 6 + 8 + 76 + 4 + 68 + 44 =  206
 // ■ Difference between total even and total odd numbers: 206 - 104 = 102
+
+function questionSeven(arr) {
+  let evenSum = 0;
+  let oddSum = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      evenSum += arr[i];
+    } else {
+      oddSum += arr[i];
+    }
+  }
+
+  console.log(evenSum - oddSum);
+}
+
+questionSeven([5, 6, 99, 8, 76, 4, 68, 44]);
+
 console.log("\n =============Question 8===========");
 // ● Writeafunctionthattakesanarrayasaparameterandlogsintheconsoletheelementsthathave
 // evenindexesonly.Notice: thisquestionisnotaskingyoutologelementswithevenvalue,but
@@ -137,6 +149,17 @@ console.log("\n =============Question 8===========");
 // ***********************************
 // Questions 9 and 10 are dependent on the sampleArray provided below:
 // let sampleArray = [5, 6, 99, 8, 76, 4, 68, 44];
+
+function questionEight(arr) {
+  for (let i = 0; i < arr.length; i += 2) {
+    console.log(arr[i]);
+  }
+}
+
+questionEight([5, 6, 99, 8, 76, 4, 68, 44]);
+
+questionEight([11, "Sam", 3, 7, "car"]);
+
 console.log("\n =============Question 9===========");
 // Writeafunctionthat takes thesampleArrayasaparameter, removes the lastelement fromthearray,
 // adds a new value of "32" to the array and prints the new array on the console.Hint: use an array method
@@ -182,14 +205,10 @@ console.log("\n =============Question 10===========");
 // sex: "F"
 // }
 
-
-
 console.log("\n =============Question 11===========");
 // ● Change the lengthOfCourse property of the object to "5 Month" and print the new object on the
 // console
 // ○ // Use the dot notation "." to call the property you want to change
-
-
 
 console.log("\n =============Question 12===========");
 // ● Add "Bootstrap" at the end of the topicsCovered property and print the new object on the
