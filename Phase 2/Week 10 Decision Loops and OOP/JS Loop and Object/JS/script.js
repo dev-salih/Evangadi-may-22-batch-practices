@@ -67,7 +67,12 @@ console.log("\n =============Question 4===========");
 // 8
 // 44
 
+function questionFour(arr) {
+  console.log(arr.length);
+}
 
+questionFour([1, "Hello", 8, 44]);
+questionFour(["world", 13]);
 
 console.log("\n =============Question 5===========");
 // ● Write a function that takes anarrayasanargument andprints the totalnumberofelements
