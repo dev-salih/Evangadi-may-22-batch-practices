@@ -68,17 +68,26 @@ console.log("\n =============Question 4===========");
 // 44
 
 function questionFour(arr) {
-  console.log(arr.length);
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+    }
 }
 
 questionFour([1, "Hello", 8, 44]);
-questionFour(["world", 13]);
 
 console.log("\n =============Question 5===========");
 // ● Write a function that takes anarrayasanargument andprints the totalnumberofelements
 // found in the array.Hint: use a property of the Arrayobject to solve this question.
 // ○ Test case 1: Given the array a = [1, "Hello", 8, 44], output should be: 4
 // ○ Test case 2: Given the array a = ["world", 13], output should be: 2
+
+function questionFive(arr) {
+  console.log(arr.length);
+}
+
+questionFive([1, "Hello", 8, 44]);
+questionFive(["world", 13]);
+
 console.log("\n =============Question 6===========");
 // ● Writeafunctionthattakesanarrayofnumbersasaparameterandlogsintheconsolethesumof
 // all the numbers in the array.
@@ -87,7 +96,18 @@ console.log("\n =============Question 6===========");
 // ○ Testcase2:Ifyougivethisarray,[3,0],tothefunction,outputshouldbe: 3 because
 // 3 + 0
 
+function questionSix(arr) {
+  let sum = 0;
 
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+
+  console.log(sum);
+}
+
+questionSix([5, 6, 99, 8, 76, 4, 68, 44]);
+questionSix([3, 0]);
 
 console.log("\n =============Question 7===========");
 // ● Writeafunctionthat takesanarrayofallnumbersasaparameter,subtractsthetotalsumofall
