@@ -45,27 +45,46 @@ console.log("\n =============Question 3===========");
 // given number.
 // ○ Testcase: If you give 7 to the function,out put should be:125-because(8+9+10+
 // 11+  12+  13+  14+  15+  16+  17 = 125)
-// Question 4
-// ● Writeafunctionthat takesanarrayasanargumentandprintseveryelementofthearrayonthe
+
+function questionThree(num) {
+  let sum = 0;
+
+  for (let i = 1; i <= 10; i++) {
+    sum += num + i;
+  }
+
+  console.log(sum);
+}
+
+questionThree(7);
+
+console.log("\n =============Question 4===========");
+// ● Write a function that takes an array as an argument and prints every element of the  array on the
 // console.
 // ○ Test case: given the array a = [1, "Hello", 8, 44],  output should look like this:
 // 1
 // Hello
 // 8
 // 44
-// Question 5
+
+
+
+console.log("\n =============Question 5===========");
 // ● Write a function that takes anarrayasanargument andprints the totalnumberofelements
 // found in the array.Hint: use a property of the Arrayobject to solve this question.
 // ○ Test case 1: Given the array a = [1, "Hello", 8, 44], output should be: 4
 // ○ Test case 2: Given the array a = ["world", 13], output should be: 2
-// Question 6
+console.log("\n =============Question 6===========");
 // ● Writeafunctionthattakesanarrayofnumbersasaparameterandlogsintheconsolethesumof
 // all the numbers in the array.
 // ○ Test case1: Ifyougive thisarray, [5, 6, 99, 8, 76, 4, 68, 44], tothefunction,output
 // should be: 310 because 5 + 6 + 99 + 8 + 76 + 4 + 68 + 44
 // ○ Testcase2:Ifyougivethisarray,[3,0],tothefunction,outputshouldbe: 3 because
 // 3 + 0
-// Question 7
+
+
+
+console.log("\n =============Question 7===========");
 // ● Writeafunctionthat takesanarrayofallnumbersasaparameter,subtractsthetotalsumofall
 // oddnumbers of the array fromthe total sumofall evennumbersandlogs theresult inthe
 // console.
@@ -74,7 +93,7 @@ console.log("\n =============Question 3===========");
 // ■ Sum of odd numbers: 5 + 99 =  104
 // ■ Sum of even numbers: 6 + 8 + 76 + 4 + 68 + 44 =  206
 // ■ Difference between total even and total odd numbers: 206 - 104 = 102
-// Question  8
+console.log("\n =============Question 8===========");
 // ● Writeafunctionthattakesanarrayasaparameterandlogsintheconsoletheelementsthathave
 // evenindexesonly.Notice: thisquestionisnotaskingyoutologelementswithevenvalue,but
 // elements that are located on even indexes)
@@ -93,10 +112,10 @@ console.log("\n =============Question 3===========");
 // ***********************************
 // Questions 9 and 10 are dependent on the sampleArray provided below:
 // let sampleArray = [5, 6, 99, 8, 76, 4, 68, 44];
-// Question 9
+console.log("\n =============Question 9===========");
 // Writeafunctionthat takes thesampleArrayasaparameter, removes the lastelement fromthearray,
 // adds a new value of "32" to the array and prints the new array on the console.Hint: use an array method
-// Question 10
+console.log("\n =============Question 10===========");
 // ● Write a function that takes the sampleArray as an argument, sorts the array in ascending order
 // and prints the sorted array on the console
 // // Use the sort method. Make sure you understand just using the sort() method alphabetically.
@@ -137,32 +156,41 @@ console.log("\n =============Question 3===========");
 // age: 19,
 // sex: "F"
 // }
-// Question 11
+
+
+
+console.log("\n =============Question 11===========");
 // ● Change the lengthOfCourse property of the object to "5 Month" and print the new object on the
 // console
 // ○ // Use the dot notation "." to call the property you want to change
-// Question 12
+
+
+
+console.log("\n =============Question 12===========");
 // ● Add "Bootstrap" at the end of the topicsCovered property and print the new object on the
 // console
 // ○ // Use an array method
-// Question 13
+console.log("\n =============Question 13===========");
 // ● Write a function that takes the "evangadiClass" object as an argument and calculates the average
 // age of the class. Print the result on the console
-// Question 14
+console.log("\n =============Question 14===========");
 // ● Write a function that takes the "evangadiClass" object as an argument and calculates the
 // percentage of male students in the class. Print the result on the console
 // Puzzles
 // *******
-// Question 15: Test the divisors of three
+console.log("\n =============Question 15===========");
+// Test the divisors of three
 // ● Write a function that takes 2 parameters: a low and high number. Your goal is to print all
 // numbers (on the console) between low and high, and for each of these numbers print
 // whether or not the number is divisible by 3. If the number is divisible by 3, print the word
 // "div3" directly after the number.
-// Question 16: The famous coding interview question (FizzBuzz)
+console.log("\n =============Question 16===========");
+// The famous coding interview question (FizzBuzz)
 // ● Write a function that prints in the console the numbers from 1 to 100. But for multiples of
 // three print “Fizz” instead of the number and for the multiples of five print “Buzz” and for
 // numbers which are multiples of both three and five print "FizzBuzz".
-// Question 19: Evens number
+console.log("\n =============Question 17===========");
+// Evens number
 // ● An Evens number is an integer whose digits are all even. For example 2426 is an Evens
 // number but 3224 is not. Write a function named isEvens that prints on the console 1 if its
 // integer argument is an Evens number. The function prints 0 otherwise.
