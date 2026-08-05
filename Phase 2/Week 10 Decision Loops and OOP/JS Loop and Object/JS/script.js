@@ -163,6 +163,19 @@ questionEight([11, "Sam", 3, 7, "car"]);
 console.log("\n =============Question 9===========");
 // Writeafunctionthat takes thesampleArrayasaparameter, removes the lastelement fromthearray,
 // adds a new value of "32" to the array and prints the new array on the console.Hint: use an array method
+
+let sampleArray = [5, 6, 99, 8, 76, 4, 68, 44];
+
+function questionNine(arr) {
+  arr.pop();
+
+  arr.push(32);
+
+  console.log(arr);
+}
+
+questionNine(sampleArray);
+
 console.log("\n =============Question 10===========");
 // ● Write a function that takes the sampleArray as an argument, sorts the array in ascending order
 // and prints the sorted array on the console
