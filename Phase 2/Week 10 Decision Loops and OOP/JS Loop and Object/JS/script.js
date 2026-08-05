@@ -226,6 +226,13 @@ console.log("\n =============Question 12===========");
 // ● Add "Bootstrap" at the end of the topicsCovered property and print the new object on the
 // console
 // ○ // Use an array method
+
+evangadiClass.topicsCovered.push("Bootstrap");
+
+console.log(evangadiClass.topicsCovered);
+
+
+
 console.log("\n =============Question 13===========");
 // ● Write a function that takes the "evangadiClass" object as an argument and calculates the average
 // age of the class. Print the result on the console
