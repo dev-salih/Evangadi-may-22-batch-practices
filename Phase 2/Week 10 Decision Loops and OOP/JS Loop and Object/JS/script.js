@@ -255,6 +255,24 @@ averageAge(evangadiClass);
 console.log("\n =============Question 14===========");
 // ● Write a function that takes the "evangadiClass" object as an argument and calculates the
 // percentage of male students in the class. Print the result on the console
+
+function malePercentage(obj) {
+  let maleCount = 0;
+
+  for (let i = 0; i < obj.students.length; i++) {
+    if (obj.students[i].sex === "M") {
+      maleCount++;
+    }
+  }
+
+  let percentage = (maleCount / obj.students.length) * 100;
+
+  console.log(percentage + "%");
+}
+
+malePercentage(evangadiClass);
+
+
 // Puzzles
 // *******
 console.log("\n =============Question 15===========");
