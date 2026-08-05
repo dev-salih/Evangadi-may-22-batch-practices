@@ -176,16 +176,13 @@ function questionNine(arr) {
 
 questionNine(sampleArray);
 
-
-
 console.log("\n =============Question 10===========");
 // ● Write a function that takes the sampleArray as an argument, sorts the array in ascending order
 // and prints the sorted array on the console
 // Use the sort method. Make sure you understand just using the sort() method alphabetically.
 // You should use this sorting syntax -  sort(function(a, b){return a-b});
 
-
-let sampleArray = [5, 6, 99, 8, 76, 4, 68, 44];
+let sampleArray2 = [5, 6, 99, 8, 76, 4, 68, 44];
 
 function questionTen(arr) {
   arr.sort(function (a, b) {
@@ -197,48 +194,33 @@ function questionTen(arr) {
 
 questionTen(sampleArray);
 
-
 // Questions on JavaScript objects
 // ****************************
 // The questions below ( questions 11 to 14) are based on the "evangadiClass" object provided below.
-// let evangadiClass = {
-// lengthOfCourse: "1 Month",
-// website: "https://www.evangadi.com/",
-// isChallenging: false,
-// topicsCovered: ["HTML", "CSS", "Media Query", "JavaScript"],
-// students: [
-// {
-// },
-// {
-// },
-// {
-// },
-// {
-// },
-// {
-// }
-// ]
-// name: "Abebe",
-// age: 34,
-// sex: "M"
-// name: "Kebede",
-// age: 44,
-// sex: "M"
-// name: "Almaz",
-// age: 27,
-// sex: "F"
-// name: "Challa",
-// age: 22,
-// sex: "M"
-// name: "Chaltu",
-// age: 19,
-// sex: "F"
-// }
+
+
+let evangadiClass = {
+  lengthOfCourse: "1 Month",
+  website: "https://www.evangadi.com/",
+  isChallenging: false,
+  topicsCovered: ["HTML", "CSS", "Media Query", "JavaScript"],
+  students: [
+    { name: "Abebe", age: 34, sex: "M" },
+    { name: "Kebede", age: 44, sex: "M" },
+    { name: "Almaz", age: 27, sex: "F" },
+    { name: "Challa", age: 22, sex: "M" },
+    { name: "Chaltu", age: 19, sex: "F" },
+  ],
+};
 
 console.log("\n =============Question 11===========");
 // ● Change the lengthOfCourse property of the object to "5 Month" and print the new object on the
 // console
 // ○ // Use the dot notation "." to call the property you want to change
+
+evangadiClass.lengthOfCourse = "5 Month";
+
+console.log(evangadiClass.lengthOfCourse);
 
 console.log("\n =============Question 12===========");
 // ● Add "Bootstrap" at the end of the topicsCovered property and print the new object on the
