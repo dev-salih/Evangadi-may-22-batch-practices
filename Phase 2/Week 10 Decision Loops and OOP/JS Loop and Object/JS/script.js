@@ -198,7 +198,6 @@ questionTen(sampleArray);
 // ****************************
 // The questions below ( questions 11 to 14) are based on the "evangadiClass" object provided below.
 
-
 let evangadiClass = {
   lengthOfCourse: "1 Month",
   website: "https://www.evangadi.com/",
@@ -231,8 +230,6 @@ evangadiClass.topicsCovered.push("Bootstrap");
 
 console.log(evangadiClass.topicsCovered);
 
-
-
 console.log("\n =============Question 13===========");
 // ● Write a function that takes the "evangadiClass" object as an argument and calculates the average
 // age of the class. Print the result on the console
@@ -250,7 +247,6 @@ function averageAge(obj) {
 }
 
 averageAge(evangadiClass);
-
 
 console.log("\n =============Question 14===========");
 // ● Write a function that takes the "evangadiClass" object as an argument and calculates the
@@ -272,7 +268,6 @@ function malePercentage(obj) {
 
 malePercentage(evangadiClass);
 
-
 // Puzzles
 // *******
 console.log("\n =============Question 15===========");
@@ -281,13 +276,61 @@ console.log("\n =============Question 15===========");
 // numbers (on the console) between low and high, and for each of these numbers print
 // whether or not the number is divisible by 3. If the number is divisible by 3, print the word
 // "div3" directly after the number.
+
+function divisorsOfThree(low, high) {
+  for (let i = low; i <= high; i++) {
+    if (i % 3 === 0) {
+      console.log(i + " div3");
+    } else {
+      console.log(i);
+    }
+  }
+}
+
+divisorsOfThree(1, 10);
+
 console.log("\n =============Question 16===========");
 // The famous coding interview question (FizzBuzz)
 // ● Write a function that prints in the console the numbers from 1 to 100. But for multiples of
 // three print “Fizz” instead of the number and for the multiples of five print “Buzz” and for
 // numbers which are multiples of both three and five print "FizzBuzz".
+
+function fizzBuzz() {
+  for (let i = 1; i <= 100; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log("FizzBuzz");
+    } else if (i % 3 === 0) {
+      console.log("Fizz");
+    } else if (i % 5 === 0) {
+      console.log("Buzz");
+    } else {
+      console.log(i);
+    }
+  }
+}
+
+fizzBuzz();
+
 console.log("\n =============Question 17===========");
 // Evens number
 // ● An Evens number is an integer whose digits are all even. For example 2426 is an Evens
 // number but 3224 is not. Write a function named isEvens that prints on the console 1 if its
 // integer argument is an Evens number. The function prints 0 otherwise.
+
+function isEvens(number) {
+  let numString = number.toString();
+
+  for (let i = 0; i < numString.length; i++) {
+    let digit = Number(numString[i]);
+
+    if (digit % 2 !== 0) {
+      console.log(0);
+      return;
+    }
+  }
+
+  console.log(1);
+}
+
+isEvens(2426);
+isEvens(3224);
