@@ -236,6 +236,22 @@ console.log(evangadiClass.topicsCovered);
 console.log("\n =============Question 13===========");
 // ● Write a function that takes the "evangadiClass" object as an argument and calculates the average
 // age of the class. Print the result on the console
+
+function averageAge(obj) {
+  let totalAge = 0;
+
+  for (let i = 0; i < obj.students.length; i++) {
+    totalAge += obj.students[i].age;
+  }
+
+  let average = totalAge / obj.students.length;
+
+  console.log(average);
+}
+
+averageAge(evangadiClass);
+
+
 console.log("\n =============Question 14===========");
 // ● Write a function that takes the "evangadiClass" object as an argument and calculates the
 // percentage of male students in the class. Print the result on the console
