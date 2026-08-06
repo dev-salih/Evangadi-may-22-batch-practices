@@ -151,17 +151,22 @@ console.log("\n =============Question 8===========");
 // let sampleArray = [5, 6, 99, 8, 76, 4, 68, 44];
 
 function questionEight(arr) {
+  if (!Array.isArray(arr)) {
+    console.log("please provide an array!")
+    return;
+  }
   for (let i = 0; i < arr.length; i += 2) {
     console.log(arr[i]);
   }
 }
 
 questionEight([5, 6, 99, 8, 76, 4, 68, 44]);
+// questionEight([11, "Sam", 3, 7, "car"]);
+// questionEight(9,8);
 
-questionEight([11, "Sam", 3, 7, "car"]);
 
 console.log("\n =============Question 9===========");
-// Writeafunctionthat takes thesampleArrayasaparameter, removes the lastelement fromthearray,
+// Write a function that takes the sample Array as a parameter, removes the last element from the array,
 // adds a new value of "32" to the array and prints the new array on the console.Hint: use an array method
 
 let sampleArray = [5, 6, 99, 8, 76, 4, 68, 44];
