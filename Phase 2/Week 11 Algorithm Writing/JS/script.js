@@ -105,3 +105,16 @@
 //         return hiddenWord;
 
 
+// js code
+function detectWord(a) {
+  var hiddenWord = "";
+  for (i = 0; i < a.length; i++) {
+    var singleLetter = a.charAt(i);
+    if (singleLetter == singleLetter.toLowerCase()) {
+      hiddenWord = hiddenWord + singleLetter;
+    }
+  }
+  return hiddenWord;
+}
+var hiddenWord = detectWord("UcUNFYGaFYFYGtNUH");
+console.log(hiddenWord);
