@@ -31,7 +31,7 @@
 //     collect the lowercase letters together keeping their order
 //     that is the answer
 
-// // psedo code
+// // pseudo code
 // -define a function detectWord that takes an argument
 //     -for loop to iterate through the letters
 
@@ -106,11 +106,14 @@
 
 
 // js code
+
+// method-1
+
 function detectWord(a) {
   var hiddenWord = "";
   for (i = 0; i < a.length; i++) {
     var singleLetter = a.charAt(i);
-    if (singleLetter == singleLetter.toLowerCase()) {
+    if (singleLetter !== singleLetter.toUpperCase()) {
       hiddenWord = hiddenWord + singleLetter;
     }
   }
@@ -118,3 +121,10 @@ function detectWord(a) {
 }
 var hiddenWord = detectWord("UcUNFYGaFYFYGtNUH");
 console.log(hiddenWord);
+
+
+
+// method-2
+// function detectLowercases(b) {
+  
+// }
