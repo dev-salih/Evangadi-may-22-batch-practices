@@ -137,5 +137,5 @@ function detectLowercases(b) {
   smallLetters = smallLetters.join("");
   return smallLetters;
 }
-var ();
-console.log(object);
+var object = detectWord("UcUNFYGaFYFYGtNUH");
+console.log(object) 
