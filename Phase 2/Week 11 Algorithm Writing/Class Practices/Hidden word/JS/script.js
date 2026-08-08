@@ -125,6 +125,17 @@ console.log(hiddenWord);
 
 
 // method-2
-// function detectLowercases(b) {
-  
-// }
+function detectLowercases(b) {
+  let singleArrays = b.split("");
+  // console.log(singleArrays);
+
+  let smallLetters = singleArrays.filter(
+    (singleLetter) => singleLetter !== singleLetter.toUpperCase()
+  );
+  // console.log(smallLetters);
+
+  smallLetters = smallLetters.join("");
+  return smallLetters;
+}
+var ();
+console.log(object);
