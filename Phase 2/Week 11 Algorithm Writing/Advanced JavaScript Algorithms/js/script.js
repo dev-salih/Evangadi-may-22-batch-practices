@@ -6,8 +6,46 @@ console.log("\n ===========Question 1===============");
 // ○ Test 1:  getOnlyEvens([1, 2, 3, 6, 4, 8]) prints  [ 4]
 // ○ Test 2:  getOnlyEvens([0, 1, 2, 3, 4]) prints  [0, 2, 4]
 
+// step 1---understand
+// -I will check the the numbers in the even index
+// -then if the number is also an even number
+// -i will collect in one array and
+// -finally execute the collected array
 
+// step 2---check on paper
 
+// step 3---craft a general formula
+
+// step 4---pseudo code
+// -define a function which takes an array as an argument
+// -check the argument is an array or not
+// -declare a variable with array value which collects the results
+// -create for loop to access every even-indexes
+// -check the even-index value is even number or not
+// -if it is even number;
+// -add it to the previously declared variable
+// -if not even number;
+// -skip it
+// -finally execute the the variable which collected the results
+
+// step 5--- JS code
+function getOnlyEvens(arr) {
+  if (!Array.isArray(arr)) {
+    return "please enter an Array value!";
+  }
+  let results = [];
+  for (let i = 0; i <= arr.length; i = i + 2) {
+    if (arr[i] % 2 === 0) {
+      results.push(arr[i]);
+    }
+  }
+
+  return results;
+}
+// let a = getOnlyEvens([1, 2, 3, 6, 4, 8]);
+// let a = getOnlyEvens([0, 1, 2, 3, 4]);
+// let a = getOnlyEvens(0, 1, 2, 3, 4);
+console.log(a);
 
 console.log("\n ===========Question 2===============");
 
@@ -16,10 +54,6 @@ console.log("\n ===========Question 2===============");
 // function will print "Not ok"
 // ○ Test 1: reverseCompare(72)  prints "ok" because  72 > 27
 // ○ reverseCompare(23) prints  "Not ok", because 23 is not greater than 32
-
-
-
-
 
 console.log("\n ===========Question 3===============");
 
@@ -31,12 +65,7 @@ console.log("\n ===========Question 3===============");
 // ○ Test 2: returnFactorial(6) outputs 720
 // ○ Test 3: returnFactorial(0) outputs 1
 
-
-
-
-
-
-console.log("\n ===========Question 4 (Meera array)==============="); 
+console.log("\n ===========Question 4 (Meera array)===============");
 // ● A Meera array is defined to be an array containing only numbers as its elements and for
 // all n values in the array, the value n*2 is not in the array. So [3, 5,-2] is a Meera array
 // because 3*2, 5*2 or 2*2 are not in the array. But [8, 3, 4] is not a Meera array because
@@ -50,13 +79,7 @@ console.log("\n ===========Question 4 (Meera array)===============");
 // ○ Test 1: checkMeera([1,-6, 4,-3]) outputs “I am NOT a Meera array” because-3
 // *2 is -6
 
-
-
-
-
-
-console.log("\n ===========Question 5 (Dual array)==============="); 
-
+console.log("\n ===========Question 5 (Dual array)===============");
 
 // ● Define a Dual array to be an array where every value occurs exactly twice. For example,
 // {1, 2, 1, 3, 3, 2} is a dual array.The following arrays are not Dual arrays {2, 5, 2, 5, 5} (5
@@ -64,12 +87,7 @@ console.log("\n ===========Question 5 (Dual array)===============");
 // times) Write a function named isDual that returns 1 if its array argument is a Dual array.
 // Otherwise it returns 0.
 
-
-
-
-
-
-console.log("\n ===========Question 6==============="); 
+console.log("\n ===========Question 6===============");
 
 // ● Write a function that takes the number of seconds and returns the digital format clock
 // time as a string. Time should be counted from 00:00:00.
