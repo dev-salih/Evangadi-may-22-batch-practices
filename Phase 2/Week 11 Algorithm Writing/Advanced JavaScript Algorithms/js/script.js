@@ -45,7 +45,41 @@ function getOnlyEvens(arr) {
 // let a = getOnlyEvens([1, 2, 3, 6, 4, 8]);
 // let a = getOnlyEvens([0, 1, 2, 3, 4]);
 // let a = getOnlyEvens(0, 1, 2, 3, 4);
-console.log(a);
+// console.log(a);
+
+
+
+// method 2
+function getOnlyEvens(arr) {
+  const result = arr.filter((value, index) =>
+    index % 2 === 0 && value % 2 === 0
+  );
+
+  // console.log(result);
+}
+
+// Test Cases
+// getOnlyEvens([1, 2, 3, 6, 4, 8]); // [4]
+// getOnlyEvens([0, 1, 2, 3, 4]);    // [0, 2, 4]
+
+
+function getOnlyEvens(arr) {
+  const result = [];
+
+  arr.forEach((value, index) => {
+    if (index % 2 === 0 && value % 2 === 0) {
+      result.push(value);
+    }
+  });
+
+  console.log(result);
+}
+
+// Test Cases
+getOnlyEvens([1, 2, 3, 6, 4, 8]); // [4]
+getOnlyEvens([0, 1, 2, 3, 4]);    // [0, 2, 4]
+
+
 
 console.log("\n ===========Question 2===============");
 
@@ -54,6 +88,8 @@ console.log("\n ===========Question 2===============");
 // function will print "Not ok"
 // ○ Test 1: reverseCompare(72)  prints "ok" because  72 > 27
 // ○ reverseCompare(23) prints  "Not ok", because 23 is not greater than 32
+
+
 
 console.log("\n ===========Question 3===============");
 
