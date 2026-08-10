@@ -176,6 +176,34 @@ console.log("\n ===========Question 5 (Dual array)===============");
 // times) Write a function named isDual that returns 1 if its array argument is a Dual array.
 // Otherwise it returns 0.
 
+
+function isDual(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let count = 0;
+
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[i] === arr[j]) {
+        count++;
+      }
+    }
+
+    if (count !== 2) {
+      return 0;
+    }
+  }
+
+  return 1;
+}
+
+// Test 1
+console.log(isDual([1, 2, 1, 3, 3, 2])); // 1
+
+// Test 2
+console.log(isDual([2, 5, 2, 5, 5])); // 0
+
+// Test 3
+console.log(isDual([3, 1, 1, 2, 2])); // 0
+
 console.log("\n ===========Question 6===============");
 
 // ● Write a function that takes the number of seconds and returns the digital format clock
