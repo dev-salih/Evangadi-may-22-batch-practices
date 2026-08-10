@@ -116,6 +116,20 @@ console.log("\n ===========Question 3===============");
 // ○ Test 2: returnFactorial(6) outputs 720
 // ○ Test 3: returnFactorial(0) outputs 1
 
+function returnFactorial(x) {
+  let factorial = 1;
+
+  for (let i = 1; i <= x; i++) {
+    factorial *= i;
+  }
+
+  return factorial;
+}
+
+console.log(returnFactorial(5)); // 120
+console.log(returnFactorial(6)); // 720
+console.log(returnFactorial(0)); // 1
+
 console.log("\n ===========Question 4 (Meera array)===============");
 // ● A Meera array is defined to be an array containing only numbers as its elements and for
 // all n values in the array, the value n*2 is not in the array. So [3, 5,-2] is a Meera array
