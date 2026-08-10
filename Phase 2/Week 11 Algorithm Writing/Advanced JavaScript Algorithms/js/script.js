@@ -144,6 +144,30 @@ console.log("\n ===========Question 4 (Meera array)===============");
 // ○ Test 1: checkMeera([1,-6, 4,-3]) outputs “I am NOT a Meera array” because-3
 // *2 is -6
 
+
+function checkMeera(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr.includes(arr[i] * 2)) {
+      console.log("I am NOT a Meera array");
+      return;
+    }
+  }
+
+  console.log("I am a Meera array");
+}
+
+// Test 1
+checkMeera([10, 4, 0, 5]);
+// I am NOT a Meera array
+
+// Test 2
+checkMeera([7, 4, 9]);
+// I am a Meera array
+
+// Test 3
+checkMeera([1, -6, 4, -3]);
+// I am NOT a Meera array
+
 console.log("\n ===========Question 5 (Dual array)===============");
 
 // ● Define a Dual array to be an array where every value occurs exactly twice. For example,
