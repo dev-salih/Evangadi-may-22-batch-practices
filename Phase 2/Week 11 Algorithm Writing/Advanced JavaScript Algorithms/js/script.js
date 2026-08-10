@@ -204,6 +204,8 @@ console.log(isDual([2, 5, 2, 5, 5])); // 0
 // Test 3
 console.log(isDual([3, 1, 1, 2, 2])); // 0
 
+
+
 console.log("\n ===========Question 6===============");
 
 // ● Write a function that takes the number of seconds and returns the digital format clock
@@ -212,3 +214,25 @@ console.log("\n ===========Question 6===============");
 // secs.
 // ■ digitalClock(61201) as "17:00:01"   No AM/PM. 24h format.
 // ■ digitalClock(87000) as "00:10:00" It's 00:10 next day
+
+
+function digitalClock(seconds) {
+  let hours = Math.floor(seconds / 3600);
+  let minutes = Math.floor((seconds % 3600) / 60);
+  let secs = seconds % 60;
+
+  // Keep the clock in 24-hour format
+  hours = hours % 24;
+
+  // Add leading zeros
+  hours = String(hours).padStart(2, "0");
+  minutes = String(minutes).padStart(2, "0");
+  secs = String(secs).padStart(2, "0");
+
+  return `${hours}:${minutes}:${secs}`;
+}
+
+// Tests
+console.log(digitalClock(5025));  // "01:23:45"
+console.log(digitalClock(61201)); // "17:00:01"
+console.log(digitalClock(87000)); // "00:10:00"
