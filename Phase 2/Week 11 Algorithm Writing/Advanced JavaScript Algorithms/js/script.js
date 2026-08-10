@@ -89,7 +89,22 @@ console.log("\n ===========Question 2===============");
 // ○ Test 1: reverseCompare(72)  prints "ok" because  72 > 27
 // ○ reverseCompare(23) prints  "Not ok", because 23 is not greater than 32
 
+function reverseCompare(num) {
+    let tens = Math.floor(num / 10);
+    let ones = num % 10;
 
+    let reversed = ones * 10 + tens;
+
+    if (num > reversed) {
+        console.log("Ok");
+    } else {
+        console.log("Not ok");
+    }
+}
+
+// Test Cases
+reverseCompare(72); // Ok
+reverseCompare(23); // Not ok
 
 console.log("\n ===========Question 3===============");
 
