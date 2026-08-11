@@ -106,6 +106,24 @@ function reverseCompare(num) {
 reverseCompare(72); // Ok
 reverseCompare(23); // Not ok
 
+
+// method 2
+function reverseCompare(num) {
+    let reversed = Number(
+        num.toString().split("").reverse().join("")
+    );
+
+    if (num > reversed) {
+        console.log("Ok");
+    } else {
+        console.log("Not ok");
+    }
+}
+
+// Test Cases
+reverseCompare(72); // Ok
+reverseCompare(23); // Not ok
+
 console.log("\n ===========Question 3===============");
 
 // ● Write a function that takes a positive integer and returns the factorial of the number.
