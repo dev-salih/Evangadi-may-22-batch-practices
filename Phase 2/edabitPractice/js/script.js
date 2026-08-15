@@ -46,3 +46,18 @@ console.log(shiftToLeft("abebe", 2));
 console.log(shiftToLeft("abebe", "3"));
 console.log(shiftToLeft(2, "3"));
 
+// Q-2
+// Create a function that changes specific words into emoticons. Given a sentence as a string, replace the words smile, grin, sad and mad with their corresponding emoticons.
+
+// word	emoticon
+// smile	:D
+// grin	:)
+// sad	:(
+// mad	:P
+// Examples
+// emotify("Make me smile") ➞ "Make me :D"
+
+// emotify("Make me grin") ➞ "Make me :)"
+
+// emotify("c") ➞ "Make me :("
+
