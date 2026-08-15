@@ -61,3 +61,54 @@ console.log(shiftToLeft(2, "3"));
 
 // emotify("c") ➞ "Make me :("
 
+// step 1
+// step 2
+
+// step 3
+// step 4(pseudocode)
+// -define a function which takes one string as an argument
+// -check
+// -declare a variable smile = :D;
+// -declare a variable grin = :);
+// -declare a variable sad = :(;
+// -declare a variable mad = :P;
+
+
+// this pseudocode needs to be corrected
+// step 5
+// function emotify(a) {
+//   let smile = "Make me :D";
+//   let grin = "Make me :)";
+//   let sad = "Make me :(";
+//   let mad = "Make me :P";
+//   return;
+// }
+// console.log(emotify("Make me grin"));
+
+// this JS code needs to be corrected
+
+
+
+// the correct solution
+function emotify(sentence) {
+  const emoticons = {
+    smile: ":D",
+    grin: ":)",
+    sad: ":(",
+    mad: ":P",
+  };
+
+  let words = sentence.split(" "); // ["Make","me","smile"]  
+  // console.log(words);
+  let lastWord = words[words.length - 1];
+  // console.log(lastWord);
+  words[words.length - 1] = emoticons[lastWord];
+  // console.log(emoticons[lastWord]);
+
+  // return words.join(" ");
+}
+
+console.log(emotify("Make me smile"));
+// console.log(emotify("Make me grin"));
+// console.log(emotify("Make me sad"));
+// console.log(emotify("Make me mad"));
