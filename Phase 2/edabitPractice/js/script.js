@@ -105,7 +105,7 @@ function emotify(sentence) {
   words[words.length - 1] = emoticons[lastWord];
   // console.log(emoticons[lastWord]);
 
-  // return words.join(" ");
+  return words.join(" ");
 }
 
 console.log(emotify("Make me smile"));
@@ -149,6 +149,20 @@ console.log(emotify("Make me smile"));
 // Notes
 // Expect any positive number between 1 and 1000.
 
+function addUp(number) {
+  let sum = 0;
+
+  for (let i = 1; i <= number; i++) {
+    sum += i;
+  }
+
+  return sum;
+}
+
+console.log(addUp(4));
+console.log(addUp(13));
+console.log(addUp(600));
+
 
 // Q-6
 // Create a function that takes an array of numbers and return both the minimum and maximum numbers, in that order.
@@ -175,6 +189,5 @@ console.log(emotify("Make me smile"));
 // Notes
 // Dates are zero based (see resources).
 // All test cases contain valid dates.\
-
 
 
