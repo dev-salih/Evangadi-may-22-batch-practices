@@ -191,3 +191,24 @@ console.log(addUp(600));
 // All test cases contain valid dates.\
 
 
+// Q-8 finding the largest number and the second largest number of a given array 
+// example; findLargest([3, 7, 2, 9, 4])
+function findLargestAndSecondLargest(arr) {
+  let largest = arr[0];
+  let secondLargest = arr[0];
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > largest) {
+      secondLargest = largest;
+      largest = arr[i];
+    } else if (arr[i] > secondLargest && arr[i] !== largest) {
+      secondLargest = arr[i];
+    }
+  }
+
+  console.log("Largest:", largest);
+  console.log("Second Largest:", secondLargest);
+}
+
+findLargestAndSecondLargest([3, 7, 2, 9, 4]);
+// findLargestAndSecondLargest([-5, -2, -10, -1]);
