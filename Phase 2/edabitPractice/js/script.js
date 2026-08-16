@@ -136,6 +136,16 @@ console.log(emotify("Make me smile"));
 // Notes
 // JavaScript has a useful function: toString(2), where you can see the binary representation of a decimal number.
 
+function bitwiseAND(a, b) {
+  return a & b;
+};
+function bitwiseOR(a, b) {
+  return a | b;
+};
+function bitwiseXOR(a, b) {
+  return a ^ b;
+};
+console.log(bitwiseAND(7, 12));
 
 // Q-4
 // Create a function that takes a number as an argument. Add up all the numbers from 1 to the number you passed to the function. For example, if the input is 4 then your function should return 10 because 1 + 2 + 3 + 4 = 10.
@@ -175,6 +185,27 @@ console.log(addUp(600));
 // minMax([1]) ➞ [1, 1]
 // Notes
 // All test arrays will have at least one element and are valid.
+
+function minMax(arr) {
+  let min = arr[0];
+  let max = arr[0];
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < min) {
+      min = arr[i];
+    }
+
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+  }
+
+  return [min, max];
+}
+
+console.log(minMax([1, 2, 3, 4, 5]));
+console.log(minMax([2334454, 5]));
+console.log(minMax([1]));
 
 
 // Q-7
