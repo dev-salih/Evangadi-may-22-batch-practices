@@ -73,7 +73,6 @@ console.log(shiftToLeft(2, "3"));
 // -declare a variable sad = :(;
 // -declare a variable mad = :P;
 
-
 // this pseudocode needs to be corrected
 // step 5
 // function emotify(a) {
@@ -87,8 +86,6 @@ console.log(shiftToLeft(2, "3"));
 
 // this JS code needs to be corrected
 
-
-
 // the correct solution
 function emotify(sentence) {
   const emoticons = {
@@ -98,7 +95,7 @@ function emotify(sentence) {
     mad: ":P",
   };
 
-  let words = sentence.split(" "); // ["Make","me","smile"]  
+  let words = sentence.split(" "); // ["Make","me","smile"]
   // console.log(words);
   let lastWord = words[words.length - 1];
   // console.log(lastWord);
@@ -138,14 +135,16 @@ console.log(emotify("Make me smile"));
 
 function bitwiseAND(a, b) {
   return a & b;
-};
+}
 function bitwiseOR(a, b) {
   return a | b;
-};
+}
 function bitwiseXOR(a, b) {
   return a ^ b;
-};
+}
 console.log(bitwiseAND(7, 12));
+console.log(bitwiseOR(7, 12));
+console.log(bitwiseXOR(7, 12));
 
 // Q-4
 // Create a function that takes a number as an argument. Add up all the numbers from 1 to the number you passed to the function. For example, if the input is 4 then your function should return 10 because 1 + 2 + 3 + 4 = 10.
@@ -172,7 +171,6 @@ function addUp(number) {
 console.log(addUp(4));
 console.log(addUp(13));
 console.log(addUp(600));
-
 
 // Q-6
 // Create a function that takes an array of numbers and return both the minimum and maximum numbers, in that order.
@@ -207,7 +205,6 @@ console.log(minMax([1, 2, 3, 4, 5]));
 console.log(minMax([2334454, 5]));
 console.log(minMax([1]));
 
-
 // Q-7
 // Christmas Eve is almost upon us, so naturally we need to prepare some milk and cookies for Santa! Create a function that accepts a Date object and returns true if it's Christmas Eve (December 24th) and false otherwise. Keep in mind JavaScript's Date month is 0 based, meaning December is the 11th month while January is 0.
 
@@ -219,10 +216,17 @@ console.log(minMax([1]));
 // timeForMilkAndCookies(new Date(3000, 11, 24)) ➞ true
 // Notes
 // Dates are zero based (see resources).
-// All test cases contain valid dates.\
+// All test cases contain valid dates.
 
+function timeForMilkAndCookies(date) {
+  return date.getMonth() === 11 && date.getDate() === 24;
+}
 
-// Q-8 finding the largest number and the second largest number of a given array 
+console.log(timeForMilkAndCookies(new Date(2013, 11, 24)));
+console.log(timeForMilkAndCookies(new Date(2013, 0, 23)));
+console.log(timeForMilkAndCookies(new Date(3000, 11, 24)));
+
+// Q-8 finding the largest number and the second largest number of a given array
 // example; findLargest([3, 7, 2, 9, 4])
 function findLargestAndSecondLargest(arr) {
   let largest = arr[0];
@@ -244,7 +248,6 @@ function findLargestAndSecondLargest(arr) {
 findLargestAndSecondLargest([3, 7, 2, 9, 4]);
 // findLargestAndSecondLargest([-5, -2, -10, -1]);
 
-
 // Q-9
 // Create a function that takes a string and returns a new string with all vowels removed.
 
@@ -259,7 +262,6 @@ findLargestAndSecondLargest([3, 7, 2, 9, 4]);
 // ➞ "Hppy Thnksgvng t ll--vn th htrs nd lsrs!"
 // Notes
 // "y" is not considered a vowel.
-
 
 // Q-10
 // A salesman has a number of cities to visit. He wants to calculate the total number of possible paths he could take, visiting each city once before returning home. Return the total number of possible paths a salesman can travel, given n cities.
