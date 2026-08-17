@@ -263,6 +263,18 @@ findLargestAndSecondLargest([3, 7, 2, 9, 4]);
 // Notes
 // "y" is not considered a vowel.
 
+function removeVowels(str) {
+  return str.replace(/[aeiou]/gi, "");
+}
+
+console.log(
+  removeVowels("I have never seen a thin person drinking Diet Coke."),
+);
+console.log(removeVowels("We're gonna build a wall!"));
+console.log(
+  removeVowels("Happy Thanksgiving to all--even the haters and losers!"),
+);
+
 // Q-10
 // A salesman has a number of cities to visit. He wants to calculate the total number of possible paths he could take, visiting each city once before returning home. Return the total number of possible paths a salesman can travel, given n cities.
 
