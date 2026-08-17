@@ -298,6 +298,20 @@ console.log(
 // Inspired by a video from Dr. Peter Uelkes.
 // This challenge is describing a factorial.
 
+function paths(n) {
+  let result = 1;
+
+  for (let i = 1; i <= n; i++) {
+    result *= i;
+  }
+
+  return result;
+}
+
+console.log(paths(4));
+console.log(paths(1));
+console.log(paths(9));
+
 // Q-11
 // Create a function that takes two numbers and a mathematical operator + - / * and will perform a calculation with the given numbers.
 
