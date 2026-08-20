@@ -1,3 +1,30 @@
 .red{
     background-color: red;
 }
+.yellow{
+    background-color: yellow;
+}
+.blue {
+    background-color: blue;
+    color: white;
+}
+
+button {
+    background-color: lightblue;
+    font-size: 20px;
+    padding: 5px 15px;
+}
+form input{
+    width: 30px;
+    padding: 10px;
+    font-size: 20px;
+}
+#eventP {
+    color: red;
+    font-size: 64px;
+    text-align: center;
+}
+#div1 {
+    height: 500px;
+    width: 500px;
+}
