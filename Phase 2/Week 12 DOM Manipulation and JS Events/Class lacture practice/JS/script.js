@@ -89,12 +89,14 @@
       // console.log(document.getElementById("three").nextElementSibling);
 
 
-// =============== Step 2 - Altering values (working with HTML contents) ======================
+// =============== Step 2 - Altering values  ======================
+
+// ************ A (working with HTML contents) ******************
 
 // 1)   createElement() ----- method
 
 let liElem = document.createElement("li");
-console.log(liElem);
+// console.log(liElem);
 
 // 2)    appendChild()  ----- method
 
@@ -104,7 +106,7 @@ let pareElem = document.getElementById("numbersList");
 
 // 3)    PrependChild()  ----- method
 
-pareElem.prepend(liElem);
+// pareElem.prepend(liElem);
 
 // 4)    innerHTML & outerHTML ---- properties
 
@@ -116,7 +118,7 @@ pareElem.prepend(liElem);
 
 // 5)    textContent --- property
 
-liElem.textContent = "Hello Class";
+// liElem.textContent = "Hello Class";
 
 // 6)    remove() ---- method
 
@@ -127,4 +129,50 @@ let childEle = document.getElementById("two");
 
 let myReferenceElem = document.getElementById("three");
 // myReferenceElem.after(liElem);
-myReferenceElem.before(liElem);
+// myReferenceElem.before(liElem);
+
+
+// ************ B (working with HTML Attribute) ******************
+
+// 1) className --------- property
+let parent = document.getElementById("numbersList");
+// console.log(parent.className);    
+parent.className = "blue pink";    
+
+// 2) classList() ------- method
+  console.log(parent.classList);
+  // adding class using classList
+      parent.classList.add("violet");
+      console.log(parent.classList);
+  // removing class using classList
+      parent.classList.remove("pink");
+  // adding & removing class together using ---- classList.toggle()
+      parent.classList.toggle("green"); //it removes if it was existed and add if not existed.
+
+// 3) ID ----- property 
+  // parent.id = "newID";
+  // console.log(parent.id);
+
+
+// 4) hasAttribute() ---- method
+    // console.log(parent.hasAttribute("href"));
+    // console.log(parent.hasAttribute("id"));
+// 5) getAttribute() ---- method
+    // console.log(parent.getAttribute("id"));
+    // console.log(parent.getAttribute("type"));
+// 6) setAttribute() ---- method
+    // console.log(parent.setAttribute("name", "abebe"));
+
+
+// example ---- to insert an image iside the html 
+
+let imgEle = document.createElement("img");
+// console.log(imgEle);
+imgEle.setAttribute(
+  "src",
+  "https://t4.ftcdn.net/jpg/01/00/34/13/360_F_100341373_Pq7QzOJOLAvZaJysSYYbeZ9uqEIQV7bk.jpg",
+);
+parent.appendChild(imgEle);
+imgEle.setAttribute("width", "300px");
+// 7) removeAttribute() ---------- method
+imgEle.removeAttribute("width");
