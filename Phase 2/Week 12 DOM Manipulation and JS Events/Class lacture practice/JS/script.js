@@ -122,12 +122,12 @@ let pareElem = document.getElementById("numbersList");
 
 // 6)    remove() ---- method
 
-let childEle = document.getElementById("two");
+// let childEle = document.getElementById("two");
 // pareElem.removeChild(childEle);
 
 // 7)    after() & before() ---- methodes
 
-let myReferenceElem = document.getElementById("three");
+// let myReferenceElem = document.getElementById("three");
 // myReferenceElem.after(liElem);
 // myReferenceElem.before(liElem);
 
@@ -137,17 +137,17 @@ let myReferenceElem = document.getElementById("three");
 // 1) className --------- property
 let parent = document.getElementById("numbersList");
 // console.log(parent.className);    
-parent.className = "blue pink";    
+// parent.className = "blue pink";    
 
-// 2) classList() ------- method
-  console.log(parent.classList);
-  // adding class using classList
-      parent.classList.add("violet");
-      console.log(parent.classList);
-  // removing class using classList
-      parent.classList.remove("pink");
-  // adding & removing class together using ---- classList.toggle()
-      parent.classList.toggle("green"); //it removes if it was existed and add if not existed.
+// // 2) classList() ------- method
+//   console.log(parent.classList);
+//   // adding class using classList
+//       parent.classList.add("violet");
+//       console.log(parent.classList);
+//   // removing class using classList
+//       parent.classList.remove("pink");
+//   // adding & removing class together using ---- classList.toggle()
+//       parent.classList.toggle("green"); //it removes if it was existed and add if not existed.
 
 // 3) ID ----- property 
   // parent.id = "newID";
@@ -176,3 +176,18 @@ parent.appendChild(imgEle);
 imgEle.setAttribute("width", "300px");
 // 7) removeAttribute() ---------- method
 imgEle.removeAttribute("width");
+
+// ==========================================================
+// 8.12 Altering values (working with inline styling)
+// directly (without the need of classes or ids)
+// ===========================================================
+
+// parent.document.getElementById("numbersList");
+
+parent.style.backgroundColor = "green";
+parent.style.color = "white";
+parent.style.fontSize = "20px";
+parent.style.border = "black double 20px";
+parent.style.display = "none";
+parent.style.display = "block";
+
