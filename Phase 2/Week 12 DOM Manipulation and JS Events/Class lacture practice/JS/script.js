@@ -95,12 +95,12 @@
 
 // 1)   createElement() ----- method
 
-let liElem = document.createElement("li");
+// let liElem = document.createElement("li");
 // console.log(liElem);
 
 // 2)    appendChild()  ----- method
 
-let pareElem = document.getElementById("numbersList");
+// let pareElem = document.getElementById("numbersList");
 // pareElem.appendChild(liElem);
 // liElem.innerText = "Hi Everyone!!"; // innerText --- property
 
@@ -166,16 +166,16 @@ let parent = document.getElementById("numbersList");
 
 // example ---- to insert an image iside the html 
 
-let imgEle = document.createElement("img");
-// console.log(imgEle);
-imgEle.setAttribute(
-  "src",
-  "https://t4.ftcdn.net/jpg/01/00/34/13/360_F_100341373_Pq7QzOJOLAvZaJysSYYbeZ9uqEIQV7bk.jpg",
-);
-parent.appendChild(imgEle);
-imgEle.setAttribute("width", "300px");
-// 7) removeAttribute() ---------- method
-imgEle.removeAttribute("width");
+// let imgEle = document.createElement("img");
+// // console.log(imgEle);
+// imgEle.setAttribute(
+//   "src",
+//   "https://t4.ftcdn.net/jpg/01/00/34/13/360_F_100341373_Pq7QzOJOLAvZaJysSYYbeZ9uqEIQV7bk.jpg",
+// );
+// parent.appendChild(imgEle);
+// imgEle.setAttribute("width", "300px");
+// // 7) removeAttribute() ---------- method
+// imgEle.removeAttribute("width");
 
 // ==========================================================
 // 8.12 Altering values (working with inline styling)
@@ -184,10 +184,12 @@ imgEle.removeAttribute("width");
 
 // parent.document.getElementById("numbersList");
 
-parent.style.backgroundColor = "green";
-parent.style.color = "white";
-parent.style.fontSize = "20px";
-parent.style.border = "black double 20px";
-parent.style.display = "none";
-parent.style.display = "block";
+// parent.style.backgroundColor = "green";
+// parent.style.color = "white";
+// parent.style.fontSize = "20px";
+// parent.style.border = "black double 20px";
+// parent.style.display = "none";
+// parent.style.display = "block";
+
+
 
