@@ -49,14 +49,13 @@ totalBlue.textContent = `Total blue companies are: ${blueClass}`; // Q-1; is the
 // Q-3
 let yesEle = document.getElementById("yes");
 // method-1
-yesEle.onclick =  addBG;
+yesEle.onclick = addBG;
 // method-2
 // yesEle.addEventListener("click", addBG);
 
 let noEle = document.getElementById("No");
 // noEle.onclick = removeBG; // OR
 noEle.addEventListener("click", removeBG);
-
 
 function addBG() {
   document.body.style.backgroundColor = "#99ecff";
@@ -66,3 +65,39 @@ function removeBG() {
 }
 
 // Q-2; what should be done with the css of "#yesBackground" and "#noBackground" inside style.css file ?
+
+// Q-4
+const form = document.getElementById("adder");
+const resultDiv = document.getElementById("sum");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  // Get input values using their name attributes
+  const firstVal = document
+    .querySelector('input[name="first-value"]')
+    .value.trim();
+  const secondVal = document
+    .querySelector('input[name="second-value"]')
+    .value.trim();
+
+  // Validate if both inputs are valid non-empty numbers
+  if (
+    firstVal === "" ||
+    secondVal === "" ||
+    isNaN(firstVal) ||
+    isNaN(secondVal)
+  ) {
+    const errorMsg = "Please enter numerical values only";
+    console.log(errorMsg);
+    resultDiv.textContent = errorMsg;
+  } else {
+    const sum = Number(firstVal) + Number(secondVal);
+
+    // 1. Display the result on the console
+    console.log(sum);
+
+    // 2. Display the result underneath the form inside the #sum div
+    resultDiv.textContent = `Sum: ${sum}`;
+  }
+});
