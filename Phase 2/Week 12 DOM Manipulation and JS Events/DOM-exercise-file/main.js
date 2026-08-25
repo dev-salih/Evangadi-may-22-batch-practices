@@ -74,12 +74,8 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   // Get input values using their name attributes
-  const firstVal = document
-    .querySelector('input[name="first-value"]')
-    .value.trim();
-  const secondVal = document
-    .querySelector('input[name="second-value"]')
-    .value.trim();
+  const firstVal = document.querySelector('input[name="first-value"]').value.trim();
+  const secondVal = document.querySelector('input[name="second-value"]').value.trim();
 
   // Validate if both inputs are valid non-empty numbers
   if (
@@ -88,11 +84,10 @@ form.addEventListener("submit", function (e) {
     isNaN(firstVal) ||
     isNaN(secondVal)
   ) {
-    const errorMsg = "Please enter numerical values only";
-    console.log(errorMsg);
-    resultDiv.textContent = errorMsg;
+    console.log("Please enter numerical values only");
+    resultDiv.textContent = "Please enter numerical values only";
   } else {
-    const sum = Number(firstVal) + Number(secondVal);
+    const sum = Number(firstVal) + Number(secondVal); //Q-2; why it does not convet the string num in to num?
 
     // 1. Display the result on the console
     console.log(sum);
