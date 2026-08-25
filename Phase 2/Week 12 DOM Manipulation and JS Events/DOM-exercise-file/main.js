@@ -2,34 +2,34 @@
 // 1.1
 let ele_1 = document.getElementById("sample1");
 // 1.2
-console.log(ele_1);
+console.log("1.2:", ele_1);
 // 1.3
-console.log(ele_1.textContent);
+console.log("1.3:", ele_1.textContent);
 
 // Q-2
 // 2.1
 let ele_2 = document.getElementById("techCompanies");
-console.log(ele_2);
+console.log("2.1:", ele_2);
 
 // 2.2
 let ele_3 = document.querySelector("#techCompanies");
-console.log(ele_3);
+console.log("2.2:", ele_3);
 
 // 2.3
 let ele_4 = document.querySelectorAll("#techCompanies li").length;
-console.log(ele_4);
+console.log("2.3:", ele_4);
 
 // 2.4
 let redClass = document.querySelectorAll(".red");
-console.log(redClass);
+console.log("2.4:", redClass);
 
 let redClass_2 = document.getElementsByClassName("red");
-console.log(redClass_2);
+console.log("2.4:", redClass_2);
 
 // 2.5
 let newEle = document.createElement("li");
 newEle.innerText = "Facebook"; // we can also use "textContent"
-console.log(newEle);
+console.log("2.5:", newEle);
 
 // 2.6
 newEle.className = "blue"; // OR
@@ -40,7 +40,7 @@ ele_2.appendChild(newEle);
 
 // 2.8
 let blueClass = document.querySelectorAll(".blue").length;
-console.log(blueClass);
+console.log("2.8:", blueClass);
 
 // 2.9
 let totalBlue = document.getElementById("blueCompanies");
