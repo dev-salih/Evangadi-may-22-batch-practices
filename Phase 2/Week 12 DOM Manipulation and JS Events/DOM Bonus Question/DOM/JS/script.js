@@ -21,4 +21,25 @@ if (themeForm) {
     }
   });
 }
+// Q-2
+let formCounter = document.getElementById("counter");
+let plus = document.getElementById("plus");
+let minus = document.getElementById("minus");
+let result = document.getElementById("result");
 
+let counts = 0;
+
+plus.addEventListener("click", function (e) {
+  e.preventDefault();
+  if (counts < 20) {
+    counts++;
+    result.textContent = counts;
+  }
+});
+minus.addEventListener("click", function (event) {
+  event.preventDefault();
+  if (counts > 0) {
+    counts--;
+    result.textContent = counts;
+  }
+});
