@@ -32,8 +32,8 @@
 
       // ******* 1) getElementByClassName("  "); ******
 
-        // let classElements = document.getElementsByClassName("red");
-        // console.log(classElements);
+        let classElements = document.getElementsByClassName("red");
+        console.log(classElements);
 
       // ******* 2) getElementByTagName("  "); *******
 
@@ -43,8 +43,8 @@
 
       // ******* 3) querySelectorAll("#__ or .__"); ***
 
-        // let queryElements = document.querySelectorAll(".red");
-        // console.log(queryElements);
+        let queryElements = document.querySelectorAll(".red");
+        console.log(queryElements);
         // // console.log(queryElements[2]);
 
 // 8.8 – Selecting elements (HTML collection vs NodeList)
@@ -63,13 +63,13 @@
 
 
       // let Ele = document.getElementsByClassName("red");
-      // // let Ele = document.getElementsByTagName("h1");
-      // // let Ele = document.querySelectorAll(".red");
-      // for (let i = 0; i < Ele.length; i++) {
-      //   const element = Ele[i];
-      //   element.className = "blue";
-      //   // element.outerHTML =`<li>${element.textContent}</li>`;
-      // }
+      // let Ele = document.getElementsByTagName("h1");
+      let Ele = document.querySelectorAll(".red");
+      for (let i = 0; i < Ele.length; i++) {
+        const element = Ele[i];
+        element.className = "blue";
+        // element.outerHTML =`<li>${element.textContent}</li>`;
+      }
 
 
 // c) Traversing b/n multiple elements 

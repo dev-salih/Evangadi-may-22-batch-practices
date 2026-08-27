@@ -40,11 +40,12 @@ ele_2.appendChild(newEle);
 
 // 2.8
 let blueClass = document.querySelectorAll(".blue").length;
-console.log("2.8:", blueClass);
-
-// 2.9
 let totalBlue = document.getElementById("blueCompanies");
-totalBlue.textContent = `Total blue companies are: ${blueClass}`; // Q-1; is there any difference of using "innerText" or "innerHTML" instead of "textContent" ?
+console.log("2.8:", blueClass);
+let newP = document.createElement("p");
+totalBlue.appendChild(newP);
+newP.textContent = `Total blue companies are: ${blueClass}`;
+  // Q-1; is there any difference of using "innerText" or "innerHTML" instead of "textContent" ?
 
 // Q-3
 let yesEle = document.getElementById("yes");
@@ -65,6 +66,7 @@ function removeBG() {
 }
 
 // Q-2; what should be done with the css of "#yesBackground" and "#noBackground" inside style.css file ?
+
 
 // Q-4
 const form = document.getElementById("adder");
