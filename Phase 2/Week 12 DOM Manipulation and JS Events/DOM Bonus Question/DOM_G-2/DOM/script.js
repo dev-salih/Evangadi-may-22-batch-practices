@@ -10,7 +10,7 @@ blue.onclick = function  (){ document.body.style.backgroundColor = "#5ab5ff";}
 green.onclick = function  (){ document.body.style.backgroundColor = "#03c4a1";}
 purple.onclick = function  (){ document.body.style.backgroundColor = "#c300ff";}
 sunny.onclick = function  (){ document.body.style.backgroundColor = "#FFEB3B";}
-nightmode.onclick = function  (){ document.body.style.backgroundColor = "#000";}
+nightmode.onclick = function  (){ document.body.style.backgroundColor = "#000"; document.body.style.color = "#fff"; }
 white.onclick = function  (){ document.body.style.backgroundColor = "#fff";}
 
 
