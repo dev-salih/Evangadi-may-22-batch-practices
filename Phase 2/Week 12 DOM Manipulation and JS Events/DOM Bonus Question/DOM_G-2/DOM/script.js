@@ -55,67 +55,70 @@ minus.addEventListener("click", function (event) {
 
 // Q3
 
-// const form = document.getElementById("form");
-// const fullName = document.getElementById("fullName");
-// const password = document.getElementById("password");
-// const message = document.getElementById("message");
-
-// form.addEventListener("submit", function (event) {
-//   // Stop the form from submitting/reloading the page
-//   event.preventDefault();
-
-//   // Check Full Name
-//   if (fullName.value.trim() === "") {
-//     fullName.style.backgroundColor = "pink";
-//   } else {
-//     fullName.style.backgroundColor = "";
-//   }
-
-//   // Check Password
-//   if (password.value.trim() === "") {
-//     password.style.backgroundColor = "pink";
-//   } else {
-//     password.style.backgroundColor = "";
-//   }
-
-//   // Check if both fields are filled
-//   if (fullName.value.trim() !== "" && password.value.trim() !== "") {
-//     message.textContent = "Form submitted";
-
-//     // Hide the form
-//     form.style.display = "none";
-//   }
-// });
-
 const form = document.getElementById("form");
-const userName = document.getElementById("user-name");
+const fullName = document.getElementById("fullName");
 const password = document.getElementById("password");
 const message = document.getElementById("message");
 
 form.addEventListener("submit", function (event) {
+  // Stop the form from submitting/reloading the page
   event.preventDefault();
 
-  // Remove previous error styling
-  userName.classList.remove("error");
-  password.classList.remove("error");
-
-  let isValid = true;
-
-  // Check user name
-  if (userName.value.trim() === "") {
-    userName.classList.add("error");
-    isValid = false;
+  // Check Full Name
+  if (fullName.value.trim() === "") {
+    fullName.style.backgroundColor = "pink";
+  } else {
+    fullName.style.backgroundColor = "";
   }
 
-  // Check password
+  // Check Password
   if (password.value.trim() === "") {
-    password.classList.add("error");
-    isValid = false;
+    password.style.backgroundColor = "pink";
+  } else {
+    password.style.backgroundColor = "";
   }
 
-  // If all fields are filled
-  if (isValid) {
+  // Check if both fields are filled
+  if (fullName.value.trim() !== "" && password.value.trim() !== "") {
     message.textContent = "Form submitted";
+
+    // Hide the form
     form.style.display = "none";
   }
 });
+
+
+// METHOD 2------ THIS needs some fixation
+
+// const form = document.getElementById("form");
+// const userName = document.getElementById("user-name");
+// const password = document.getElementById("password");
+// const message = document.getElementById("message");
+
+// form.addEventListener("submit", function (event) {
+//   event.preventDefault();
+
+//   // Remove previous error styling
+//   userName.classList.remove("error");
+//   password.classList.remove("error");
+
+//   let isValid = true;
+
+//   // Check user name
+//   if (userName.value.trim() === "") {
+//     userName.classList.add("error");
+//     isValid = false;
+//   }
+
+//   // Check password
+//   if (password.value.trim() === "") {
+//     password.classList.add("error");
+//     isValid = false;
+//   }
+
+//   // If all fields are filled
+//   if (isValid) {
+//     message.textContent = "Form submitted";
+//     form.style.display = "none";
+//   }
+// });

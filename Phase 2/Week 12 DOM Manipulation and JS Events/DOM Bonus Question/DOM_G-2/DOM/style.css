@@ -1,3 +1,6 @@
-.blueBG{
-    background-color: #5ab5ff;
+.blueBG {
+  background-color: #5ab5ff;
+}
+.error {
+  background-color: pink;
 }
