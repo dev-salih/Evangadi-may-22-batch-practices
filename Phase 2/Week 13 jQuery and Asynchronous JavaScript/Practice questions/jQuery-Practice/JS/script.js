@@ -43,48 +43,72 @@
     $("#blueCompanies").text(blueCount);
 
 // Q-3 
+$(document).ready(function () {
+  $("#btn").on("click", function (e) {
+    e.preventDefault();
 
-  $("form:first").on("submit", function (event) {
-    event.preventDefault();
+    // Clear previous results
+    $("#davg").empty();
+    $("#dsum").empty();
 
-    // Get the values from the inputs
-    let firstValue = $("#in1").val();
-    let secondValue = $("#in2").val();
+    // Get input values
+    const val1 = $("#in1").val().trim();
+    const val2 = $("#in2").val().trim();
 
-    // Convert strings to numbers
-    let num1 = Number(firstValue);
-    let num2 = Number(secondValue);
+    // Check if both values are valid numbers and not empty strings
+    const num1 = Number(val1);
+    const num2 = Number(val2);
 
-    // Check if the values are numbers
-    if (
-      firstValue.trim() === "" ||
-      secondValue.trim() === "" ||
-      Number.isNaN(num1) ||
-      Number.isNaN(num2)
-    ) {
-      $(".err").text("Please enter numerical values only");
-
-      // Clear previous results
-      $("#dsum").text("");
-      $("#davg").text("");
-
+    if (val1 === "" || val2 === "" || isNaN(num1) || isNaN(num2)) {
+      $("#davg").text("Please enter numerical values only");
       return;
     }
 
-    // Calculate sum
-    let sum = num1 + num2;
+    // Calculate sum and average
+    const sum = num1 + num2;
+    const avg = sum / 2;
 
-    // Calculate average
-    let average = sum / 2;
-
-    // 3.1 Display result on console
+    // 3.1. Display the result on the console
     console.log("Sum:", sum);
-    console.log("Average:", average);
+    console.log("Average:", avg);
 
-    // 3.2 Display results underneath the form
+    // 3.2. Display the result underneath the form
+    $("#davg").text(avg);
     $("#dsum").text(sum);
-    $("#davg").text(average);
-
-    // Remove error message
-    $(".err").text("");
   });
+});
+
+
+// Q-4 
+$(document).ready(function () {
+  $("#btn-2").on("click", function (e) {
+    // Prevent the default form submission
+    e.preventDefault();
+
+    // Clear previous messages
+    $(".err").empty();
+    $(".result").empty();
+
+    // Fetch and trim values from all fields
+    const firstName = $("#forF").val().trim();
+    const lastName = $("#forL").val().trim();
+    const email = $("#email").val().trim();
+
+    // Check if any field is left empty
+    if (!firstName || !lastName || !email) {
+      $(".err").css("color", "red").text("Please fill out all fields.");
+      return;
+    }
+
+    // Hide input fields, labels, and line breaks inside the form
+    $("form").find("input, label, br, submit").hide();   //but how do i hide the border in the form and the submit button?
+
+
+    // Display the provided values inside the result span
+    $(".result").html(`
+      <p><strong>First Name:</strong> ${firstName}</p>
+      <p><strong>Last Name:</strong> ${lastName}</p>
+      <p><strong>Email:</strong> ${email}</p>
+    `);
+  });
+});
