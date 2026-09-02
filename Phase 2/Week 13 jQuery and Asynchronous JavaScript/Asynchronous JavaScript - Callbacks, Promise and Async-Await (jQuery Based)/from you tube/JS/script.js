@@ -186,22 +186,22 @@ console.log("taking orders");
   //   toppings: ["chocolate", "peanuts"],
   // };
 
-  // let is_shop_open = false;
+  let is_shop_open = false;
 
-  // let order = (time, work) => {
-  //   return new Promise((resolve, reject) => {
-  //     if (is_shop_open) {
-  //       setTimeout(() => {
-  //         // work is 👇 getting done here
-  //         resolve(work());
+  let order = (time, work) => {
+    return new Promise((resolve, reject) => {
+      if (is_shop_open) {
+        setTimeout(() => {
+          // work is 👇 getting done here
+          resolve(work());
 
-  //         // Setting 👇 time here for 1 work
-  //       }, time);
-  //     } else {
-  //       reject(console.log("Our shop is closed"));
-  //     }
-  //   });
-  // };
+          // Setting 👇 time here for 1 work
+        }, time);
+      } else {
+        reject(console.log("Our shop is closed"));
+      }
+    });
+  };
 
   // // step 1
   // order(2000, () => console.log(`${stocks.Fruits[0]} was selected`))

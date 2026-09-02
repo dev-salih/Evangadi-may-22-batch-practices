@@ -41,3 +41,50 @@
     // console.log(blueCount);
 
     $("#blueCompanies").text(blueCount);
+
+// Q-3 
+
+  $("form:first").on("submit", function (event) {
+    event.preventDefault();
+
+    // Get the values from the inputs
+    let firstValue = $("#in1").val();
+    let secondValue = $("#in2").val();
+
+    // Convert strings to numbers
+    let num1 = Number(firstValue);
+    let num2 = Number(secondValue);
+
+    // Check if the values are numbers
+    if (
+      firstValue.trim() === "" ||
+      secondValue.trim() === "" ||
+      Number.isNaN(num1) ||
+      Number.isNaN(num2)
+    ) {
+      $(".err").text("Please enter numerical values only");
+
+      // Clear previous results
+      $("#dsum").text("");
+      $("#davg").text("");
+
+      return;
+    }
+
+    // Calculate sum
+    let sum = num1 + num2;
+
+    // Calculate average
+    let average = sum / 2;
+
+    // 3.1 Display result on console
+    console.log("Sum:", sum);
+    console.log("Average:", average);
+
+    // 3.2 Display results underneath the form
+    $("#dsum").text(sum);
+    $("#davg").text(average);
+
+    // Remove error message
+    $(".err").text("");
+  });
