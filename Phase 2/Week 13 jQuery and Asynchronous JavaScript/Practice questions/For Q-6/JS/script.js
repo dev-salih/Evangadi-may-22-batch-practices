@@ -30,6 +30,8 @@ promise
   });
 
 // What is the output of the code above ?
+// Error 1
+// Success 4
 
 // Q-2
 function job(state) {
@@ -69,6 +71,9 @@ promise_2
   });
 
 // What is the output of the code above?
+// success
+// error
+// Error caught
 
 // Q-3
 function job(state) {
@@ -137,3 +142,8 @@ promise_3
 
 
   // What is the output of the code above?
+// success
+// Defeat
+// error
+// Error caught
+// Success: test
