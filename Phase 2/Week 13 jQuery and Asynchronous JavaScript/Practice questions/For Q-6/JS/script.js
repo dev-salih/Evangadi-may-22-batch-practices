@@ -42,9 +42,9 @@ function job(state) {
   });
 }
 
-let promise = job(true);
+let promise_2 = job(true);
 
-promise
+promise_2
 
   .then(function (data) {
     console.log(data);
@@ -81,9 +81,9 @@ function job(state) {
   });
 }
 
-let promise = job(true);
+let promise_3 = job(true);
 
-promise
+promise_3
 
   .then(function (data) {
     console.log(data);

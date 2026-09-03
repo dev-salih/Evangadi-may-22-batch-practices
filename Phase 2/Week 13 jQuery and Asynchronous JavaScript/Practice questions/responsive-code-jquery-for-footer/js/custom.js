@@ -1,22 +1,21 @@
-$(document).ready(function () {
-  $(".footer-links-wrapper h3").click(function () {
-    // console.log($(".footer-links-wrapper h3").length);
+if ($(window).width() <= 768) {
+  $(".footer-links-wrapper").addClass("someClass");
+} else {
+  $(".footer-links-wrapper").removeClass("someClass");
+}
 
-    // only run on mobile
-    if ($(window).width() <= 768) {
-      let marged = $(this).next("ul"); //this the element that was clicked
-
-      // toggle slide
-      marged.slideToggle();
-
-      // toggle + / × icon
-      $(this).toggleClass("expanded");
-    }
-  });
-});
-
-$(window).resize(function () {
-  if ($(window).width() > 768) {
-    $(".footer-links-wrapper ").removeClass("expanded");
+$(window).on("resize", function () {
+  if ($(window).width() <= 768) {
+    $(".footer-links-wrapper").addClass("someClass");
+  } else {
+    $(".footer-links-wrapper").removeClass("someClass");
+    $(".footer-links-wrapper ul").show();
   }
 });
+
+// Footer collapse functionality
+$(document).on("click", ".someClass h3", function () {
+  $(this).next("ul").slideToggle();
+  $(this).toggleClass("expanded");
+});
+
