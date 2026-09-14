@@ -8,7 +8,7 @@ function myMultiplier(x) {
 
 // 1 (D & E)
 let y = myMultiplier(4);
-console.log(y);
+// console.log(y);
 
 // 1 (F)
 module.exports.myMultiplier = myMultiplier;
