@@ -14,18 +14,17 @@ console.log(result2);
 const fs = require("fs");
 
 const result3 = first.myMultiplier(14);
-fs.writeFileSync(
+fs.writeFile(
   "results.txt",
   `The value of 14 when passed through the myMultiplier 
 function is (${result3}).`,
 );
 
-
 // 4 (b)
 
 const result4 = second.myMultiplier(14);
 
-fs.appendFileSync(
+fs.appendFile(
   "results.txt",
   `\nThe value of 14 when passed through the myMultiplier function is (${result4}).`,
 );
