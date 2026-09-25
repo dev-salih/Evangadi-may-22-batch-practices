@@ -7,40 +7,40 @@
 
 
 // if you want create database with in code
-
+require("dotenv").config();
 // const  express = require("express");
 // const app = express();
-// const mysql = require("mysql2");
-
-// require('dotenv').config()
+const mysql = require("mysql2");
 
 
 
-// const connection = mysql.createConnection({
-//     // to access .env file install dotenv in `npm install dotenv --save `
-//     host: process.env.DB_HOST,
-//     user: process.env.DB_USER,
-//     password: process.env.DB_PASSWORD,
-//     database: process.env.DB_NAME,
-//     port: process.env.PORT
-// });
+
+
+const connection = mysql.createConnection({
+    // to access .env file install dotenv in `npm install dotenv --save `
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    port: process.env.PORT
+});
 
 // const createDatabaseSQL = `CREATE DATABASE IF NOT EXISTS zele`;
 
-// connection.connect((error) => {
-//     if(error) {
-//         console.error(error.message);
-//     }
-//     console.log("Connected to MySQL Database ");
-// });
+connection.connect((error) => {
+    if(error) {
+        console.error(error.message);
+    }
+    console.log("Connected to MySQL Database ");
+});
 
- // connection.query(createDatabaseSQL, (error) => {
-    //     if(error){
-    //         console.error("Database cration failed:", error.message);
-    //         return;
-    //     }
-    //     console.log("Database Created Successfully.");
-    // });
+ connection.query(createDatabaseSQL, (error) => {
+        if(error){
+            console.error("Database cration failed:", error.message);
+            return;
+        }
+        console.log("Database Created Successfully.");
+    });
 
 
 
@@ -115,44 +115,44 @@ console.log("====Question 2 New====");
 
 // });
 
-// // Excel design shows thes five table
-// //     products;
-// //     product_description;
-// //     product_price;
-// //     users;
-// //     orders;
+// Excel design shows thes five table
+//     products;
+//     product_description;
+//     product_price;
+//     users;
+//     orders;
 
 
-// //     The important rlationships are
-// //             products
-// //                |
-// //                +---- product_description
-// //                |
-// //                +---- product_price
-// //                |
-// //                +---- orders <---- users
+//     The important rlationships are
+//             products
+//                |
+//                +---- product_description
+//                |
+//                +---- product_price
+//                |
+//                +---- orders <---- users
 
-// // products ───────────────→ orders
-// //    │                       ↑
-// //    ├→ product_description  │
-// //    └→ product_price        │
-// //                            │
-// // users ─────────────────────┘
+// products ───────────────→ orders
+//    │                       ↑
+//    ├→ product_description  │
+//    └→ product_price        │
+//                            │
+// users ─────────────────────┘
 
 
-// // products      => must exist first
-// // users         => must exist first
+// products      => must exist first
+// users         => must exist first
 
-// // description   => depends on products
-// // price         => depends on products
-// // orders        => depends on products + users
+// description   => depends on products
+// price         => depends on products
+// orders        => depends on products + users
 
-// // Create the products table
+// Create the products table
 
-// // The Excel design:
-//     // Product_id
-//     // product_url
-//     // product_name
+// The Excel design:
+    // Product_id
+    // product_url
+    // product_name
 
 // app.get("/install", (req, res) => {
 
@@ -362,7 +362,7 @@ console.log("====Question 2 New====");
 
 
 
-console.log("====Question 3====");
+// console.log("====Question 3====");
 
 
 
@@ -479,15 +479,15 @@ console.log("====Question 3====");
 // Step 1
 // Import modules
 
-const express = require("express");
-const app = express();
+// const express = require("express");
+// const app = express();
 
-const mysql = require("mysql2");
+// const mysql = require("mysql2");
 
-const bodyParser = require("body-parser");
-const cors = require("cors");
+// const bodyParser = require("body-parser");
+// const cors = require("cors");
 
-require("dotenv").config();
+// require("dotenv").config();
 
 // app.use(cors());
 
@@ -502,7 +502,7 @@ require("dotenv").config();
     // means:
 // Add CORS handling to my Express application.
 
-app.use(cors());
+// app.use(cors());
 
 // app.
     // is our express application
@@ -531,7 +531,7 @@ app.use(cors());
 
 
 
-app.use(bodyParser.urlencoded({
+// app.use(bodyParser.urlencoded({
     // This is an option passed to urlencoded().
     // extended: false  
         // is for parsing simple form fields
@@ -557,136 +557,136 @@ app.use(bodyParser.urlencoded({
             // That is the kind of situation where:
                 // extended: true
     extended: false
-}));
+// }));
 // static
     // serves all of them as well as we have other file
-app.use(express.static("public"));
+// app.use(express.static("public"));
 
 
 // Step 3
 // MySQL connection
 
 
-const conn = mysql.createConnection({
+// const conn = mysql.createConnection({
 
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME
+//     host: process.env.DB_HOST,
+//     user: process.env.DB_USER,
+//     password: process.env.DB_PASSWORD,
+//     database: process.env.DB_NAME
 
-});
+// });
 
 // Step 4
 // Connect to MySQL
 
 
-conn.connect((err) => {
-    if (err) {
-        console.log(
-            "MySQL connection error:",
-            err
-        );
-    } else {
-        console.log(
-            "Connected to MySQL Database"
-        );
-    }
-});
+// conn.connect((err) => {
+//     if (err) {
+//         console.log(
+//             "MySQL connection error:",
+//             err
+//         );
+//     } else {
+//         console.log(
+//             "Connected to MySQL Database"
+//         );
+//     }
+// });
 
-// Step 5
-// Add product route
+// // Step 5
+// // Add product route
 
 
-app.post("/add-product", (req, res) => {
+// app.post("/add-product", (req, res) => {
 
-    // 
-// What is req.body?
-    // When a client sends data in the HTTP request body:
+//     // 
+// // What is req.body?
+//     // When a client sends data in the HTTP request body:
 
-    // req.body
-        // is where your Express route can access that parsed data.
+//     // req.body
+//         // is where your Express route can access that parsed data.
 
-    // example 
-        // If the user submitted:
-            // Product Name = iPhone 16
-            // Product URL = https://apple.com/iphone/
+//     // example 
+//         // If the user submitted:
+//             // Product Name = iPhone 16
+//             // Product URL = https://apple.com/iphone/
 
-    // we check in console 
-        // app.post("/add-product", (req, res) => {
-        //     console.log(req.body);
-        // });
+//     // we check in console 
+//         // app.post("/add-product", (req, res) => {
+//         //     console.log(req.body);
+//         // });
 
-    // you might see:
-        // {
-        //     product_name: "iPhone 16",
-        //     product_url: "https://apple.com/iphone/"
-        // }
+//     // you might see:
+//         // {
+//         //     product_name: "iPhone 16",
+//         //     product_url: "https://apple.com/iphone/"
+//         // }
     
-        // Then we check one by one 
-            // req.body.product_name
-                // iPhone 16
+//         // Then we check one by one 
+//             // req.body.product_name
+//                 // iPhone 16
 
-            // req.body.product_url
-                // https://apple.com/iphone/
+//             // req.body.product_url
+//                 // https://apple.com/iphone/
 
-    const productName =
-        req.body.product_name;
+//     const productName =
+//         req.body.product_name;
 
-    const productUrl =
-        req.body.product_url;
-    // Check the form data
-    if (!productName || !productUrl) {
-        return res.send(
-            "Please enter product name and product URL"
-        );
-    }
-    // SQL query
+//     const productUrl =
+//         req.body.product_url;
+//     // Check the form data
+//     if (!productName || !productUrl) {
+//         return res.send(
+//             "Please enter product name and product URL"
+//         );
+//     }
+//     // SQL query
 
-    const sql = `
-        INSERT INTO products
-        (product_url, product_name)
-        VALUES (?, ?)
-    `;
-    // Execute SQL query
+//     const sql = `
+//         INSERT INTO products
+//         (product_url, product_name)
+//         VALUES (?, ?)
+//     `;
+//     // Execute SQL query
 
-    conn.query(
-        sql,
-        [productUrl, productName],
-        (err, result) => {
-            // Check for error
-            if (err) {
-                console.log(
-                    "Insert error:",
-                    err
-                );
-                return res.send(
-                    "Error inserting product"
-                );
-            }
-            // Success
-            console.log(
-                "Product inserted successfully"
-            );
-            console.log(
-                "New product ID:",
-                result.insertId
-            );
-            res.send(
-                "Product added successfully!"
-            );
-        }
-    );
+//     conn.query(
+//         sql,
+//         [productUrl, productName],
+//         (err, result) => {
+//             // Check for error
+//             if (err) {
+//                 console.log(
+//                     "Insert error:",
+//                     err
+//                 );
+//                 return res.send(
+//                     "Error inserting product"
+//                 );
+//             }
+//             // Success
+//             console.log(
+//                 "Product inserted successfully"
+//             );
+//             console.log(
+//                 "New product ID:",
+//                 result.insertId
+//             );
+//             res.send(
+//                 "Product added successfully!"
+//             );
+//         }
+//     );
 
-});
+// });
 
-// Step 6
-// Start server
+// // Step 6
+// // Start server
 
 
-app.listen(3000, () => {
+// app.listen(3000, () => {
 
-    console.log(
-        "Server running: http://localhost:3000"
-    );
+//     console.log(
+//         "Server running: http://localhost:3000"
+//     );
 
-});
+// });
