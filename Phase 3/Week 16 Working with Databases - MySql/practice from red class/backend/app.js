@@ -10,7 +10,7 @@ let myDBconnection = mysql.createConnection({
   user: "crudpracticeuser",
   password: "crudpracticeuser@1234",
   host: "localhost",
-  database:"crudpracticeDB",
+  database: "crudpracticeDB",
 });
 
 // step 5 (set up db and user in phpMyAdmin)
@@ -36,3 +36,22 @@ let myDBconnection = mysql.createConnection({
 // });
 
 // ! better way of db and server connection (step 6 & 3 combined)
+async function startServer() {
+  try {
+    myDBconnection.connect((err) => {
+      if (err) {
+        console.log(`database connection error: ${err}`);
+        return;
+      } else {
+        console.log("Database connected successfully");
+        let PORT = 4678;
+        app.listen(PORT, () => {
+          console.log(`server is listening on localhost: ${PORT}`);
+        });
+      }
+    });
+  } catch (err) {
+    console.log("failed to connect to database", err);
+  }
+}
+startServer();
