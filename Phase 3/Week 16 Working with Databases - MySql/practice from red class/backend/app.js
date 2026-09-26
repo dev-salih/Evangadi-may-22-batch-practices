@@ -2,7 +2,7 @@
 const express = require("express");
 const mysql = require("mysql2");
 
-// step 2 (initialize express)
+//  step 2 (initialize express)
 let app = express();
 
 // step 4 (set up db connection)
@@ -26,6 +26,7 @@ let myDBconnection = mysql.createConnection({
 // )
 
 // step 3 (create server)
+
 // let PORT = 4678;
 // app.listen(PORT, (err) => {
 //   if (err) {
@@ -34,6 +35,8 @@ let myDBconnection = mysql.createConnection({
 //     console.log(`server is listening to port ${PORT}`);
 //   }
 // });
+
+// step 7
 
 // ! better way of db and server connection (step 6 & 3 combined)
 async function startServer() {
