@@ -144,6 +144,22 @@ app.patch("/user/:user_id", (req,res)=>{
 
 });
 
+//! step 12 (delete user data)
+
+app.delete("/user/:user_id", (req, res)=>{
+  const { user_id } = req.params;
+  let deleteQuery = `DELETE FROM userInfo WHERE user_id = ?`;
+
+  myDBconnection.query(deleteQuery, [user_id], (err, data, field)=>{
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("user data deleted");
+      res.send("user data deleted!");
+    }
+  });
+});
+
 // ! better way of db and server connection (step 6 & 3 combined)
 async function startServer() {
   try {
@@ -153,7 +169,7 @@ async function startServer() {
         return;
       } else {
         console.log("Database connected successfully");
-        let PORT = 4678;
+        let PORT = 8991;
         app.listen(PORT, () => {
           console.log(`server is listening on localhost: ${PORT}`);
         });
