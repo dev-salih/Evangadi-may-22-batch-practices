@@ -45,7 +45,7 @@ app.get("/test",(req, res)=>{
   res.send("backend is working");
 })
 
-// step 8 (create table)
+//! step 8 (create table)
 app.get("/createTable", (req,res)=>{
   let tableSchema = `CREATE TABLE if not exists userinfo(
   user_id int auto_increment,
@@ -93,9 +93,55 @@ app.post("/createUser", (req, res)=>{
     if (err) {
       console.log(err);
     } else {
+      console.log("data inserted successfully")
       res.send("data inserted successfully");
     }
   });
+});
+
+
+//! step 10 (select OR getting user data)
+
+app.get("/getUserData", (req, res)=>{
+  let getAllUserQuery = 'SELECT * FROM userInfo';
+
+  myDBconnection.query(getAllUserQuery, (err, data, field)=>{
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("user info data is being aquired!");
+      res.send(data);
+    }
+  });
+})
+
+// if you want to select in ASC or DESC: 'SELECT * FROM userInfo ORDER BY id ASC/DESC', 
+// if you want to select specific data: 'SELECT * FROM userInfo WHERE user_id = ?'
+
+//! step 11 (update single data)
+
+app.patch("/user/:user_id", (req,res)=>{
+  const { user_id } = req.params;
+  const { user_group } = req.body;
+  let updateQuery = `
+  UPDATE userInfo
+  SET user_group = ?
+  WHERE user_id = ?
+  `;
+
+  myDBconnection.query(
+    updateQuery,
+    [user_group, user_id],
+    (err, data, field) => {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log("user info updated!");
+        res.send("user info updated!");
+      }
+    },
+  );
+
 });
 
 // ! better way of db and server connection (step 6 & 3 combined)
