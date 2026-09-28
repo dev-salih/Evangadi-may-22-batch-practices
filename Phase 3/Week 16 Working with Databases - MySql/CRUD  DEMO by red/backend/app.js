@@ -9,7 +9,7 @@ let app = express();
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
-// ! step 4 (set up db connection)
+// ! step 5 (set up db connection)
 let myDBconnection = mysql.createConnection({
   user: "crudpracticeuser",
   password: "crudpracticeuser@1234",
@@ -17,17 +17,17 @@ let myDBconnection = mysql.createConnection({
   database: "crudpracticeDB",
 });
 
-// ! step 5 (set up db and user in phpMyAdmin)
+// ! step 6 (set up db and user in phpMyAdmin)
 
-// ! step 6 (connect with db)
-// myDBconnection.connect((err)=>{
-//     if (err) {
-//       console.log(err);
-//     } else {
-//       console.log("db connected successfully")
-//     }
-//   }
-// )
+// ! step 7 (connect with db)
+myDBconnection.connect((err)=>{
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("db connected successfully")
+    }
+  }
+)
 
 // ! step 3 (create server)
 
@@ -40,7 +40,7 @@ let myDBconnection = mysql.createConnection({
 //   }
 // });
 
-// ! step 7
+// ! step 4
 app.get("/test",(req, res)=>{
   res.send("backend is working");
 })
