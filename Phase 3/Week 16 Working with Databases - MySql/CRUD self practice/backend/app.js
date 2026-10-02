@@ -38,14 +38,43 @@ app.get("/createTable", (req, res) => {
   PRIMARY KEY(user_id)
   )`;
 
-  myDBconnection.query(tableSchema, (err, data, feild)=>{
+  myDBconnection.query(tableSchema, (err, data, feild) => {
     if (err) {
-      console.log(err)
+      console.log(err);
     } else {
       console.log("table created successfully");
       res.send("Table created successfully");
     }
   });
+});
+
+//! step 9 (data insertion)
+app.post("/createUser", (req, res) => {
+  
+  const { firstName, lastName, email, batch, group, course } = req.body;
+
+  let insertQuery = `INSERT INTO userInformation(
+  user_first_name, 
+  user_last_name, 
+  user_email, 
+  user_batch, 
+  user_group, 
+  user_course
+  )
+  VALUES(?, ?, ?, ?, ?, ?)`;
+
+  myDBconnection.query(
+    insertQuery,
+    [firstName, lastName, email, batch, group, course],
+    (err, data, field) => {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log("data inserted successfully");
+        res.send("data inserted successfully");
+      }
+    },
+  );
 });
 
 //! step 4 (test backend)
