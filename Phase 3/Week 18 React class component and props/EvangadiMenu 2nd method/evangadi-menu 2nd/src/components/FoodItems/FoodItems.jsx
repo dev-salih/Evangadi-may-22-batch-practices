@@ -6,7 +6,6 @@ export class FoodItems extends Component {
     let {imgUrl, title, price, desc} = this.props;
     return (
       <>
-        <div className="foods-container">
           <div className="single-food">
             <div className="img">
               <img src={imgUrl} />
@@ -17,7 +16,6 @@ export class FoodItems extends Component {
             </div>
             <div className="food-desc">{desc}</div>
           </div>
-        </div>
       </>
     );
   }

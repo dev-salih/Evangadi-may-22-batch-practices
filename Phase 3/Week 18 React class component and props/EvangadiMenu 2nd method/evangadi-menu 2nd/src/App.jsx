@@ -6,7 +6,7 @@ import menu from "./commonResource/data";
 function App() {
   return (
     <>
-      <div className="all-container">
+      {/* <div className="all-container"> */}
         <Header />
 
         {/* 1) using replicating the components */}
@@ -48,19 +48,21 @@ function App() {
 
         {/* 3) using destructuring */}
 
-        {menu.map(({ img, title, price, desc }, i) => {
-          // console.log(singleItem);
-          return (
-            <FoodItems
-              key={i}
-              imgUrl={img}
-              title={title}
-              price={price}
-              desc={desc}
-            />
-          );
-        })}
-      </div>
+        <div className="foods-container">
+          {menu.map(({ img, title, price, desc }, i) => {
+            // console.log(singleItem);
+            return (
+              <FoodItems
+                key={i}
+                imgUrl={img}
+                title={title}
+                price={price}
+                desc={desc}
+              />
+            );
+          })}
+        </div>
+      {/* </div> */}
     </>
   );
 }
