@@ -1,6 +1,6 @@
 import "./App.css";
 import FoodItems from "./components/FoodItems/FoodItems";
-import Header from "./components/Header/Header";
+import Header from "./components/Header/Header.module";
 import menu from "./commonResource/data";
 
 function App() {
