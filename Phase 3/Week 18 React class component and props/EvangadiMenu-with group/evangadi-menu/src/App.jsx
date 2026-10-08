@@ -9,14 +9,11 @@ function App() {
       <div className="all-container">
         <Header />
         <div className="foods-container">
-          {menu.map(({ img, title, price, desc }, i) => {
+          {menu.map((product, i) => { 
             return (
               <FoodItem
                 key={i}
-                imgUrl={img}
-                title={title}
-                price={price}
-                desc={desc}
+                data={product}
               />
             );
           })}
