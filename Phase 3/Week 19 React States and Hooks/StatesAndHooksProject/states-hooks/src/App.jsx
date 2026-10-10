@@ -1,11 +1,12 @@
 import './App.css'
+import MyCounter from './components/MyCounter/StateComponents/MyCounter'
 
 function App() {
   
 
   return (
     <>
-    <h1>Test</h1>
+    <MyCounter/>
     </>
   )
 }
