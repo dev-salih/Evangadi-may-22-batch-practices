@@ -2,13 +2,18 @@ import {useState} from 'react'
 import './ThemeToggle.css'
 
 function ThemeToggle() {
-  const [color, setColor] = useState(0);
+
+  const [IsDark, setIsDark] = useState(true);
+
+  const toggleTheme = () => {
+    setIsDark(!IsDark);
+  }
   return (
     <>
-      <div>
+      <div className={`app ${(IsDark) ? "dark" : "light"}`}>
         <div className='container'>
           <h2>Theme Toggle App</h2>
-          <button>switch to {} mode</button>
+          <button onClick={toggleTheme}>{IsDark ? "switch to light mode" : "switch to dark mode"}</button>
         </div>
       </div>
     </>

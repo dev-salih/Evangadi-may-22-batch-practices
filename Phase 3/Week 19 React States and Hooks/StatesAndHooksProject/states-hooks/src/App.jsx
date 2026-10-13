@@ -1,17 +1,19 @@
 import './App.css'
-import IncreaseDecreaseCount from './components/MyCounter/HooksComponents/IncreaseDecreaseCount'
-import MyCounter from './components/MyCounter/StateComponents/MyCounter'
+// import IncreaseDecreaseCount from './components/MyCounter/HooksComponents/IncreaseDecreaseCount'
+import ThemeToggle from './components/MyCounter/HooksComponents/ThemeToggle'
+// import MyCounter from './components/MyCounter/StateComponents/MyCounter'
 
 function App() {
   
 
   return (
     <>
-    <MyCounter/>
+    {/* <MyCounter/> */}
     <br/>
     <br/>
     <br/>
-    <IncreaseDecreaseCount/>
+    {/* <IncreaseDecreaseCount/> */}
+    <ThemeToggle/>
     </>
   )
 }
