@@ -3,17 +3,17 @@ import './ThemeToggle.css'
 
 function ThemeToggle() {
 
-  const [IsDark, setIsDark] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleTheme = () => {
-    setIsDark(!IsDark);
+    setIsDarkMode(!isDarkMode);
   }
   return (
     <>
-      <div className={`app ${(IsDark) ? "dark" : "light"}`}>
+      <div className={`app ${(isDarkMode) ? "dark" : "light"}`}>
         <div className='container'>
           <h2>Theme Toggle App</h2>
-          <button onClick={toggleTheme}>{IsDark ? "switch to light mode" : "switch to dark mode"}</button>
+          <button onClick={toggleTheme}>{isDarkMode ? "switch to light mode" : "switch to dark mode"}</button>
         </div>
       </div>
     </>

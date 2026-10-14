@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import "./passwordToggle.css";
+// import "./passwordToggle.css";
 
 function PasswordToggle() {
-  const [showPassword, setShowPassword] = useState(true);
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+  // const [username, setUsername] = useState("");
+  // const [password, setPassword] = useState("");
 
   const togglePasswordVisibility = () => {
     setShowPassword((prev) => !prev);
@@ -13,8 +13,8 @@ function PasswordToggle() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`username : ${username} & password : ${password}`);
-    console.log("Form submitted with", { username, password });
+    // alert(`username : ${username} & password : ${password}`);
+    // console.log("Form submitted with", { username, password });
   };
 
   return (
@@ -27,10 +27,10 @@ function PasswordToggle() {
               <label htmlFor="user">USERNAME</label>
               <input
                 type="text"
-                value={username}
                 placeholder="Enter username"
                 id="user"
-                onChange={(e) => setUsername(e.target.value)}
+                // value={username}
+                // onChange={(e) => setUsername(e.target.value)}
               />
             </div>
 
@@ -39,10 +39,10 @@ function PasswordToggle() {
               <div className="password-wrapper">
                 <input
                   type={showPassword ? "text" : "password"}
-                  value={password}
                   placeholder="Enter password"
                   id="password"
-                  onChange={(e) => setPassword(e.target.value)}
+                  // value={password}
+                  // onChange={(e) => setPassword(e.target.value)}
                 />
                 <span className="eye-icon" onClick={togglePasswordVisibility}>
                   {showPassword ? <FaEyeSlash /> : <FaEye />}
