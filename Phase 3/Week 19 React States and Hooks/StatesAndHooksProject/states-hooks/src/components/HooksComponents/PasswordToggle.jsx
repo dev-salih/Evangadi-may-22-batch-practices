@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-// import "./passwordToggle.css";
+import "./passwordToggle.css";
 
 function PasswordToggle() {
   const [showPassword, setShowPassword] = useState(false);

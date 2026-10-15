@@ -1,9 +1,9 @@
 import './App.css'
-// import UseEffectForTitle from './components/HooksComponents/UseEffectForTitle'
-import PasswordToggle from './components/HooksComponents/PasswordToggle'
-// import IncreaseDecreaseCount from './components/MyCounter/HooksComponents/IncreaseDecreaseCount'
-// import ThemeToggle from './components/MyCounter/HooksComponents/ThemeToggle'
-// import MyCounter from './components/MyCounter/StateComponents/MyCounter'
+import UseEffectForTitle from './components/HooksComponents/UseEffectForTitle'
+// import PasswordToggle from './components/HooksComponents/PasswordToggle'
+// import ThemeToggle from './components/HooksComponents/ThemeToggle'
+// import IncreaseDecreaseCount from './components/HooksComponents/IncreaseDecreaseCount'
+// import MyCounter from './components/StateComponents/MyCounter'
 
 function App() {
   
@@ -13,8 +13,8 @@ function App() {
     {/* <MyCounter/> */}
     {/* <IncreaseDecreaseCount/> */}
     {/* <ThemeToggle/> */}
-    <PasswordToggle/>
-    {/* <UseEffectForTitle/> */}
+    {/* <PasswordToggle/> */}
+    <UseEffectForTitle/>
     </>
   )
 }

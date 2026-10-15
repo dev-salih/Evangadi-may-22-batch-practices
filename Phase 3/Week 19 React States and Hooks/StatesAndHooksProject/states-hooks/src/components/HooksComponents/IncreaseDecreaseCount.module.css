@@ -1,5 +1,5 @@
 /* Display banner styling */
-p {
+.para {
   background-color: #d1d1d1;
   text-align: center;
   font-size: 28px;
@@ -10,7 +10,7 @@ p {
 }
 
 /* Button container / styling */
-button {
+.btn {
   background-color: #38a169;
   color: white;
   border: none;
