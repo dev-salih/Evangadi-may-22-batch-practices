@@ -1,6 +1,7 @@
 import { Component } from "react";
 import CounterDisplayer from "./CounterDisplayer";
 import EvenCounterDisplayer from "./EvenCounterDisplayer";
+import './MyCounter.css'
 
 export class MyCounter extends Component {
   constructor() {
@@ -21,9 +22,9 @@ export class MyCounter extends Component {
     // console.log(this.state.count); why the results are doubled ?
     return (
       <>
-        <button onClick={this.allClicksCounter}>count</button>
-        <CounterDisplayer count={this.state.count} />
-        <EvenCounterDisplayer count={this.state.count} />
+        <button className="btn" onClick={this.allClicksCounter}>count</button>
+        <CounterDisplayer clickedCount={this.state.count} />
+        <EvenCounterDisplayer countEven={this.state.count} />
       </>
     );
   }

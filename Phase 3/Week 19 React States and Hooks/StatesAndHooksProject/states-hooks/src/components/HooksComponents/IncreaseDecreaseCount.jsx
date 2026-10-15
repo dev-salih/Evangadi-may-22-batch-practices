@@ -19,9 +19,15 @@ function IncreaseDecreaseCount() {
   return (
     <>
       <p className={style.para}>Initial count: {count}</p>
-      <button onClick={resetCount}>Reset Result</button>
-      <button onClick={increaseCount}>Increase Result</button>
-      <button onClick={decreaseCount}>Decrease Result</button>
+      <button className={style.btn} onClick={resetCount}>
+        Reset Result
+      </button>
+      <button className={style.btn} onClick={increaseCount}>
+        Increase Result
+      </button>
+      <button className={style.btn} onClick={decreaseCount}>
+        Decrease Result
+      </button>
     </>
   );
 }

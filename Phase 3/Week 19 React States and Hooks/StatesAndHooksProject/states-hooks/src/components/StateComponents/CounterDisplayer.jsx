@@ -16,7 +16,7 @@ export default class CounterDisplayer extends Component {
   render() {
     return (
       <div>
-        <p>Number of clicks: {this.props.count}</p>
+        <p>Number of clicks: {this.props.clickedCount}</p>
       </div>
     );
   }
