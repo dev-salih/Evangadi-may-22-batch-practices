@@ -1,1 +1,12 @@
 api_key = AIzaSyB5_yFT5h3IKG52kLU6dJgvrYlWtJ6iWMc
+
+channel_id = UCE_M8A5yxnLfW0KghEeajjw
+
+
+
+
+https://www.googleapis.com/youtube/v3/search
+
+
+
+  'https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCE_M8A5yxnLfW0KghEeajjw&maxResults=9&order=date&type=video&key=AIzaSyB5_yFT5h3IKG52kLU6dJgvrYlWtJ6iWMc' \
