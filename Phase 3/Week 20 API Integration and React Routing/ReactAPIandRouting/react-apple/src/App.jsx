@@ -1,6 +1,4 @@
 import "./App.css";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home/Home";
 import Mac from "./pages/Mac/Mac";
 import Ipad from "./pages/Ipad/Ipad";
@@ -11,24 +9,30 @@ import Music from "./pages/Music/Music";
 import Support from "./pages/Support/Support";
 import Cart from "./pages/Cart/Cart";
 import { Route, Routes } from "react-router";
+import NotFound from "./pages/NotFound/NotFound";
+import SharedLayout from "./components/layout/SharedLayout";
 
 function App() {
   return (
     <>
-      <Header />
+  
 
       <Routes>
-        <Route index element={<Home />} />   {/* we can use path="/" instead of index */}
-        <Route path="mac" element={<Mac />} />
-        <Route path="ipnone" element={<Iphone />} />
-        <Route path="ipad" element={<Ipad />} />
-        <Route path="watch" element={<Watch />} />
-        <Route path="tv" element={<Tv />} />
-        <Route path="music" element={<Music />} />
-        <Route path="support" element={<Support />} />
-        <Route path="cart" element={<Cart />} />
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<Home />} />{" "}
+          {/* we can use path="/" instead of index */}
+          <Route path="mac" element={<Mac />} />
+          <Route path="ipnone" element={<Iphone />} />
+          <Route path="ipad" element={<Ipad />} />
+          <Route path="watch" element={<Watch />} />
+          <Route path="tv" element={<Tv />} />
+          <Route path="music" element={<Music />} />
+          <Route path="support" element={<Support />} />
+          <Route path="cart" element={<Cart />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
       </Routes>
-      <Footer />
+
     </>
   );
 }

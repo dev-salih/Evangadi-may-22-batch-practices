@@ -1,5 +1,3 @@
-
-
 function NotFound() {
   return (
     <div>
@@ -11,7 +9,7 @@ function NotFound() {
                 404 <br />
                 The page you're looking for can't be found.
               </h1>
-              <link to="/">back to home</link>
+              {/* <link to="/">back to home</link> */}
             </div>
           </div>
         </div>

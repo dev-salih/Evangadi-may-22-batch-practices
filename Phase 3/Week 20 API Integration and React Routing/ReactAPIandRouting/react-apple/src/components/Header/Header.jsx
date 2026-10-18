@@ -18,51 +18,29 @@ function Header() {
             >
               ☰
             </button>
-            <Link className="navbar-brand mx-auto" href="/">
+            <Link className="navbar-brand mx-auto" to="/">
               <img src={appleLogo} />
             </Link>
 
             <div className="navbar-collapse collapse">
               <ul className="navbar-nav nav-justified w-100 nav-fill">
+
                 <NavbarList LinkName={"mac"} LinkUrl={"/mac/"} />
+                <NavbarList LinkName={"iphone"} LinkUrl={"/iphone/"} />
+                <NavbarList LinkName={"ipad"} LinkUrl={"/ipad/"} />
+                <NavbarList LinkName={"watch"} LinkUrl={"/watch/"} />
+                <NavbarList LinkName={"tv"} LinkUrl={"/tv/"} />
+                <NavbarList LinkName={"Music"} LinkUrl={"/Music/"} />
+                <NavbarList LinkName={"Support"} LinkUrl={"/Support/"} />
+                <NavbarList LinkName={"Support"} LinkUrl={"/Support/"} />
 
                 <li className="nav-item">
-                  <a className="nav-link js-scroll-trigger" href="/iphone/">
-                    iphone
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link js-scroll-trigger" href="/ipad">
-                    ipad
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link js-scroll-trigger" href="/watch/">
-                    watch
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link js-scroll-trigger" href="/tv/">
-                    tv
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link js-scroll-trigger" href="/music/">
-                    Music
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link js-scroll-trigger" href="/support/">
-                    Support
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link js-scroll-trigger" href="/search/">
+                  <Link className="nav-link js-scroll-trigger" to="/search/">
                     <img src={searchIcon} />
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link js-scroll-trigger" href="/cart/">
+                  <Link className="nav-link js-scroll-trigger" to="/cart/">
                     <img src={cartIcon} />
                   </Link>
                 </li>
