@@ -1,10 +1,14 @@
 // ! step 1 (import modules)
-require("dotenv").config();
 const express = require("express");
 const mysql = require("mysql2");
+require("dotenv").config();
 
 // ! step 2 (initialize express)
 const app = express();
+
+// ! step 10 (middleware)
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // ! step 4 (test the backend)
 app.get("/test", (req, res) => {
@@ -91,7 +95,74 @@ app.get("/install", (req, res) => {
 });
 
 // ! step 9 (data insertion)
-app.post("/addiphone", (req, res) => {});
+app.post("/addiphones", (req, res) => {
+  // console.log(req.body);
+  const {
+    product_name,
+    product_url,
+    product_brief_description,
+    product_description,
+    product_img,
+    product_link,
+    starting_price,
+    price_range,
+  } = req.body;
+
+  const sqlAddToProducts =
+    "INSERT INTO Products (product_url, product_name) VALUES (?, ?)";
+
+  const sqlAddToDescription =
+    "INSERT INTO ProductDescription (product_id, product_brief_description, product_description, product_img, product_link) VALUES (?, ?, ?, ?, ?)";
+
+  const sqlAddToPrice =
+    "INSERT INTO ProductPrice (product_id, starting_price, price_range) VALUES (?, ?, ?)";
+
+  // Step 1: Insert the product
+  db.query(sqlAddToProducts, [product_url, product_name], (err, result) => {
+    if (err) {
+      console.error("Error inserting product:", err.message);
+      return res.status(500).send("Error inserting product");
+    }
+
+    // Step 2: Get the inserted product ID
+    const productId = result.insertId;
+
+    // Step 3: Insert the product description
+    db.query(
+      sqlAddToDescription,
+      [
+        productId,
+        product_brief_description,
+        product_description,
+        product_img,
+        product_link,
+      ],
+      (err, result, fields) => {
+        if (err) {
+          console.error("Error inserting description:", err.message);
+          return res.status(500).send("Error inserting product description");
+        }
+
+        // Step 4: Insert the product price
+        db.query(
+          sqlAddToPrice,
+          [productId, starting_price, price_range],
+          (err, result, fields) => {
+            if (err) {
+              console.error("Error inserting price:", err.message);
+              return res.status(500).send("Error inserting product price");
+            }
+
+            // Step 5: Send success response
+            return res.send("All records inserted successfully!");
+          },
+        );
+      },
+    );
+  });
+});
+
+
 // ! step 3 (create server)
 app.listen(3000, () => {
   console.log("Server running: http://localhost:3000");
@@ -139,3 +210,14 @@ app.listen(3000, () => {
 //     });
 //   });
 // });
+
+// [
+//   product_name,
+//   product_url,
+//   product_brief_description,
+//   product_description,
+//   product_img,
+//   product_link,
+//   starting_price,
+//   price_range,
+// ];

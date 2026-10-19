@@ -10,39 +10,48 @@
 <body>
   <h1>Add iphone</h1>
   <form action="http://localhost:3000/addiphones" method="post">
-    <label for="name ">iphone ID:</label><br />
-    <input type="text" name="iphoneID" />
-    <br />
-    <br />
-    <label for="imgPath">iPhone image path:</label><br />
-    <input type="text" name="imgPath" />
-    <br />
-    <br />
-    <label for="iPhoneLink">iPhone page link:</label><br />
-    <input type="text" name="iPhoneLink" />
-    <br />
-    <br />
-    <label for="iPhoneTitle">iPhone Title:</label><br />
-    <input type="text" name="iPhoneTitle" />
-    <br />
-    <br />
-    <label for="startPrice">Starting Price:</label><br />
-    <input type="text" name="startPrice" />
-    <br />
-    <br />
-    <label for="priceRange">Price Range:</label><br />
-    <input type="text" name="priceRange" />
-    <br />
-    <br />
-    <label for="briefDescription">Breif Description:</label><br />
-    <textarea name="briefDescription" cols="30" rows="10"></textarea>
-    <br />
-    <br />
-    <label for="fullDescription">Full Description:</label><br />
-    <textarea name="fullDescription" cols="30" rows="10"></textarea>
-    <br />
-    <br />
-    <input type="submit" value="App iphone"/>
+    <div>
+      <h2>Add Products</h2>
+      <label for="productname">product-name </label>
+      <br />
+      <input type="text" name="product_name" />
+      <br />
+      <label for="producturl">product-url</label>
+      <br />
+      <input type="text" name="product_url" />
+    </div>
+    <div>
+      <h2>Add product description</h2>
+      <label for="product_brief_description">product_brief_description
+      </label>
+      <br />
+      <textarea name="product_brief_description" id="" cols="30" rows="10"></textarea>
+      <br />
+      <label for="product_description">product_description</label>
+      <br />
+      <textarea name="product_description" id="" cols="30" rows="10"></textarea>
+      <br />
+      <label for="product_img">product_img </label>
+      <br />
+      <input type="text" name="product_img" />
+      <br />
+      <label for="product_link">product_link</label>
+      <br />
+      <input type="text" name="product_link" />
+    </div>
+    <div>
+      <h2>Add product Price</h2>
+      <label label for="starting_price">starting_price </label>
+      <br />
+      <input type="text" name="starting_price" />
+      <br />
+      <label for="price_range">price_range</label>
+      <br />
+      <input type="text" name="price_range" />
+    </div>
+  
+    <br /><br />
+    <input type="submit" value="Add product" />
   </form>
 </body>
 
