@@ -25,15 +25,16 @@ const db = mysql.createConnection({
 // ! step 7 (connect with db)
 db.connect((error) => {
   if (error) {
-    console.error("mysql is not connected", error.message);
+    console.log("mysql is not connected", error.message);
     return;
+  } else {
+    console.log("connected to mySQL database!");
   }
-  console.log("connected to mySQL database!");
 });
 
 // ! step 8 (create table)
 app.get("/install", (req, res) => {
-  let message = "Tables created!"
+  let message = "Tables created!";
 
   let createProducts = `
         CREATE TABLE IF NOT EXISTS Products(
@@ -74,36 +75,23 @@ app.get("/install", (req, res) => {
     `;
 
   db.query(createProducts, (err, result, fields) => {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log("Product Table created!");
-    }
+    if (err) console.log(err);
   });
 
   db.query(createProductDescription, (err, result, fields) => {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log("ProductDescription Table created!");
-    }
+    if (err) console.log(err);
   });
 
   db.query(createProductPrice, (err, result, fields) => {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log("ProductPrice Table created successfully!");
-    }
+    if (err) console.log(err);
   });
 
-  res.send("message");
+  res.send(message);
+  console.log(message);
 });
 
 // ! step 9 (data insertion)
-app.post("/addiphone", (req, res)=>{
-
-})
+app.post("/addiphone", (req, res) => {});
 // ! step 3 (create server)
 app.listen(3000, () => {
   console.log("Server running: http://localhost:3000");
