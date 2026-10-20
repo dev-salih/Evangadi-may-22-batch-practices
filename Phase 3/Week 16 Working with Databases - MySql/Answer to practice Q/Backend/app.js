@@ -167,26 +167,40 @@ app.get("/iphones", (req, res) => {
   db.query(
     `SELECT * FROM Products p INNER JOIN ProductDescription d ON p.product_id = d.product_id INNER JOIN ProductPrice r ON p.product_id = r.product_id;`,
     (err, rows) => {
-      if (!err) res.json({ products: rows });
+      if (!err) res.json({ salih: rows });
       else console.log(err);
     },
   );
 });
+
+// ! 0R
+// app.get("/iphones", (req, res) => {
+//   db.query(
+//     "SELECT * FROM Products JOIN ProductDescription JOIN ProductPrice ON Products.product_id = ProductDescription.product_id AND Products.product_id = ProductPrice.product_id",
+//     (err, rows, fields) => {
+//       let iphones = { products: [] };
+//       iphones.products = rows;
+//       var stringIphones = JSON.stringify(iphones);
+//       if (!err) res.end(stringIphones);
+//       else console.log(err);
+//     },
+//   );
+// });
 
 // ! step 12 (select/Read single product)
-app.get("/iphones/:product_id", (req, res) => {
-  const productID = req.params.product_id;
-  // console.log(productID);
+// app.get("/iphones/:product_id", (req, res) => {
+//   const productID = req.params.product_id;
+//   // console.log(productID);
 
-  db.query(
-    `SELECT * FROM Products JOIN ProductDescription ON Products.product_id = ProductDescription.product_id JOIN ProductPrice ON Products.product_id = ProductPrice.product_id WHERE Products.product_id = ${productID}`,
+//   db.query(
+//     `SELECT * FROM Products JOIN ProductDescription ON Products.product_id = ProductDescription.product_id JOIN ProductPrice ON Products.product_id = ProductPrice.product_id WHERE Products.product_id = ${productID}`,
 
-    (err, rows) => {
-      if (!err) res.json({ products: rows });
-      else console.log(err);
-    },
-  );
-});
+//     (err, rows) => {
+//       if (!err) res.json({ products: rows });
+//       else console.log(err);
+//     },
+//   );
+// });
 
 // ! step 3 (create server)
 app.listen(3000, () => {
