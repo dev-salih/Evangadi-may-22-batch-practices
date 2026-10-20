@@ -1,6 +1,8 @@
 import appleLogo from "../../assets/images/icons/logo-sm.png"
 import searchIcon from "../../assets/images/icons/search-icon-sm.png"
 import cartIcon from "../../assets/images/icons/cart-sm.png"
+import { Link } from "react-router";
+import NavbarList from "../NavbarList";
 
 function Header() {
   return (
@@ -16,56 +18,29 @@ function Header() {
             >
               ☰
             </button>
-            <a className="navbar-brand mx-auto" href="#">
+            <Link className="navbar-brand mx-auto" to="/">
               <img src={appleLogo} />
-            </a>
+            </Link>
 
             <div className="navbar-collapse collapse">
               <ul className="navbar-nav nav-justified w-100 nav-fill">
+                <NavbarList Linkname="Mac" Linkurl="/mac/" />
+                <NavbarList Linkname="iphone" Linkurl="/iphone/" />
+                <NavbarList Linkname="ipad" Linkurl="/ipad/" />
+                <NavbarList Linkname="watch" Linkurl="/watch/" />
+                <NavbarList Linkname="tv" Linkurl="/tv/" />
+                <NavbarList Linkname="Music" Linkurl="/music/" />
+                <NavbarList Linkname="Support" Linkurl="/support/" />
+
                 <li className="nav-item">
-                  <a className="nav-link js-scroll-trigger" href="/mac/">
-                    Mac
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link js-scroll-trigger" href="#">
-                    iphone
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link js-scroll-trigger" href="#">
-                    ipad
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link js-scroll-trigger" href="#">
-                    watch
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link js-scroll-trigger" href="#">
-                    tv
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link js-scroll-trigger" href="#">
-                    Music
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link js-scroll-trigger" href="#">
-                    Support
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link js-scroll-trigger" href="/search/">
+                  <Link className="nav-link js-scroll-trigger" to="/search/">
                     <img src={searchIcon} />
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link js-scroll-trigger" href="/cart/">
+                  <Link className="nav-link js-scroll-trigger" to="/cart/">
                     <img src={cartIcon} />
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
