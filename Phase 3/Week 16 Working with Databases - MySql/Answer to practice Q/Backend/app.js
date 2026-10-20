@@ -1,10 +1,15 @@
 // ! step 1 (import modules)
 const express = require("express");
 const mysql = require("mysql2");
+const cors = require("cors"); 
+const { use } = require("react");
 require("dotenv").config();
 
 // ! step 2 (initialize express)
 const app = express();
+
+// ! step 13 (use cors)
+app.use(cors());
 
 // ! step 10 (middleware)
 app.use(express.json());
