@@ -2,7 +2,6 @@
 const express = require("express");
 const mysql = require("mysql2");
 const cors = require("cors"); 
-const { use } = require("react");
 require("dotenv").config();
 
 // ! step 2 (initialize express)
@@ -10,6 +9,13 @@ const app = express();
 
 // ! step 13 (use cors)
 app.use(cors());
+// const corsOption = {
+//   origin: [
+//     "http://localhost:3000",
+//     "https://www.evangadi.com",
+//     "http://www.apple.com",
+//   ],
+// };
 
 // ! step 10 (middleware)
 app.use(express.json());
@@ -168,11 +174,11 @@ app.post("/addiphones", (req, res) => {
 });
 
 // ! step 11 (select/Read All data)
-app.get("/iphones", (req, res) => {
+app.get("/iphone", (req, res) => {
   db.query(
     `SELECT * FROM Products p INNER JOIN ProductDescription d ON p.product_id = d.product_id INNER JOIN ProductPrice r ON p.product_id = r.product_id;`,
     (err, rows) => {
-      if (!err) res.json({ salih: rows });
+      if (!err) res.json({ products: rows });
       else console.log(err);
     },
   );

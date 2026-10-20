@@ -14,26 +14,21 @@ import SharedLayout from "./components/layout/SharedLayout";
 
 function App() {
   return (
-    <>
-  
-
-      <Routes>
-        <Route path="/" element={<SharedLayout />}>
-          <Route index element={<Home />} />{" "}
-          {/* we can use path="/" instead of index */}
-          <Route path="mac" element={<Mac />} />
-          <Route path="ipnone" element={<Iphone />} />
-          <Route path="ipad" element={<Ipad />} />
-          <Route path="watch" element={<Watch />} />
-          <Route path="tv" element={<Tv />} />
-          <Route path="music" element={<Music />} />
-          <Route path="support" element={<Support />} />
-          <Route path="cart" element={<Cart />} />
-          <Route path="*" element={<NotFound />} />
-        </Route>
-      </Routes>
-
-    </>
+    <Routes>
+      <Route path="/" element={<SharedLayout />}>
+        <Route index element={<Home />} />{" "}
+        {/* we can use path="/" instead of index */}
+        <Route path="mac" element={<Mac />} />
+        <Route path="iphone" element={<Iphone />} />
+        <Route path="ipad" element={<Ipad />} />
+        <Route path="watch" element={<Watch />} />
+        <Route path="tv" element={<Tv />} />
+        <Route path="music" element={<Music />} />
+        <Route path="support" element={<Support />} />
+        <Route path="cart" element={<Cart />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    </Routes>
   );
 }
 
