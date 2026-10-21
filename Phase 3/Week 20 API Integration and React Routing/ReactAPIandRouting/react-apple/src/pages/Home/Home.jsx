@@ -5,6 +5,7 @@ import FourthSection from "../../components/FourthSection/FourthSection"
 import SecondSection from "../../components/SecondSection/SecondSection"
 import SixthSection from "../../components/SixthSection/SixthSection"
 import ThirdSection from "../../components/ThirdSection/ThirdSection"
+import YoutubeVideos from "../../components/YoutubeVideos/YoutubeVideos"
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
       <FourthSection/>
       <FifthSection/>
       <SixthSection/>
+      <YoutubeVideos/>
     </>
   )
 }
