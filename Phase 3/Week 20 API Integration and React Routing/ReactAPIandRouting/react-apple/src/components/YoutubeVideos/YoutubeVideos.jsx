@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react";
 import "./YoutubeVideos.css";
+import axios from "axios"
 
 function YoutubeVideos() {
   const [YoutubeVideos, setYoutubeVideos] = useState([]);
 
+  // api key
+  const Yt_Key = import.meta.env.VITE_YT_KEY;
+  
+  // ! method 1(fetch)
   // useEffect(()=>{
   //   fetch(
   //   "https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCE_M8A5yxnLfW0KghEeajjw&maxResults=8&order=date&type=video&key=AIzaSyB5_yFT5h3IKG52kLU6dJgvrYlWtJ6iWMc",
@@ -17,14 +22,31 @@ function YoutubeVideos() {
   // });
   // },[])
 
-  useEffect(() => {
+  // ! method 2(async await)
+  // useEffect(() => {
+  //   const fetchVideos = async () => {
+  //     try {
+  //       const res = await fetch(
+  //         "https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCE_M8A5yxnLfW0KghEeajjw&maxResults=8&order=date&type=video&key=AIzaSyB5_yFT5h3IKG52kLU6dJgvrYlWtJ6iWMc",
+  //       );
+  //       const data = await res.json();
+  //       setYoutubeVideos(data.items);
+  //     } catch (error) {
+  //       console.error("Error fetching videos:", error);
+  //     }
+  //   };
+  //   fetchVideos()
+  // }, []);
+
+  // ! method 3 (axios)
+    useEffect(() => {
     const fetchVideos = async () => {
       try {
-        const res = await fetch(
-          "https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCE_M8A5yxnLfW0KghEeajjw&maxResults=8&order=date&type=video&key=AIzaSyB5_yFT5h3IKG52kLU6dJgvrYlWtJ6iWMc",
+        const res = await axios(
+          `https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCxA7AzkI2Sndf8S1G5rSkwQ&maxResults=8&order=date&type=video&key=${Yt_Key}`,
         );
-        const data = await res.json();
-        setYoutubeVideos(data.items);
+        // const data = await res.json();
+        setYoutubeVideos(res.data.items);
       } catch (error) {
         console.error("Error fetching videos:", error);
       }
