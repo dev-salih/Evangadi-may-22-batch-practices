@@ -11,6 +11,7 @@ import Cart from "./pages/Cart/Cart";
 import { Route, Routes } from "react-router";
 import NotFound from "./pages/NotFound/NotFound";
 import SharedLayout from "./components/layout/SharedLayout";
+import ProductPage from "./pages/ProductPage/ProductPage"
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         {/* we can use path="/" instead of index */}
         <Route path="mac" element={<Mac />} />
         <Route path="iphone" element={<Iphone />} />
+        <Route path="iphone/:productID" element={<ProductPage/>} />
         <Route path="ipad" element={<Ipad />} />
         <Route path="watch" element={<Watch />} />
         <Route path="tv" element={<Tv />} />
