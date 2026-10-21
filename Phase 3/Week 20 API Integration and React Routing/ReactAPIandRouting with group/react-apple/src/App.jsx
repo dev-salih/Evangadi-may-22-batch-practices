@@ -6,6 +6,7 @@ import Mac from './pages/Mac/Mac'
 import Iphone from './pages/Iphone/Iphone'
 import Ipad from './pages/Ipad/Ipad'
 import { Route, Routes } from 'react-router'
+import NotFound from './pages/NotFound/NotFound'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="mac" element={<Mac />} />
         <Route path="iphone" element={<Iphone />} />
         <Route path="ipad" element={<Ipad />} />
+        <Route path="*" element={<NotFound/>} />
       </Routes>
 
       <Footer />
